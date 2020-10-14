@@ -7,7 +7,6 @@
       <module fileurl="file://$PROJECT_DIR$/DAO/DAO.iml" filepath="$PROJECT_DIR$/DAO/DAO.iml" />
       <module fileurl="file://$PROJECT_DIR$/InterfaceGraphic/InterfaceGraphic.iml" filepath="$PROJECT_DIR$/InterfaceGraphic/InterfaceGraphic.iml" />
       <module fileurl="file://$PROJECT_DIR$/ManagerLife.iml" filepath="$PROJECT_DIR$/ManagerLife.iml" />
-      <module fileurl="file://$PROJECT_DIR$/InterfaceGraphic/TelaCadastraCartaoCredito/TelaCadastraCartaoCredito.iml" filepath="$PROJECT_DIR$/InterfaceGraphic/TelaCadastraCartaoCredito/TelaCadastraCartaoCredito.iml" />
       <module fileurl="file://$PROJECT_DIR$/InterfaceGraphic/TelaCadastraSaldoContaCorrente/TelaCadastraSaldoContaCorrente.iml" filepath="$PROJECT_DIR$/InterfaceGraphic/TelaCadastraSaldoContaCorrente/TelaCadastraSaldoContaCorrente.iml" />
       <module fileurl="file://$PROJECT_DIR$/InterfaceGraphic/TelaCadastraUsuario/TelaCadastraUsuario.iml" filepath="$PROJECT_DIR$/InterfaceGraphic/TelaCadastraUsuario/TelaCadastraUsuario.iml" />
       <module fileurl="file://$PROJECT_DIR$/InterfaceGraphic/TelaCadastrarGastos/TelaCadastrarGastos.iml" filepath="$PROJECT_DIR$/InterfaceGraphic/TelaCadastrarGastos/TelaCadastrarGastos.iml" />
