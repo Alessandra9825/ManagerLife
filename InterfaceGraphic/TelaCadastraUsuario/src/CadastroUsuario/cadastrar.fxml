@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="557.0" prefWidth="595.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CadastroUsuario.Controller">
+<AnchorPane prefHeight="583.0" prefWidth="595.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CadastroUsuario.PainelPostIt.PainelPostIt.Controller">
    <children>
       <Label layoutX="225.0" layoutY="31.0" text="Manager Life">
          <font>
