@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TelaCadastrarGastos.src.Gastos.Gastos">
+   <children>
+      <RadioButton layoutX="76.0" layoutY="80.0" mnemonicParsing="false" text="Gasto Geral" />
+      <RadioButton layoutX="76.0" layoutY="105.0" mnemonicParsing="false" text="Gasto de Cartão de crédito" />
+      <Label layoutX="76.0" layoutY="141.0" text="Valor:" />
+      <Label layoutX="112.0" layoutY="14.0" text="Adicionar Gastos">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+      </Label>
+      <TextField layoutX="118.0" layoutY="137.0" prefHeight="25.0" prefWidth="200.0" />
+      <TextField layoutX="118.0" layoutY="174.0" prefHeight="25.0" prefWidth="200.0" />
+      <Label layoutX="79.0" layoutY="178.0" text="Data:" />
+      <TextArea layoutX="118.0" layoutY="210.0" prefHeight="79.0" prefWidth="200.0" />
+      <Label layoutX="53.0" layoutY="216.0" text="Descrição:" />
+      <ComboBox layoutX="118.0" layoutY="305.0" prefHeight="25.0" prefWidth="200.0" />
+      <Label layoutX="50.0" layoutY="309.0" text="Frequência:" />
+      <Button layoutX="118.0" layoutY="346.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="95.0" style="-fx-background-color: green;" text="Adicionar" textFill="WHITE" />
+      <Button layoutX="223.0" layoutY="346.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="95.0" text="Cancelar" />
+      <Label layoutX="76.0" layoutY="56.0" text="Tipo:" />
+   </children>
+</AnchorPane>
