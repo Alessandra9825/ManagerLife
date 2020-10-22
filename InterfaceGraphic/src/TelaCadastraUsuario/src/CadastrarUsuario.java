@@ -73,6 +73,7 @@ public class CadastrarUsuario extends Application {
         Usuario user = new Usuario();
         ArrayList<String> erros;
         ValidaUsuario validacao = new ValidaUsuario();
+        boolean cadastrado = false;
 
         try {
             user.setNome(nomeTxt.getText());
@@ -90,6 +91,15 @@ public class CadastrarUsuario extends Application {
             }
             else{
                 //tenta cadastrar no banco o novo usuario
+
+                if(!cadastrado){
+                    erros.add("Sistema fora de serviço!");
+                    GerenciadorAuditoria.getInstancia().adicionaMsgAuditoria("DataBase - Sistema fora de serviço!");
+                    controller.popupError(erros);
+                }
+                else{
+                    //cadastro realizado com sucesso
+                }
             }
         }
         catch (Exception e)

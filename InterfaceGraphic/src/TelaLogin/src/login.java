@@ -60,6 +60,7 @@ public class login extends Application {
             }
             else{
                 erros.add("Usuário não cadastrado");
+                GerenciadorAuditoria.getInstancia().adicionaMsgAuditoria("Login - Usuário não cadastrado");
                 controller.popupError(erros);
             }
         }

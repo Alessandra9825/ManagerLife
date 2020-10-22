@@ -1,0 +1,2 @@
+2020-10-21T22:28:18.849-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!2020-10-21T22:29:42.576-03:00[America/Sao_Paulo] - ValidaUsuario - Data de nascimento inválida.
+2020-10-21T22:29:48.310-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!2020-10-21T22:30:08.765-03:00[America/Sao_Paulo] - Login - Usuário não cadastrado

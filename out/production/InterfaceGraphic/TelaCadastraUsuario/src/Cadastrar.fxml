@@ -30,7 +30,7 @@
                   <TextField fx:id="nomeTxt" layoutX="110.0" layoutY="11.0" prefHeight="25.0" prefWidth="334.0" />
                   <TextField fx:id="emailTxt" layoutX="110.0" layoutY="45.0" prefHeight="25.0" prefWidth="334.0" />
                   <TextField fx:id="celTxt" layoutX="110.0" layoutY="78.0" prefHeight="25.0" prefWidth="174.0" />
-                  <DatePicker fx:id="dataNasc" layoutX="110.0" layoutY="118.0" onAction="#Salvar_btn" />
+                  <DatePicker fx:id="dataNasc" layoutX="110.0" layoutY="118.0" />
                </children>
             </AnchorPane>
         </items>
