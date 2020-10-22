@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane fx:id="princPanel" prefHeight="552.0" prefWidth="597.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TelaCadastraUsuario.src.CadastroUsuario.Cadastrar">
+<AnchorPane fx:id="princPanel" prefHeight="552.0" prefWidth="597.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TelaCadastraUsuario.src.CadastrarUsuario">
    <children>
       <Label layoutX="225.0" layoutY="31.0" text="Manager Life">
          <font>
@@ -29,8 +29,8 @@
                   <Label layoutX="9.0" layoutY="122.0" text="Data Nascimento" />
                   <TextField fx:id="nomeTxt" layoutX="110.0" layoutY="11.0" prefHeight="25.0" prefWidth="334.0" />
                   <TextField fx:id="emailTxt" layoutX="110.0" layoutY="45.0" prefHeight="25.0" prefWidth="334.0" />
-                  <TextField fx:id="celTxt" layoutX="110.0" layoutY="78.0" prefHeight="25.0" prefWidth="156.0" />
-                  <TextField fx:id="dataNascTxt" accessibleRole="DATE_PICKER" alignment="CENTER" layoutX="110.0" layoutY="118.0" prefHeight="25.0" prefWidth="156.0" promptText="00/00/0000" />
+                  <TextField fx:id="celTxt" layoutX="110.0" layoutY="78.0" prefHeight="25.0" prefWidth="174.0" />
+                  <DatePicker fx:id="dataNasc" layoutX="110.0" layoutY="118.0" onAction="#Salvar_btn" />
                </children>
             </AnchorPane>
         </items>

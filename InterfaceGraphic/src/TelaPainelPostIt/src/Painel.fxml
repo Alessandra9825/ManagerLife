@@ -7,7 +7,7 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: #82EEFD;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TelaPainelPostIt.src.PainelPostIt.PainelPostIt">
+<AnchorPane prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: #82EEFD;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TelaPainelPostIt.src.PainelPostIt">
    <children>
       <AnchorPane cache="true" layoutX="199.0" prefHeight="500.0" prefWidth="604.0">
          <effect>

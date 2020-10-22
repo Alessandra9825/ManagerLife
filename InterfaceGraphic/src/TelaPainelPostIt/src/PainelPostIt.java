@@ -1,4 +1,4 @@
-package TelaPainelPostIt.src.PainelPostIt;
+package TelaPainelPostIt.src;
 
 import javafx.application.Application;
 import javafx.event.ActionEvent;

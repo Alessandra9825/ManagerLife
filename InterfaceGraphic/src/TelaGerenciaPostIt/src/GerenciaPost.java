@@ -1,4 +1,4 @@
-package TelaGerenciaPostIt.src.GerenciaPostIt;
+package TelaGerenciaPostIt.src;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -16,7 +16,7 @@ public class GerenciaPost extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("Postit.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("PostIt.fxml"));
         primaryStage.setTitle("Gerenciamento de Post-it");
         primaryStage.setScene(new Scene(root, 600, 400));
         primaryStage.show();

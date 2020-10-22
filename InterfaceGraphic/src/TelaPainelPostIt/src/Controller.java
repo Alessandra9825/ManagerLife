@@ -1,4 +1,4 @@
-package TelaPainelPostIt.src.PainelPostIt;
+package TelaPainelPostIt.src;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;

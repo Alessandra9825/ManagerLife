@@ -1,6 +1,5 @@
 package sample;
 
-import CadastroUsuario.MainCadastra;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;

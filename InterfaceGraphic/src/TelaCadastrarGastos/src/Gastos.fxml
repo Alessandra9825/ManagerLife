@@ -5,7 +5,7 @@
 <?import javafx.scene.text.*?>
 
 
-<AnchorPane prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TelaCadastrarGastos.src.Gastos.Gastos">
+<AnchorPane prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TelaCadastrarGastos.src.Gastos">
    <children>
       <RadioButton layoutX="76.0" layoutY="80.0" mnemonicParsing="false" text="Gasto Geral" />
       <RadioButton layoutX="76.0" layoutY="105.0" mnemonicParsing="false" text="Gasto de Cartão de crédito" />
