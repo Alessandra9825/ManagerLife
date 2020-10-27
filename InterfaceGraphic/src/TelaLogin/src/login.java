@@ -1,5 +1,6 @@
 package TelaLogin.src;
 
+import Acesso.Acesso;
 import Auditoria.GerenciadorAuditoria;
 import Validacao.ValidaLogin;
 import javafx.application.Application;
@@ -53,7 +54,8 @@ public class login extends Application {
         else
         {
             //busca usuario no banco e salvo no log se foi OK ou nao
-            //logado = buscaUsuario;
+            Acesso buscaUsuario = new Acesso();
+            logado = buscaUsuario.validaUsuario(user);
 
             if(logado){
                 controller.home();

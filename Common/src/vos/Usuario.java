@@ -1,16 +1,29 @@
 package vos;
 
+import Annotations.CampoNoBanco;
 import Basis.Entidade;
 import javafx.scene.image.Image;
 
 import java.util.Date;
 
 public class Usuario extends Entidade {
+
+    @CampoNoBanco(nome = "nome", chave = false)
     private String nome;
+
+    @CampoNoBanco(nome = "cel", chave = false)
     private String cel;
+
+    @CampoNoBanco(nome = "email", chave = true)
     private String email;
+
+    @CampoNoBanco(nome = "senha", chave = false)
     private String senha;
+
+    @CampoNoBanco(nome = "dataNascimento", chave = false)
     private Date dataNascimento;
+
+    @CampoNoBanco(nome = "imagem", chave = false)
     private Image foto;
 
     public String getNome() {

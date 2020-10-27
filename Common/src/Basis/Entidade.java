@@ -1,6 +1,10 @@
 package Basis;
 
+import Annotations.CampoNoBanco;
+
 public class Entidade {
+
+    @CampoNoBanco(nome = "id", chave = false)
     private int id;
 
     public int getId() {

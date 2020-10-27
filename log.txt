@@ -1,2 +1,8 @@
-2020-10-21T22:28:18.849-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!2020-10-21T22:29:42.576-03:00[America/Sao_Paulo] - ValidaUsuario - Data de nascimento inválida.
-2020-10-21T22:29:48.310-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!2020-10-21T22:30:08.765-03:00[America/Sao_Paulo] - Login - Usuário não cadastrado
+2020-10-26T21:57:27.994-03:00[America/Sao_Paulo] - ValidaLogin - Senha vazio.
+
+2020-10-26T21:57:45.452-03:00[America/Sao_Paulo] - Acesso - Usuário não cadastrado
+2020-10-26T21:57:45.461-03:00[America/Sao_Paulo] - Login - Usuário não cadastrado
+2020-10-26T22:01:09.793-03:00[America/Sao_Paulo] - Acesso - Usuário não cadastrado
+2020-10-26T22:01:09.804-03:00[America/Sao_Paulo] - Login - Usuário não cadastrado
+2020-10-26T22:01:46.422-03:00[America/Sao_Paulo] - Acesso - Usuário não cadastrado
+2020-10-26T22:01:47.932-03:00[America/Sao_Paulo] - Login - Usuário não cadastrado

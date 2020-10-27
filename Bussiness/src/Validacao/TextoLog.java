@@ -32,7 +32,7 @@ public class TextoLog {
         {
             validaTxt();
             BufferedWriter bw = new BufferedWriter(validaTxt());
-            bw.write(log);
+            bw.write(log + "\n");
 
             bw.close();
             validaTxt().close();
