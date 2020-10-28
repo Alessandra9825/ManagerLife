@@ -1,4 +1,4 @@
-package TelaLogin.src;
+package TelaRecuperarSenha.src;
 
 import Auditoria.GerenciadorAuditoria;
 import javafx.application.Application;
@@ -12,8 +12,7 @@ import javafx.stage.StageStyle;
 
 import java.io.IOException;
 
-
-public class login extends Application {
+public class RecuperarSenha extends Application {
 
     private double xOffset = 0;
     private double yOffset = 0;

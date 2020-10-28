@@ -6,3 +6,17 @@
 2020-10-26T22:01:09.804-03:00[America/Sao_Paulo] - Login - Usuário não cadastrado
 2020-10-26T22:01:46.422-03:00[America/Sao_Paulo] - Acesso - Usuário não cadastrado
 2020-10-26T22:01:47.932-03:00[America/Sao_Paulo] - Login - Usuário não cadastrado
+2020-10-27T19:47:50.967-03:00[America/Sao_Paulo] - ValidaLogin - Email vazio.
+
+2020-10-27T19:47:50.985-03:00[America/Sao_Paulo] - ValidaLogin - Senha vazio.
+
+2020-10-27T20:45:53.631-03:00[America/Sao_Paulo] - Acesso - Usuário não cadastrado
+2020-10-27T20:45:53.640-03:00[America/Sao_Paulo] - Login - Usuário não cadastrado
+2020-10-27T20:50:29.032-03:00[America/Sao_Paulo] - ValidaLogin - Email vazio.
+
+2020-10-27T20:50:29.043-03:00[America/Sao_Paulo] - ValidaLogin - Senha vazio.
+
+2020-10-27T21:46:45.619-03:00[America/Sao_Paulo] - ValidaLogin - Email vazio.
+
+2020-10-27T21:46:45.632-03:00[America/Sao_Paulo] - ValidaLogin - Senha vazio.
+
