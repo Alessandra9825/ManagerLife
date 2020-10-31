@@ -5,6 +5,7 @@ import Basis.Entidade;
 import vos.Usuario;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class ValidaLogin <E extends Entidade> extends Validacao {
     private final String meth = "ValidaLogin - ";
@@ -31,7 +32,7 @@ public class ValidaLogin <E extends Entidade> extends Validacao {
             }
         }
         catch (Exception e){
-            GerenciadorAuditoria.getInstancia().adicionaMsgAuditoria(meth + " - " + e.getMessage() + "\n" + e.getStackTrace());
+            GerenciadorAuditoria.getInstancia().adicionaMsgAuditoria(meth + " - " + e.getMessage() + "\n" + Arrays.toString(e.getStackTrace()));
         }
 
         return erros;

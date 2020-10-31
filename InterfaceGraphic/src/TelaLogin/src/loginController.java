@@ -3,6 +3,7 @@ package TelaLogin.src;
 import Acesso.Acesso;
 import Auditoria.GerenciadorAuditoria;
 import TelaCadastraUsuario.src.CadastrarUsuario;
+import TelaRecuperarSenha.src.RecuperarSenha;
 import Validacao.ValidaLogin;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -19,27 +20,39 @@ import javafx.stage.StageStyle;
 import vos.Usuario;
 
 import java.io.File;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class loginController implements Initializable {
 
+    private Stage stage;
     @FXML private TextField user_txt;
     @FXML private TextField pass_txt;
     @FXML private ImageView imageLogin;
+    @FXML private ImageView imageKey;
+    @FXML private ImageView imageUser;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        File file = new File("InterfaceGraphic/src/TelaLogin/src/image/login.png");
-        Image image = new Image(file.toURI().toString());
-        imageLogin.setImage(image);
+        File login = new File("InterfaceGraphic/src/TelaLogin/src/image/login.png");
+        Image loginImage = new Image(login.toURI().toString());
+        imageLogin.setImage(loginImage);
+
+        File user = new File("InterfaceGraphic/src/TelaLogin/src/image/user.png");
+        Image userImage = new Image(user.toURI().toString());
+        imageUser.setImage(userImage);
+
+        File key = new File("InterfaceGraphic/src/TelaLogin/src/image/key.png");
+        Image keyImage = new Image(key.toURI().toString());
+        imageKey.setImage(keyImage);
     }
 
     @FXML
     public void exit(ActionEvent event){
-        System.exit(0);
+        stage = (Stage)imageLogin.getScene().getWindow();
+        stage.close();
     }
 
     @FXML
@@ -75,16 +88,9 @@ public class loginController implements Initializable {
     }
 
     @FXML
-    public void RecuperarSenha_Button(ActionEvent event){
-        TextInputDialog dialog = new TextInputDialog();
-        dialog.setHeaderText("Recuperar Senha!");
-        dialog.setContentText("Informe seu e-mail:");
-
-        dialog.initStyle(StageStyle.DECORATED.UNDECORATED);
-        Optional<String> result = dialog.showAndWait();
-
-        // The Java 8 way to get the response value (with lambda expression).
-        result.ifPresent(name -> System.out.println("Your name: " + name));
+    public void RecuperarSenha_Button(ActionEvent event) throws IOException {
+        RecuperarSenha tela = new RecuperarSenha();
+        tela.start(new Stage());
     }
 
     @FXML

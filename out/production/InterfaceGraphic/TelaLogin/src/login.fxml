@@ -26,27 +26,34 @@
                   <Font size="42.0" />
                </font>
                <textFill>
-                  <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="0.3047619047619048">
+                  <LinearGradient endX="1.0" endY="0.1904761904761904" startX="1.0" startY="1.0">
                      <stops>
                         <Stop>
                            <color>
-                              <Color red="0.019607843831181526" green="0.5960784554481506" blue="1.0" />
+                              <Color green="0.5333333611488342" blue="1.0" opacity="0.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.007662835249042145">
+                           <color>
+                              <Color green="0.5333333611488342" blue="1.0" opacity="0.0" />
                            </color>
                         </Stop>
                         <Stop offset="1.0">
                            <color>
-                              <Color red="1.0" green="1.0" blue="1.0" />
+                              <Color green="0.6000000238418579" blue="1.0" />
                            </color>
                         </Stop>
                      </stops>
                   </LinearGradient>
                </textFill>
             </Label>
-            <Button fx:id="exitbtn" layoutX="316.0" layoutY="14.0" mnemonicParsing="false" onAction="#exit" style="-fx-border-radius: 10px; -fx-border-width: 2px; -fx-border-color: #0598ff; -fx-background-color: transparent;" text="X" textAlignment="CENTER" textFill="#0589ff" underline="true">
+            <Button fx:id="exitbtn" layoutX="312.0" layoutY="14.0" mnemonicParsing="false" onAction="#exit" style="-fx-border-radius: 10px; -fx-border-width: 2px; -fx-border-color: #0598ff; -fx-background-color: transparent;" text="X" textAlignment="CENTER" textFill="#0589ff" underline="true">
                <font>
                   <Font name="Bodoni MT Black" size="9.0" />
                </font>
             </Button>
+            <ImageView fx:id="imageUser" fitHeight="20.0" fitWidth="20.0" layoutX="49.0" layoutY="182.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="imageKey" fitHeight="20.0" fitWidth="20.0" layoutX="49.0" layoutY="251.0" pickOnBounds="true" preserveRatio="true" />
          </children></AnchorPane>
    </right>
 </BorderPane>

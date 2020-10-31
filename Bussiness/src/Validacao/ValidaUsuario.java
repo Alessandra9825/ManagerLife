@@ -40,7 +40,7 @@ public class ValidaUsuario <E extends Entidade> extends Validacao {
             }
         }
         catch (Exception e){
-            GerenciadorAuditoria.getInstancia().adicionaMsgAuditoria(meth + " - " + e.getMessage() + "\n" + e.getStackTrace());
+            GerenciadorAuditoria.getInstancia().adicionaMsgAuditoria(meth + " - " + e.getMessage() + "\n" + Arrays.toString(e.getStackTrace()));
         }
 
         return erros;
