@@ -23,9 +23,11 @@ public class RecuperarSenha extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("RecuperarSenha.fxml"));
         primaryStage.setTitle("login");
-        primaryStage.setScene(new Scene(root, 700, 500));
+        primaryStage.setScene(new Scene(root, 500, 300));
+
+        GerenciadorAuditoria.getInstancia().ativar();
 
         primaryStage.initStyle(StageStyle.DECORATED.UNDECORATED);
 

@@ -21,8 +21,6 @@ public class ThreadGestaoAuditoria extends Thread {
                 Logger.getLogger(ThreadGestaoAuditoria.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
-
-        System.out.println(this.status);
     }
 
     public void setStatus(boolean value) {

@@ -8,10 +8,10 @@ import java.util.ArrayList;
 
 public class MSSQLDAO <E extends Entidade> extends DAO {
 
-    private final String stringConexao = "jdbc:sqlserver://localhost:1433;databaseName=SGP;";
+    private final String stringConexao = "jdbc:sqlserver://localhost:1433;databaseName=ManagerLife;";
     private final String usuario = "sa";
     private final String senha = "123456";
-    private String tabela;
+    protected String tabela;
 
     public MSSQLDAO(Class entityClass) {
         super(entityClass);
@@ -26,7 +26,7 @@ public class MSSQLDAO <E extends Entidade> extends DAO {
         throw new UnsupportedOperationException("Implementar na classe filha.");
     }
 
-    private Connection getConnection(){
+    protected Connection getConnection(){
         Connection conexao = null;
         try{
             conexao = DriverManager.getConnection(stringConexao, usuario, senha);
@@ -37,7 +37,7 @@ public class MSSQLDAO <E extends Entidade> extends DAO {
         return conexao;
     }
 
-    private PreparedStatement getStatement(String SQL, Connection conexao){
+    protected PreparedStatement getStatement(String SQL, Connection conexao){
         PreparedStatement stmt = null;
         try{
             stmt = conexao.prepareStatement(SQL, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);

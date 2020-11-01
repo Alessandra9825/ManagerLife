@@ -1,8 +1,11 @@
 package Enums;
 
+import vos.SenhasAntigas;
+
 public enum enumEntidade {
 
-    USUARIO("usuario");
+    USUARIO("usuario"),
+    SENHA_ANTIGA("senhaAntiga");
 
     private String descricao;
 
