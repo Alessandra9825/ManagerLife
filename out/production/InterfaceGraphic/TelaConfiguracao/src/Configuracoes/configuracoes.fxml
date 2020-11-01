@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TelaConfiguracao.src.Configuracoes.Controller">
+   <children>
+      <Label layoutX="166.0" layoutY="14.0" text="Configurações">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Label>
+      <Label layoutX="37.0" layoutY="166.0" text="Nome:" />
+      <Label layoutX="42.0" layoutY="197.0" text="Email:" />
+      <Label layoutX="33.0" layoutY="228.0" text="Celular:" />
+      <Label layoutX="51.0" layoutY="259.0" text="Cor:" />
+      <Label layoutX="33.0" layoutY="291.0" text="Moeda:" />
+      <TextField layoutX="84.0" layoutY="162.0" prefHeight="25.0" prefWidth="413.0" />
+      <TextField layoutX="84.0" layoutY="193.0" prefHeight="25.0" prefWidth="413.0" />
+      <TextField layoutX="84.0" layoutY="224.0" prefHeight="25.0" prefWidth="413.0" />
+      <MenuButton layoutX="84.0" layoutY="255.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="413.0" text="MenuButton">
+        <items>
+          <MenuItem mnemonicParsing="false" text="Action 1" />
+          <MenuItem mnemonicParsing="false" text="Action 2" />
+        </items>
+      </MenuButton>
+      <MenuButton layoutX="84.0" layoutY="287.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="413.0" text="MenuButton">
+        <items>
+          <MenuItem mnemonicParsing="false" text="Action 1" />
+          <MenuItem mnemonicParsing="false" text="Action 2" />
+        </items>
+      </MenuButton>
+      <Button layoutX="84.0" layoutY="318.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="189.0" text="Salvar" />
+      <Button fx:id="btn_cancelar" layoutX="308.0" layoutY="318.0" mnemonicParsing="false" onAction="#Cancelar" prefHeight="25.0" prefWidth="189.0" text="Cancelar" />
+   </children>
+</AnchorPane>
