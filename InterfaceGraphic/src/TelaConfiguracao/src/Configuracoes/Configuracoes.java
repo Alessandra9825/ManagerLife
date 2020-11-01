@@ -1,7 +1,13 @@
 package TelaConfiguracao.src.Configuracoes;
 
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
+
+import java.io.IOException;
 
 public class Configuracoes extends Application {
 
@@ -10,7 +16,12 @@ public class Configuracoes extends Application {
     }
 
     @Override
-    public void start(Stage primaryStage) {
+    public void start(Stage primaryStage) throws IOException {
+        primaryStage.initStyle(StageStyle.UNDECORATED);
+        Parent root = FXMLLoader.load(getClass().getResource("configuracoes.fxml"));
+        primaryStage.setTitle("Configurações");
+        primaryStage.setScene(new Scene(root, 600, 400));
+        primaryStage.show();
 
     }
 }

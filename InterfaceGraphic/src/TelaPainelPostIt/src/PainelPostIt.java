@@ -17,10 +17,7 @@ public class PainelPostIt extends Application {
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("Painel.fxml"));
         primaryStage.setTitle("Atividades");
-        primaryStage.setScene(new Scene(root, 700, 430));
+        primaryStage.setScene(new Scene(root, 800, 500));
         primaryStage.show();
-    }
-
-    public void handleButtonAction(ActionEvent actionEvent) {
     }
 }

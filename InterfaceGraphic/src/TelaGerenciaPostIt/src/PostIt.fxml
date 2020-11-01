@@ -4,37 +4,29 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TelaGerenciaPostIt.src.GerenciaPost">
+<AnchorPane prefHeight="345.0" prefWidth="496.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TelaGerenciaPostIt.src.Controller">
    <children>
-      <AnchorPane layoutY="-14.0" prefHeight="415.0" prefWidth="600.0">
+      <AnchorPane prefHeight="350.0" prefWidth="496.0" style="-fx-background-color: #66ccff;">
          <children>
-            <Pane layoutX="50.0" layoutY="115.0" prefHeight="252.0" prefWidth="501.0" style="-fx-background-color: lightgray;">
+            <Pane layoutX="16.0" layoutY="89.0" prefHeight="252.0" prefWidth="464.0" style="-fx-background-color: white;">
                <children>
-                  <Label layoutX="19.0" layoutY="29.0" text="Nome" />
-                  <Label layoutX="16.0" layoutY="69.0" text="Tempo Estimado" />
-                  <Label layoutX="16.0" layoutY="99.0" text="Descrição" />
-                  <Label layoutX="19.0" layoutY="185.0" text="Situação" />
+                  <Label layoutX="19.0" layoutY="29.0" text="Nome" textFill="#1c008d" />
+                  <Label layoutX="16.0" layoutY="69.0" text="Tempo Estimado" textFill="#1c008d" />
+                  <Label layoutX="16.0" layoutY="99.0" text="Descrição" textFill="#1c008d" />
+                  <Label layoutX="19.0" layoutY="185.0" text="Situação" textFill="#1c008d" />
                   <TextField layoutX="116.0" layoutY="25.0" prefHeight="25.0" prefWidth="289.0" />
                   <TextField layoutX="115.0" layoutY="65.0" prefHeight="25.0" prefWidth="97.0" />
                   <TextArea layoutX="116.0" layoutY="96.0" prefHeight="75.0" prefWidth="289.0" />
                   <ComboBox layoutX="115.0" layoutY="181.0" prefWidth="150.0" />
+                  <Button layoutX="56.0" layoutY="223.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="114.0" text="Salvar" textFill="#1c008d" />
+                  <Button fx:id="btn_cancelar" layoutX="190.0" layoutY="221.0" mnemonicParsing="false" onAction="#Cancelar" prefHeight="25.0" prefWidth="114.0" text="Cancelar" textFill="#1c008d" />
+                  <Button layoutX="330.0" layoutY="221.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="114.0" text="Deletar" textFill="#1c008d" />
                </children></Pane>
-            <Pane layoutY="26.0" prefHeight="62.0" prefWidth="600.0">
+            <Pane layoutY="14.0" prefHeight="62.0" prefWidth="496.0" style="-fx-background-color: #99ccff;">
                <children>
-                  <Label layoutX="171.0" layoutY="-10.0" prefHeight="68.0" prefWidth="283.0" text="Manager Life">
+                  <Label layoutX="191.0" prefHeight="62.0" prefWidth="120.0" text="Post-It" textFill="WHITE">
                      <font>
-                        <Font name="Monotype Corsiva" size="53.0" />
-                     </font></Label>
-               </children>
-            </Pane>
-            <Button layoutX="414.0" layoutY="380.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="114.0" text="Deletar" />
-            <Button layoutX="269.0" layoutY="380.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="114.0" text="Cancelar" />
-            <Button layoutX="110.0" layoutY="380.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="114.0" text="Salvar" />
-            <Pane layoutX="50.0" layoutY="81.0" prefHeight="34.0" prefWidth="501.0">
-               <children>
-                  <Label layoutX="196.0" layoutY="-17.0" prefHeight="62.0" prefWidth="120.0" text="Post-It">
-                     <font>
-                        <Font size="33.0" />
+                        <Font name="Myanmar Text Bold" size="33.0" />
                      </font>
                   </Label>
                </children>

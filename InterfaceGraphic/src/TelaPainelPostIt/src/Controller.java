@@ -1,39 +1,50 @@
 package TelaPainelPostIt.src;
 
+import TelaConfiguracao.src.Configuracoes.Configuracoes;
+import TelaGerenciaPostIt.src.GerenciaPost;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
 
 import java.awt.event.ActionEvent;
+import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class Controller {
+public class Controller implements Initializable {
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+
+    }
 
     @FXML
-    private Pane pnl_calendario,pnl_financas,pnl_config,pnl_painel,pnl_eventos;
+    private Button btn_config, btn_financas,btn_detalhar,btn_eventos,btn_calendario;
+    @FXML
 
-    @FXML
-    private Button btn_config, btn_financas,btn_painel,btn_eventos,btn_calendario;
-    @FXML
-    private void handleButtonAction(ActionEvent event){
+    public void handleButtonAction(javafx.event.ActionEvent event) throws IOException {
         if(event.getSource()== btn_calendario)
         {
-            pnl_calendario.toFront();
+
         }
         else if(event.getSource()== btn_config)
         {
-            pnl_config.toFront();
+            Configuracoes tela = new Configuracoes();
+            tela.start(new Stage());
         }
         else if(event.getSource()== btn_eventos)
         {
-            pnl_eventos.toFront();
         }
         else if(event.getSource()== btn_financas)
         {
-            pnl_financas.toFront();
         }
-        else if(event.getSource()== btn_painel)
+        else if(event.getSource()== btn_detalhar)
         {
-            pnl_painel.toFront();
+            GerenciaPost tela = new GerenciaPost();
+            tela.start(new Stage());
         }
     }
+
+
 }

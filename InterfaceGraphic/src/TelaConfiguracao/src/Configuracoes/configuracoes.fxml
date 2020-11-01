@@ -4,8 +4,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TelaConfiguracao.src.Configuracoes.Configuracoes">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TelaConfiguracao.src.Configuracoes.Controller">
    <children>
       <Label layoutX="166.0" layoutY="14.0" text="Configurações">
          <font>
@@ -33,6 +32,6 @@
         </items>
       </MenuButton>
       <Button layoutX="84.0" layoutY="318.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="189.0" text="Salvar" />
-      <Button layoutX="308.0" layoutY="318.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="189.0" text="Cancelar" />
+      <Button fx:id="btn_cancelar" layoutX="308.0" layoutY="318.0" mnemonicParsing="false" onAction="#Cancelar" prefHeight="25.0" prefWidth="189.0" text="Cancelar" />
    </children>
 </AnchorPane>
