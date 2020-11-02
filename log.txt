@@ -10,3 +10,11 @@
 2020-10-31T19:10:12.665-03:00[America/Sao_Paulo] - newPassword - Senha cadastrada com sucesso!
 2020-10-31T19:11:25.589-03:00[America/Sao_Paulo] - sendEmail - Sucesso!
 2020-10-31T19:11:25.596-03:00[America/Sao_Paulo] - newPassword - Senha cadastrada com sucesso!
+2020-11-02T18:46:03.735-03:00[America/Sao_Paulo] - sendEmail - Sucesso!
+2020-11-02T18:46:03.742-03:00[America/Sao_Paulo] - newPassword - Senha cadastrada com sucesso!
+2020-11-02T18:49:36.051-03:00[America/Sao_Paulo] - sendEmail - Sucesso!
+2020-11-02T18:49:36.058-03:00[America/Sao_Paulo] - newPassword - Senha cadastrada com sucesso!
+2020-11-02T19:14:14.662-03:00[America/Sao_Paulo] - sendEmail - Sucesso!
+2020-11-02T19:14:23.994-03:00[America/Sao_Paulo] - newPassword - Senha cadastrada com sucesso!
+2020-11-02T19:16:07.727-03:00[America/Sao_Paulo] - sendEmail - Sucesso!
+2020-11-02T19:16:07.734-03:00[America/Sao_Paulo] - newPassword - Senha cadastrada com sucesso!
