@@ -1,10 +1,12 @@
 package TelaCadastraSaldoContaCorrente.src;
 
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.event.ActionEvent;
 
 public class SaldoContaCorrente extends Application {
 
@@ -19,4 +21,5 @@ public class SaldoContaCorrente extends Application {
         primaryStage.setScene(new Scene(root, 400, 400));
         primaryStage.show();
     }
+
 }
