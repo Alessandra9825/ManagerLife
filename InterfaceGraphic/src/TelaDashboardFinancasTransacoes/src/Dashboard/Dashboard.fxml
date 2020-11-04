@@ -27,7 +27,7 @@
       </LineChart>
       <TextArea layoutX="24.0" layoutY="100.0" prefHeight="250.0" prefWidth="243.0" text="&lt;DD/MM/AA&gt; - R$&lt;valTransição&gt;&gt;" />
       <Label layoutX="24.0" layoutY="77.0" text="Transações" />
-      <Button layoutX="28.0" layoutY="371.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="243.0" text="Adicionar Gastos" />
-      <Button layoutX="307.0" layoutY="371.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="243.0" text="Adicionar Saldo" />
+      <Button layoutX="28.0" layoutY="371.0" mnemonicParsing="false" onAction="#Gastos_btn" prefHeight="25.0" prefWidth="243.0" text="Adicionar Gastos" />
+      <Button layoutX="307.0" layoutY="371.0" mnemonicParsing="false" onAction="#Saldo_btn" prefHeight="25.0" prefWidth="243.0" text="Adicionar Saldo" />
    </children>
 </AnchorPane>
