@@ -9,19 +9,19 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="Common" />
     <orderEntry type="module" module-name="DAO" />
-    <orderEntry type="module-library">
+    <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
-          <root url="jar://$USER_HOME$/Downloads/javax.mail.jar!/" />
+          <root url="jar://$USER_HOME$/Desktop/lib java/activation.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="module-library">
+    <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
-          <root url="jar://$USER_HOME$/Downloads/mailactivation/mail.jar!/" />
+          <root url="jar://$USER_HOME$/Desktop/lib java/mail.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
