@@ -20,6 +20,6 @@
       <Button fx:id="btnAdicionar" layoutX="183.0" layoutY="306.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="90.0" style="-fx-background-color: green;" text="Adicionar" textFill="WHITE" />
       <Button fx:id="btnCancelar" layoutX="283.0" layoutY="306.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="90.0" text="Cancelar" />
       <DatePicker fx:id="txtDataPagamento" layoutX="186.0" layoutY="88.0" prefHeight="25.0" prefWidth="200.0" />
-      <ComboBox layoutX="186.0" layoutY="270.0" prefHeight="25.0" prefWidth="200.0" />
+      <ComboBox fx:id="cbSituacao" layoutX="186.0" layoutY="270.0" prefHeight="25.0" prefWidth="200.0" />
    </children>
 </AnchorPane>
