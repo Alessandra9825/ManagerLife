@@ -4,13 +4,16 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TelaConfiguracao.src.Configuracoes.Controller">
+<AnchorPane fx:id="an_config" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TelaConfiguracao.src.Controller">
    <children>
-      <Label layoutX="166.0" layoutY="14.0" text="Configurações">
-         <font>
-            <Font size="40.0" />
-         </font>
-      </Label>
+      <Pane layoutY="14.0" prefHeight="78.0" prefWidth="600.0" style="-fx-background-color: #99ccff;" AnchorPane.topAnchor="45.0">
+         <children>
+            <Label layoutX="182.0" layoutY="-2.0" text="Configurações" textFill="WHITE">
+               <font>
+                  <Font name="Myanmar Text Bold" size="35.0" />
+               </font>
+            </Label>
+         </children></Pane>
       <Label layoutX="37.0" layoutY="166.0" text="Nome:" />
       <Label layoutX="42.0" layoutY="197.0" text="Email:" />
       <Label layoutX="33.0" layoutY="228.0" text="Celular:" />
@@ -31,7 +34,6 @@
           <MenuItem mnemonicParsing="false" text="Action 2" />
         </items>
       </MenuButton>
-      <Button layoutX="84.0" layoutY="318.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="189.0" text="Salvar" />
-      <Button fx:id="btn_cancelar" layoutX="308.0" layoutY="318.0" mnemonicParsing="false" onAction="#Cancelar" prefHeight="25.0" prefWidth="189.0" text="Cancelar" />
+      <Button layoutX="206.0" layoutY="340.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="189.0" text="Salvar" />
    </children>
 </AnchorPane>

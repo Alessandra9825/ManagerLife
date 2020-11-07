@@ -1,4 +1,4 @@
-package TelaConfiguracao.src.Configuracoes;
+package TelaConfiguracao.src;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -20,7 +20,7 @@ public class Configuracoes extends Application {
         primaryStage.initStyle(StageStyle.UNDECORATED);
         Parent root = FXMLLoader.load(getClass().getResource("configuracoes.fxml"));
         primaryStage.setTitle("Configurações");
-        primaryStage.setScene(new Scene(root, 600, 400));
+        primaryStage.setScene(new Scene(root, 600, 500));
         primaryStage.show();
 
     }

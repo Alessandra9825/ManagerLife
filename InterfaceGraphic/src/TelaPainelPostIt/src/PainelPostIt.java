@@ -1,11 +1,13 @@
 package TelaPainelPostIt.src;
 
 import javafx.application.Application;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
+
+import java.io.IOException;
 
 public class PainelPostIt extends Application {
 
@@ -14,10 +16,10 @@ public class PainelPostIt extends Application {
     }
 
     @Override
-    public void start(Stage primaryStage) throws Exception{
+    public void start(Stage primaryStage) throws IOException {
+        primaryStage.initStyle(StageStyle.UNDECORATED);
         Parent root = FXMLLoader.load(getClass().getResource("Painel.fxml"));
-        primaryStage.setTitle("Atividades");
-        primaryStage.setScene(new Scene(root, 800, 500));
+        primaryStage.setScene(new Scene(root, 600, 500));
         primaryStage.show();
     }
 }

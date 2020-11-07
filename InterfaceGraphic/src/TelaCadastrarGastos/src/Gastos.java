@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 public class Gastos extends Application {
 
@@ -14,8 +15,8 @@ public class Gastos extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
+        primaryStage.initStyle(StageStyle.UNDECORATED);
         Parent root = FXMLLoader.load(getClass().getResource("Gastos.fxml"));
-        primaryStage.setTitle("Adicionar Gastos");
         primaryStage.setScene(new Scene(root, 400, 400));
         primaryStage.show();
     }

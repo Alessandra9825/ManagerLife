@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TelaMenu.src.home">
+   <children>
+      <AnchorPane fx:id="an_home" prefHeight="500.0" prefWidth="600.0">
+         <children>
+            <TabPane layoutX="57.0" layoutY="156.0" prefHeight="308.0" prefWidth="500.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Finanças">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <LineChart prefHeight="280.0" prefWidth="500.0">
+                                <xAxis>
+                                  <CategoryAxis side="BOTTOM" />
+                                </xAxis>
+                                <yAxis>
+                                  <NumberAxis side="LEFT" />
+                                </yAxis>
+                              </LineChart>
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Agenda do Dia">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView prefHeight="283.0" prefWidth="500.0">
+                                <columns>
+                                  <TableColumn prefWidth="75.0" text="Dia" />
+                                  <TableColumn prefWidth="75.0" text="Hora" />
+                                    <TableColumn prefWidth="75.0" text="Atividade" />
+                                    <TableColumn prefWidth="75.0" text="Prioridade" />
+                                </columns>
+                              </TableView>
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+            <Pane layoutY="45.0" prefHeight="78.0" prefWidth="600.0" style="-fx-background-color: #99ccff;" AnchorPane.topAnchor="45.0">
+               <children>
+                  <Label layoutX="158.0" layoutY="-2.0" text="Seja Bem-Vindo !" textFill="WHITE">
+                     <font>
+                        <Font name="Myanmar Text Bold" size="35.0" />
+                     </font>
+                  </Label>
+               </children></Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

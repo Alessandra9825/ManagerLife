@@ -1,4 +1,4 @@
-package TelaHome.src.Home;
+package TelaHome.src;
 
 public class Controller {
 }

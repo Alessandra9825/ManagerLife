@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TelaCadastrarGastos.src.Gastos">
+<AnchorPane prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TelaCadastrarGastos.src.Controller">
    <children>
       <RadioButton fx:id="rbGastoGeral" layoutX="76.0" layoutY="80.0" mnemonicParsing="false" selected="true" text="Gasto Geral">
          <toggleGroup>
@@ -22,8 +22,8 @@
       <TextArea fx:id="txtDescricao" layoutX="118.0" layoutY="210.0" prefHeight="79.0" prefWidth="200.0" />
       <Label layoutX="53.0" layoutY="216.0" text="Descrição:" />
       <Label layoutX="50.0" layoutY="309.0" text="Frequência:" />
-      <Button fx:id="btnAdicionar" layoutX="118.0" layoutY="346.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="95.0" style="-fx-background-color: green;" text="Adicionar" textFill="WHITE" />
-      <Button fx:id="btnCancelar" layoutX="223.0" layoutY="346.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="95.0" text="Cancelar" />
+      <Button fx:id="btn_adicionar" layoutX="118.0" layoutY="346.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="95.0" style="-fx-background-color: green;" text="Adicionar" textFill="WHITE" />
+      <Button fx:id="btn_cancelar" layoutX="223.0" layoutY="346.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="95.0" text="Cancelar" />
       <Label layoutX="76.0" layoutY="56.0" text="Tipo:" />
       <DatePicker fx:id="txtDataGasto" layoutX="118.0" layoutY="174.0" prefHeight="25.0" prefWidth="200.0" />
       <ComboBox fx:id="cbFrequencia" layoutX="118.0" layoutY="305.0" prefHeight="25.0" prefWidth="200.0" />

@@ -2,126 +2,79 @@
 
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
-<?import javafx.scene.effect.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TelaPainelPostIt.src.Controller">
+<AnchorPane prefHeight="500.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TelaPainelPostIt.src.Controller">
    <children>
-      <AnchorPane cache="true" layoutX="199.0" prefHeight="500.0" prefWidth="604.0">
-         <effect>
-            <DropShadow />
-         </effect>
+      <Pane layoutY="45.0" prefHeight="78.0" prefWidth="600.0" style="-fx-background-color: #99ccff;" AnchorPane.topAnchor="45.0">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
          <children>
-            <Pane fx:id="pnl_painel" layoutX="-4.0" prefHeight="432.0" prefWidth="564.0" style="-fx-background-color: #0055B9;" />
-            <Pane fx:id="pnl_financas" layoutX="-3.0" layoutY="-3.0" prefHeight="432.0" prefWidth="561.0" style="-fx-background-color: red;" />
-            <Pane fx:id="pnl_config" prefHeight="432.0" prefWidth="561.0" style="-fx-background-color: Yellow;" />
-            <Pane fx:id="pnl_eventos" layoutX="-3.0" layoutY="1.0" prefHeight="432.0" prefWidth="564.0" style="-fx-background-color: gray;" />
-            <Pane fx:id="pnl_calendario" layoutX="5.0" prefHeight="500.0" prefWidth="613.0" style="-fx-background-color: #F6F8FF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="-14.0" AnchorPane.topAnchor="0.0">
-               <children>
-                  <AnchorPane layoutY="48.0" prefHeight="74.0" prefWidth="604.0" style="-fx-background-color: #99ccff;">
-                     <children>
-                        <Label layoutX="135.0" layoutY="-7.0" prefHeight="55.0" prefWidth="292.0" text="Atividades do Dia" textFill="WHITE">
-                           <font>
-                              <Font name="Myanmar Text Bold" size="35.0" />
-                           </font>
-                        </Label>
-                     </children></AnchorPane>
-                  <AnchorPane layoutX="302.0" layoutY="139.0" prefHeight="362.0" prefWidth="139.0" style="-fx-background-color: #ff9999;">
-                     <children>
-                        <AnchorPane layoutX="8.0" layoutY="14.0" prefHeight="30.0" prefWidth="125.0" style="-fx-background-color: #f5f5dc;">
-                           <children>
-                              <Label layoutX="34.0" layoutY="4.0" text="To Late" textFill="#00089e" />
-                           </children>
-                        </AnchorPane>
-                     </children></AnchorPane>
-                  <AnchorPane layoutX="163.0" layoutY="139.0" prefHeight="362.0" prefWidth="139.0" style="-fx-background-color: #ffcc99;">
-                     <children>
-                        <AnchorPane layoutX="8.0" layoutY="14.0" prefHeight="30.0" prefWidth="125.0" style="-fx-background-color: #f5f5dc;">
-                           <children>
-                              <Label layoutX="26.0" layoutY="4.0" text="In Development" textFill="#00089e" />
-                           </children>
-                        </AnchorPane>
-                     </children></AnchorPane>
-                  <AnchorPane layoutX="441.0" layoutY="139.0" prefHeight="362.0" prefWidth="139.0" style="-fx-background-color: #ccffcc;">
-                     <children>
-                        <AnchorPane layoutX="8.0" layoutY="11.0" prefHeight="30.0" prefWidth="125.0" style="-fx-background-color: #f5f5dc;">
-                           <children>
-                              <Label layoutX="48.0" layoutY="4.0" text="Done" textFill="#00089e">
-                                 <font>
-                                    <Font name="Myanmar Text" size="12.0" />
-                                 </font></Label>
-                           </children>
-                        </AnchorPane>
-                     </children></AnchorPane>
-                  <AnchorPane layoutX="24.0" layoutY="139.0" prefHeight="362.0" prefWidth="139.0" style="-fx-background-color: #ccccff;">
-                     <children>
-                        <AnchorPane layoutX="8.0" layoutY="14.0" prefHeight="30.0" prefWidth="125.0" style="-fx-background-color: #f5f5dc;">
-                           <children>
-                              <Label layoutX="46.0" layoutY="4.0" text="To Do" textFill="#00089e">
-                                 <font>
-                                    <Font name="Myanmar Text" size="12.0" />
-                                 </font></Label>
-                           </children>
-                        </AnchorPane>
-                        <Pane fx:id="pnl_post" layoutX="4.0" layoutY="56.0" prefHeight="115.0" prefWidth="131.0" style="-fx-background-color: white;">
-                           <children>
-                              <Label layoutX="2.0" layoutY="19.0" text="Nome" />
-                              <TextField editable="false" layoutX="42.0" layoutY="15.0" prefHeight="25.0" prefWidth="85.0" />
-                              <Label layoutX="7.0" layoutY="49.0" text="Tempo" />
-                              <TextField editable="false" layoutX="55.0" layoutY="45.0" prefHeight="25.0" prefWidth="55.0" />
-                              <Button fx:id="btn_detalhar" layoutX="30.0" layoutY="75.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="17.0" prefWidth="85.0" text="Detalhar" />
-                           </children>
-                        </Pane>
-                        <Button layoutX="103.0" layoutY="332.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="29.0" text="+" />
-                     </children></AnchorPane>
-               </children></Pane>
+            <Label layoutX="120.0" text="Painel de Atividades" textFill="WHITE">
+               <font>
+                  <Font name="Myanmar Text Bold" size="35.0" />
+               </font>
+            </Label>
          </children>
-      </AnchorPane>
-      <VBox layoutX="-2.0" prefHeight="500.0" prefWidth="204.0" style="-fx-background-color: #33ccff;">
+      </Pane>
+           <AnchorPane layoutX="29.0" layoutY="134.0" prefHeight="362.0" prefWidth="139.0" style="-fx-background-color: #ccccff;">
          <children>
-            <Pane prefHeight="115.0" prefWidth="204.0">
+            <AnchorPane layoutX="8.0" layoutY="14.0" prefHeight="30.0" prefWidth="125.0" style="-fx-background-color: #f5f5dc;">
                <children>
-                  <Label layoutX="21.0" layoutY="33.0" prefHeight="68.0" prefWidth="162.0" text="Manager Life" textFill="#05058d">
+                  <Label layoutX="46.0" layoutY="4.0" text="To Do" textFill="#00089e">
                      <font>
-                        <Font name="Monotype Corsiva" size="30.0" />
+                        <Font name="Myanmar Text" size="12.0" />
                      </font>
                   </Label>
                </children>
+            </AnchorPane>
+            <Pane fx:id="pnl_post" layoutX="4.0" layoutY="56.0" prefHeight="115.0" prefWidth="131.0" style="-fx-background-color: white;">
+               <children>
+                  <Label layoutX="2.0" layoutY="19.0" text="Nome" />
+                  <TextField editable="false" layoutX="42.0" layoutY="15.0" prefHeight="25.0" prefWidth="85.0" />
+                  <Label layoutX="7.0" layoutY="49.0" text="Tempo" />
+                  <TextField editable="false" layoutX="55.0" layoutY="45.0" prefHeight="25.0" prefWidth="55.0" />
+                  <Button fx:id="btn_detalhar" layoutX="30.0" layoutY="75.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="17.0" prefWidth="85.0" text="Detalhar" />
+               </children>
             </Pane>
-            <Button id="btn_eventos" fx:id="btn_eventos" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="250.0" stylesheets="@../css/fullpackstyling.css" text="Eventos" textFill="WHITE">
+            <Button layoutX="95.0" layoutY="320.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="39.0" style="-fx-background-color: #ccccff;" text="+" textFill="#380d80">
                <font>
-                  <Font name="Myanmar Text" size="18.0" />
+                  <Font name="System Bold" size="17.0" />
                </font></Button>
-            <Button id="btn_calendario" fx:id="btn_calendario" cache="true" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="250.0" stylesheets="@../css/fullpackstyling.css" text="Calendário" textAlignment="CENTER" textFill="WHITE">
-               <opaqueInsets>
-                  <Insets />
-               </opaqueInsets>
-               <font>
-                  <Font name="Myanmar Text" size="18.0" />
-               </font>
-            </Button>
-            <Button id="btn_painel" fx:id="btn_painel" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="250.0" stylesheets="@../css/fullpackstyling.css" text="Painel Atividades" textFill="WHITE">
-               <font>
-                  <Font name="Myanmar Text" size="18.0" />
-               </font></Button>
-            <Button id="btn_finanças" fx:id="btn_financas" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="250.0" stylesheets="@../css/fullpackstyling.css" text="Finanças" textFill="WHITE">
-               <font>
-                  <Font name="Myanmar Text" size="18.0" />
-               </font></Button>
-            <Button id="btn_config" fx:id="btn_config" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="250.0" stylesheets="@../css/fullpackstyling.css" text="Configurações" textFill="WHITE">
-               <font>
-                  <Font name="Myanmar Text" size="18.0" />
-               </font></Button>
-            <Button id="btn_config" fx:id="btn_logOut" layoutX="10.0" layoutY="345.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="250.0" stylesheets="@../css/fullpackstyling.css" text="Logout" textFill="WHITE">
-               <font>
-                  <Font name="Myanmar Text" size="18.0" />
-               </font>
-            </Button>
          </children>
-      </VBox>
+      </AnchorPane>
+      <AnchorPane layoutX="168.0" layoutY="134.0" prefHeight="362.0" prefWidth="139.0" style="-fx-background-color: #ffcc99;">
+         <children>
+            <AnchorPane layoutX="8.0" layoutY="14.0" prefHeight="30.0" prefWidth="125.0" style="-fx-background-color: #f5f5dc;">
+               <children>
+                  <Label layoutX="26.0" layoutY="4.0" text="In Development" textFill="#00089e" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="307.0" layoutY="134.0" prefHeight="362.0" prefWidth="139.0" style="-fx-background-color: #ff9999;">
+         <children>
+            <AnchorPane layoutX="8.0" layoutY="14.0" prefHeight="30.0" prefWidth="125.0" style="-fx-background-color: #f5f5dc;">
+               <children>
+                  <Label layoutX="34.0" layoutY="4.0" text="To Late" textFill="#00089e" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="446.0" layoutY="134.0" prefHeight="362.0" prefWidth="139.0" style="-fx-background-color: #ccffcc;">
+         <children>
+            <AnchorPane layoutX="8.0" layoutY="11.0" prefHeight="30.0" prefWidth="125.0" style="-fx-background-color: #f5f5dc;">
+               <children>
+                  <Label layoutX="48.0" layoutY="4.0" text="Done" textFill="#00089e">
+                     <font>
+                        <Font name="Myanmar Text" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
    </children>
-   <padding>
-      <Insets left="5.0" right="5.0" top="5.0" />
-   </padding>
 </AnchorPane>
