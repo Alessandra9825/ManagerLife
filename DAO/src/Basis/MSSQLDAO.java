@@ -14,7 +14,7 @@ public class MSSQLDAO <E extends Entidade> extends DAO {
     protected String tabela;
 */
 
-    private final String stringConexao = "jdbc:sqlserver://localhost:1433;databaseName=ManagerLife;";
+    private final String stringConexao = "jdbc:sqlserver://LOCALHOST:1433;databaseName=ManagerLife;";
     private final String usuario = "sa";
     private final String senha = "123456";
     protected String tabela;
@@ -35,8 +35,9 @@ public class MSSQLDAO <E extends Entidade> extends DAO {
     protected Connection getConnection(){
         Connection conexao = null;
         try{
+            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
             conexao = DriverManager.getConnection(stringConexao, usuario, senha);
-        } catch (SQLException throwables) {
+        } catch (SQLException | ClassNotFoundException throwables) {
             throwables.printStackTrace();
         }
 
