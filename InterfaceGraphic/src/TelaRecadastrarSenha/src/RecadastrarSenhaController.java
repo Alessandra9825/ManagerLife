@@ -126,7 +126,7 @@ public class RecadastrarSenhaController implements Initializable {
         NovaSenha solicitacao = new NovaSenha();
         Usuario user = testeRecadastrarSenha();
 
-        if (newPass.equals(confPass) && user.getSenha().equals(oldPass)) {
+        if (!Utilitarios.getInstancia().isNullorEmpty(newPass) && newPass.equals(confPass) && user.getSenha().equals(oldPass)) {
             String erros = solicitacao.newPassword(user.getEmail(), newPass);
             if (Utilitarios.getInstancia().isNullorEmpty(erros)) {
                 passOK();
@@ -138,7 +138,6 @@ public class RecadastrarSenhaController implements Initializable {
         }
 
     }
-
     private void passError() {
         File lockError = new File("InterfaceGraphic/src/TelaRecadastrarSenha/src/image/lockError.png");
         Image lockError_Image = new Image(lockError.toURI().toString());
