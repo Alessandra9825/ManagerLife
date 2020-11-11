@@ -36,8 +36,8 @@ public class Gastos extends Entidade {
         this.valor = valor;
     }
 
-    public java.sql.Date getData() {
-        return (java.sql.Date) data;
+    public Date getData() {
+        return data;
     }
 
     public void setData(Date data) {

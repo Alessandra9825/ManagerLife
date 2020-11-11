@@ -22,10 +22,10 @@
       <TextArea fx:id="txtDescricao" layoutX="118.0" layoutY="210.0" prefHeight="79.0" prefWidth="200.0" />
       <Label layoutX="53.0" layoutY="216.0" text="Descrição:" />
       <Label layoutX="50.0" layoutY="309.0" text="Frequência:" />
-      <Button fx:id="btnAdicionar" layoutX="118.0" layoutY="346.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="95.0" style="-fx-background-color: green;" text="Adicionar" textFill="WHITE" />
-      <Button fx:id="btnCancelar" layoutX="223.0" layoutY="346.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="95.0" text="Cancelar" />
+      <Button fx:id="btnAdicionar" layoutX="118.0" layoutY="346.0" mnemonicParsing="false" onMouseClicked="#adicionarGasto" prefHeight="25.0" prefWidth="95.0" style="-fx-background-color: green;" text="Adicionar" textFill="WHITE" />
+      <Button fx:id="btnCancelar" layoutX="223.0" layoutY="346.0" mnemonicParsing="false" onMouseClicked="#cancelarCadastro" prefHeight="25.0" prefWidth="95.0" text="Cancelar" />
       <Label layoutX="76.0" layoutY="56.0" text="Tipo:" />
-      <DatePicker fx:id="txtDataGasto" layoutX="118.0" layoutY="174.0" prefHeight="25.0" prefWidth="200.0" />
+      <DatePicker fx:id="dtpDataGasto" layoutX="118.0" layoutY="174.0" prefHeight="25.0" prefWidth="200.0" />
       <ComboBox fx:id="cbFrequencia" layoutX="118.0" layoutY="305.0" prefHeight="25.0" prefWidth="200.0" />
    </children>
 </AnchorPane>
