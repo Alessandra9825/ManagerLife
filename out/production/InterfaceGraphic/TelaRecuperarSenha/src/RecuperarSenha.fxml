@@ -21,11 +21,7 @@
                   <Font name="Bodoni MT Black" size="9.0" />
                </font></Button>
             <TextField fx:id="email_txt" layoutX="74.0" layoutY="165.0" prefHeight="25.0" prefWidth="200.0" promptText="Informe seu E-mail" style="-fx-background-radius: 10px;" />
-<<<<<<< HEAD
-            <Button layoutX="96.0" layoutY="220.0" mnemonicParsing="false" onAction="#recuperarSenha" style="-fx-background-color: #0598ff; -fx-background-radius: 20px;" text="Recuperar senha " textFill="WHITE" />
-=======
             <Button fx:id="recuperar_btn" layoutX="96.0" layoutY="220.0" mnemonicParsing="false" onAction="#recuperarSenha" style="-fx-background-color: #0598ff; -fx-background-radius: 20px;" text="Recuperar senha " textFill="WHITE" />
->>>>>>> backlog
             <ImageView fx:id="imageEmail" fitHeight="30.0" fitWidth="30.0" layoutX="27.0" layoutY="163.0" pickOnBounds="true" preserveRatio="true" />
             <TextField fx:id="title" alignment="CENTER" cacheShape="false" centerShape="false" editable="false" focusTraversable="false" layoutX="20.0" layoutY="71.0" prefHeight="50.0" prefWidth="260.0" scaleShape="false" style="-fx-background-radius: 15px;" text="Recuperar Senha">
                <font>
