@@ -3,17 +3,15 @@ package Validacao;
 import Auditoria.GerenciadorAuditoria;
 import Basis.Entidade;
 import vos.PostIt;
-import vos.Usuario;
-
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Date;
+
 
 public class ValidaPostIt <E extends Entidade> extends Validacao  {
     private final String meth = "ValidaPostIt - ";
 
-    public ValidaPostIt(Class entityClass) {
-        super(entityClass);
+    public ValidaPostIt() {
+        super(PostIt.class);
     }
 
     @Override

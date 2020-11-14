@@ -9,13 +9,13 @@ public class PostIt extends Entidade {
     @CampoNoBanco(nome = "nome", chave = false)
     private String nome;
 
-    @CampoNoBanco(nome = "tempo", chave = false)
+    @CampoNoBanco(nome = "tempoEstimado", chave = false)
     private String tempo;
 
     @CampoNoBanco(nome = "descricao", chave = false)
     private String descricao;
 
-    @CampoNoBanco(nome = "situacao", chave = false)
+    @CampoNoBanco(nome = "situacaoPostit_id", chave = false)
     private String situacao;
 
     public String getNome() {

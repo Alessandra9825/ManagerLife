@@ -14,7 +14,7 @@ public class Acesso {
         return userRepo.getSenha().equals(user.getSenha());
     }
 
-    public boolean validaUsuario(Usuario user){
+    public boolean validaUsuario(Usuario user) throws Exception {
         Repositorio repositorio = new RepositorioMSSQL();
         Usuario usuario = (Usuario)repositorio.localiza(user.getEmail(), enumEntidade.USUARIO);
         if(usuario != null)

@@ -35,5 +35,6 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" exported="" name="mssql-jdbc-8.4.1.jre8" level="application" />
   </component>
 </module>
