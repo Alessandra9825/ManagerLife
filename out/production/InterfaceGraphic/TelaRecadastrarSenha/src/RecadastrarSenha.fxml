@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="500.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TelaRecadastrarSenha.src.RecadastrarSenhaController">
+   <left>
+      <AnchorPane prefHeight="200.0" prefWidth="150.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="result_image" fitHeight="150.0" fitWidth="150.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/lock.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="300.0" prefWidth="350.0" style="-fx-background-color: #0598ff;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="recadastrar_btn" layoutX="57.0" layoutY="247.0" mnemonicParsing="false" onAction="#recadastrar" style="-fx-background-radius: 15px;" text="Recadastrar">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="cancelar_btn" layoutX="236.0" layoutY="247.0" mnemonicParsing="false" onAction="#exit" style="-fx-background-radius: 15px;" text="Cancelar">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Button>
+            <TextField fx:id="oldPass_txt" layoutX="57.0" layoutY="102.0" prefHeight="25.0" prefWidth="260.0" promptText="Senha Antiga" />
+            <TextField fx:id="confPass_txt" layoutX="57.0" layoutY="200.0" prefHeight="25.0" prefWidth="260.0" promptText="Nova Senha" />
+            <TextField fx:id="title" alignment="CENTER" editable="false" layoutX="22.0" layoutY="25.0" prefHeight="55.0" prefWidth="307.0" style="-fx-background-color: transparent;" text="Recadastramento de Senha">
+               <font>
+                  <Font name="Baskerville Old Face" size="22.0" />
+               </font>
+            </TextField>
+            <Button fx:id="oldPass_btn" layoutX="22.0" layoutY="102.0" mnemonicParsing="false" onAction="#maskField" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: transparent;" />
+            <Button fx:id="newPass_btn" layoutX="22.0" layoutY="150.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#maskField" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: transparent;" />
+            <Button fx:id="confPass_btn" layoutX="22.0" layoutY="200.0" mnemonicParsing="false" onAction="#maskField" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: transparent;" />
+            <TextField fx:id="newPass_txt" layoutX="57.0" layoutY="150.0" prefHeight="25.0" prefWidth="260.0" promptText="Nova Senha" />
+         </children></AnchorPane>
+   </center>
+</BorderPane>

@@ -12,7 +12,7 @@
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
-          <root url="jar://$USER_HOME$/Downloads/javax.mail.jar!/" />
+          <root url="jar://$USER_HOME$/Desktop/lib java/activation.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -21,12 +21,32 @@
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
-          <root url="jar://$USER_HOME$/Downloads/mailactivation/mail.jar!/" />
+          <root url="jar://$USER_HOME$/Desktop/lib java/mail.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" name="mailactivation" level="application" />
+    <orderEntry type="library" exported="" name="mailactivation" level="application" />
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="file://$USER_HOME$/Desktop/lib java" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://$USER_HOME$/Desktop/lib java/sqljdbc_8.4/ptb/samples/adaptive" />
+          <root url="file://$USER_HOME$/Desktop/lib java/sqljdbc_8.4/ptb/samples/alwaysencrypted" />
+          <root url="file://$USER_HOME$/Desktop/lib java/sqljdbc_8.4/ptb/samples/azureactivedirectoryauthentication" />
+          <root url="file://$USER_HOME$/Desktop/lib java/sqljdbc_8.4/ptb/samples/connections" />
+          <root url="file://$USER_HOME$/Desktop/lib java/sqljdbc_8.4/ptb/samples/constrained" />
+          <root url="file://$USER_HOME$/Desktop/lib java/sqljdbc_8.4/ptb/samples/dataclassification" />
+          <root url="file://$USER_HOME$/Desktop/lib java/sqljdbc_8.4/ptb/samples/datatypes" />
+          <root url="file://$USER_HOME$/Desktop/lib java/sqljdbc_8.4/ptb/samples/resultsets" />
+          <root url="file://$USER_HOME$/Desktop/lib java/sqljdbc_8.4/ptb/samples/sparse" />
+        </SOURCES>
+        <jarDirectory url="file://$USER_HOME$/Desktop/lib java" recursive="false" />
+      </library>
+    </orderEntry>
   </component>
 </module>

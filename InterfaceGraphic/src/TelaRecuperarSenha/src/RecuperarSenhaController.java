@@ -5,6 +5,7 @@ import Utilitarios.Utilitarios;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -16,11 +17,11 @@ import java.util.ResourceBundle;
 
 public class RecuperarSenhaController implements Initializable {
 
-    private Stage stage;
     @FXML private ImageView imageLock;
     @FXML private ImageView imageEmail;
     @FXML private TextField title;
     @FXML private TextField email_txt;
+    @FXML private Button recuperar_btn;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -37,13 +38,14 @@ public class RecuperarSenhaController implements Initializable {
 
     @FXML
     public void exit(ActionEvent event){
-        stage = (Stage) title.getScene().getWindow();
+        Stage stage = (Stage) title.getScene().getWindow();
         stage.close();
     }
 
     @FXML
     public void recuperarSenha(ActionEvent event){
         String email = email_txt.getText();
+        recuperar_btn.setDisable(true);
 
         if(Utilitarios.getInstancia().isNullorEmpty(email))
             emailEmpty();
@@ -65,6 +67,8 @@ public class RecuperarSenhaController implements Initializable {
 
         title.setText(erro);
         title.setStyle("-fx-text-fill: red; -fx-font-size: 16px;");
+
+        recuperar_btn.setDisable(false);
     }
 
     private void newPassSucess() {
@@ -75,7 +79,7 @@ public class RecuperarSenhaController implements Initializable {
         title.setText("Senha enviado com Sucesso!");
         title.setStyle("-fx-text-fill: green; -fx-font-size: 16px;");
 
-        stage.close();
+        recuperar_btn.setDisable(true);
     }
 
     private void emailEmpty(){
@@ -85,5 +89,7 @@ public class RecuperarSenhaController implements Initializable {
 
         title.setText("Informe um e-mail!");
         title.setStyle("-fx-text-fill: red; -fx-font-size: 22px;");
+
+        recuperar_btn.setDisable(true);
     }
 }
