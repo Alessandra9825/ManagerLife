@@ -32,7 +32,7 @@ public class PostMSSQL <E extends Entidade> extends MSSQLDAO {
     }
     @Override
     protected String getInsertCommand(Entidade entidade) {
-        return "INSERT INTO Post_it (nome,descricao,situacaoPostit_id,tempoEstimado) VALUES(?,?,?,?) ";
+        return "INSERT INTO Post_it (usuario_id,nome,descricao,situacaoPostit_id,tempoEstimado) VALUES('1',?,?,?,?) ";
     }
 
     @Override

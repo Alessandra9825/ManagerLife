@@ -42,3 +42,28 @@
 2020-11-14T18:20:35.909-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!
 2020-11-14T18:25:21.045-03:00[America/Sao_Paulo] - PostIt - PostIt não cadastrado
 2020-11-14T18:25:21.055-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!
+2020-11-16T19:54:31.792-03:00[America/Sao_Paulo] - PostIt - PostIt não cadastrado
+2020-11-16T19:54:31.848-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!
+2020-11-16T19:55:20.911-03:00[America/Sao_Paulo] - PostIt - PostIt não cadastrado
+2020-11-16T19:55:20.919-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!
+2020-11-16T19:55:44.281-03:00[America/Sao_Paulo] - PostIt - PostIt não cadastrado
+2020-11-16T19:55:47.548-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!
+2020-11-16T20:23:41.646-03:00[America/Sao_Paulo] - PostIt - PostIt não cadastrado
+2020-11-16T20:23:56.812-03:00[America/Sao_Paulo] - PostIt - PostIt não cadastrado
+2020-11-16T20:23:56.819-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!
+2020-11-16T20:24:16.621-03:00[America/Sao_Paulo] - PostIt - PostIt não cadastrado
+2020-11-16T20:24:16.621-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!
+2020-11-16T20:26:01.644-03:00[America/Sao_Paulo] - PostIt - PostIt não cadastrado
+2020-11-16T20:26:01.651-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!
+2020-11-16T20:31:41.588-03:00[America/Sao_Paulo] - PostIt - PostIt não cadastrado
+2020-11-16T20:31:41.596-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!
+2020-11-16T20:32:49.920-03:00[America/Sao_Paulo] - PostIt - PostIt não cadastrado
+2020-11-16T20:32:53.912-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!
+2020-11-16T20:38:13.136-03:00[America/Sao_Paulo] - PostIt - PostIt não cadastrado
+2020-11-16T20:38:13.145-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!
+2020-11-16T20:38:45.571-03:00[America/Sao_Paulo] - PostIt - PostIt não cadastrado
+2020-11-16T20:38:45.578-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!
+2020-11-16T20:43:02.083-03:00[America/Sao_Paulo] - PostIt - PostIt não cadastrado
+2020-11-16T20:43:02.092-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!
+2020-11-16T20:48:00.634-03:00[America/Sao_Paulo] - PostIt - PostIt não cadastrado
+2020-11-16T20:48:00.643-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!
