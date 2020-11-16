@@ -1,14 +1,21 @@
 package Basis;
 
 import Annotations.CampoNoBanco;
+import vos.PostIt;
 
 import java.lang.reflect.Field;
 import java.sql.*;
 import java.util.ArrayList;
 
-public class MSSQLDAO <E extends Entidade> extends DAO {
-
+public abstract class MSSQLDAO <E extends Entidade> extends DAO {
+/*
     private final String stringConexao = "jdbc:sqlserver://sql5097.site4now.net;databaseName=DB_A69CF7_ManagerLife;";
+    private final String usuario = "DB_A69CF7_ManagerLife_admin";
+    private final String senha = "managerLife1234";
+    protected String tabela;
+*/
+
+    private final String stringConexao = "jdbc:sqlserver://SQL5097.site4now.net;databaseName= DB_A69CF7_ManagerLife;";
     private final String usuario = "DB_A69CF7_ManagerLife_admin";
     private final String senha = "managerLife1234";
     protected String tabela;
@@ -29,8 +36,9 @@ public class MSSQLDAO <E extends Entidade> extends DAO {
     protected Connection getConnection(){
         Connection conexao = null;
         try{
+            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
             conexao = DriverManager.getConnection(stringConexao, usuario, senha);
-        } catch (SQLException throwables) {
+        } catch (SQLException | ClassNotFoundException throwables) {
             throwables.printStackTrace();
         }
 
@@ -129,4 +137,5 @@ public class MSSQLDAO <E extends Entidade> extends DAO {
         //To change body of generated methods, choose Tools | Templates.
         throw new UnsupportedOperationException("Implementar na classe filha.");
     }
+
 }

@@ -12,14 +12,14 @@ import java.util.logging.Logger;
 
 public class RepositorioMSSQL extends Repositorio {
     @Override
-    public Entidade seleciona(int id, enumEntidade tipoEntidade) {
+    public Entidade seleciona(int id, enumEntidade tipoEntidade) throws Exception {
         DAO dao = FabricaDAO.fabrica(tipoEntidade);
         Entidade entidade = dao.seleciona(id);
         return entidade;
     }
 
     @Override
-    public Entidade localiza(String codigo, enumEntidade tipoEntidade) {
+    public Entidade localiza(String codigo, enumEntidade tipoEntidade) throws Exception {
         DAO dao = FabricaDAO.fabrica(tipoEntidade);
         Entidade entidade = null;
         try{
@@ -32,7 +32,7 @@ public class RepositorioMSSQL extends Repositorio {
     }
 
     @Override
-    public boolean salvar(Entidade entidade, enumEntidade tipoEntidade) {
+    public boolean salvar(Entidade entidade, enumEntidade tipoEntidade) throws Exception {
         DAO dao = FabricaDAO.fabrica(tipoEntidade);
         boolean salvado = false;
 

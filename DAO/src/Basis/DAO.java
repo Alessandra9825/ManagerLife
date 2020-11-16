@@ -7,7 +7,8 @@ public abstract class DAO <E extends Entidade> {
     protected Class<E> entityClass;
 
     public DAO(Class<E> entityClass){
-        try {
+        try
+        {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
@@ -20,7 +21,8 @@ public abstract class DAO <E extends Entidade> {
     public abstract ArrayList<E> lista() throws SQLException;
 
     protected E getInstanceOfE(){
-        try{
+        try
+        {
             return entityClass.newInstance();
         }
         catch (IllegalAccessException | InstantiationException e){

@@ -2,12 +2,16 @@ package TelaGerenciaPostIt.src;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Pos;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class GerenciaPost extends Application {
 
@@ -21,5 +25,28 @@ public class GerenciaPost extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("PostIt.fxml"));
         primaryStage.setScene(new Scene(root, 495, 350));
         primaryStage.show();
+    }
+    public void popupError(ArrayList<String> erros){
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("Error Dialog");
+        alert.setHeaderText("Ops, Ocorreu um erro!");
+
+        String text = "";
+
+        for (int i = 0; i < erros.size(); i++){
+            text += erros.get(i) + "\n";
+        }
+
+        alert.setContentText(text);
+
+        alert.showAndWait();
+    }
+    public void popupSuccess(Stage stage){
+        VBox raiz = new VBox(20);
+        raiz.setAlignment(Pos.CENTER);
+        raiz.getChildren().addAll();
+        Scene tela =new Scene(raiz,450,200);
+        stage.setScene(tela);
+        stage.show();
     }
 }

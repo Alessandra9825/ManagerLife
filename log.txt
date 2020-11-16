@@ -24,17 +24,3 @@
 2020-11-02T19:22:23.735-03:00[America/Sao_Paulo] - newPassword - Senha cadastrada com sucesso!
 2020-11-02T19:25:26.802-03:00[America/Sao_Paulo] - sendEmail - Sucesso!
 2020-11-02T19:25:26.810-03:00[America/Sao_Paulo] - newPassword - Senha cadastrada com sucesso!
-2020-11-03T19:59:51.522-03:00[America/Sao_Paulo] - ValidaLogin - Email vazio.
-2020-11-03T19:59:51.539-03:00[America/Sao_Paulo] - ValidaLogin - Senha vazio.
-2020-11-03T19:59:55.524-03:00[America/Sao_Paulo] - ValidaLogin - Email vazio.
-2020-11-03T19:59:55.524-03:00[America/Sao_Paulo] - ValidaLogin - Senha vazio.
-2020-11-03T21:13:42.128-03:00[America/Sao_Paulo] - Acesso - Usuário não cadastrado.
-2020-11-03T21:13:42.138-03:00[America/Sao_Paulo] - Login - Usuário não cadastrado.
-2020-11-03T21:24:50.358-03:00[America/Sao_Paulo] - ValidaLogin - Email vazio.
-2020-11-03T21:24:50.369-03:00[America/Sao_Paulo] - ValidaLogin - Senha vazio.
-2020-11-03T21:24:52.351-03:00[America/Sao_Paulo] - ValidaLogin - Email vazio.
-2020-11-03T21:24:52.351-03:00[America/Sao_Paulo] - ValidaLogin - Senha vazio.
-2020-11-03T21:32:16.429-03:00[America/Sao_Paulo] - sendEmail - Sucesso!
-2020-11-03T21:32:16.439-03:00[America/Sao_Paulo] - newPassword - Senha cadastrada com sucesso!
-2020-11-03T21:33:14.456-03:00[America/Sao_Paulo] - sendEmail - Sucesso!
-2020-11-03T21:33:14.464-03:00[America/Sao_Paulo] - newPassword - Senha cadastrada com sucesso!

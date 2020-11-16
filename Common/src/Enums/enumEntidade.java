@@ -5,7 +5,8 @@ import vos.SenhasAntigas;
 public enum enumEntidade {
 
     USUARIO("usuario"),
-    SENHA_ANTIGA("senhaAntiga");
+    SENHA_ANTIGA("senhaAntiga"),
+    POSTIT("postIt");
 
     private String descricao;
 

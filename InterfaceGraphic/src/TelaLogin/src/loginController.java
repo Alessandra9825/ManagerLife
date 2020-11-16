@@ -56,7 +56,7 @@ public class loginController implements Initializable {
     }
 
     @FXML
-    public void Login_Button(ActionEvent event) {
+    public void Login_Button(ActionEvent event) throws Exception {
         ValidaLogin validacao = new ValidaLogin();
         Usuario user = new Usuario();
         ArrayList<String> erros;

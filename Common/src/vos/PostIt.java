@@ -9,14 +9,14 @@ public class PostIt extends Entidade {
     @CampoNoBanco(nome = "nome", chave = false)
     private String nome;
 
-    @CampoNoBanco(nome = "tempo", chave = false)
+    @CampoNoBanco(nome = "tempoEstimado", chave = false)
     private String tempo;
 
     @CampoNoBanco(nome = "descricao", chave = false)
     private String descricao;
 
-    @CampoNoBanco(nome = "situacao", chave = false)
-    private String situacao;
+    @CampoNoBanco(nome = "situacaoPostit_id", chave = false)
+    private Integer situacao;
 
     public String getNome() {
         return nome;
@@ -42,11 +42,11 @@ public class PostIt extends Entidade {
         this.descricao = descricao;
     }
 
-    public String getSituacao() {
+    public Integer getSituacao() {
         return situacao;
     }
 
-    public void setSituacao(String situacao) {
+    public void setSituacao(Integer situacao) {
         this.situacao = situacao;
     }
 }

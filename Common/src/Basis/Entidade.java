@@ -1,5 +1,4 @@
 package Basis;
-
 import Annotations.CampoNoBanco;
 
 public class Entidade {

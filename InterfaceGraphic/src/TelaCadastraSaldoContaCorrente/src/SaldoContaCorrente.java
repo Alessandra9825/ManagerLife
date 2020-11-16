@@ -17,6 +17,7 @@ public class SaldoContaCorrente extends Application {
     public void start(Stage primaryStage) throws Exception{
         primaryStage.initStyle(StageStyle.UNDECORATED);
         Parent root = FXMLLoader.load(getClass().getResource("SaldoContaCorrente.fxml"));
+        primaryStage.setTitle("Adicionar saldo CC");
         primaryStage.setScene(new Scene(root, 400, 400));
         primaryStage.show();
     }

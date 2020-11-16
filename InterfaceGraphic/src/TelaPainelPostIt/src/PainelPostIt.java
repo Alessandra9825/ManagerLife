@@ -20,6 +20,6 @@ public class PainelPostIt extends Application {
         primaryStage.initStyle(StageStyle.UNDECORATED);
         Parent root = FXMLLoader.load(getClass().getResource("Painel.fxml"));
         primaryStage.setScene(new Scene(root, 600, 500));
-        primaryStage.show();
+        primaryStage.showAndWait();
     }
 }
