@@ -7,7 +7,5 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="TelaCadastraUsuario" />
-    <orderEntry type="module" module-name="InterfaceGraphic" />
   </component>
 </module>
