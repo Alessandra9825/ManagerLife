@@ -1,25 +1,24 @@
 package TelaGerenciaPostIt.src;
-
 import AcessoPostIt.AcessarPostIt;
 import Auditoria.GerenciadorAuditoria;
-import TelaCadastraSaldoContaCorrente.src.Controller;
 import TelaPainelPostIt.src.ControllerPainel;
 import Validacao.ValidaPostIt;
-import Validacao.ValidaUsuario;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import vos.PostIt;
-import vos.Usuario;
 
-import java.sql.Date;
-import java.time.Instant;
-import java.time.ZoneId;
+import java.net.URL;
 import java.util.ArrayList;
+import java.util.Observable;
+import java.util.ResourceBundle;
 
-public class ControllerGPost {
+public class ControllerGPost implements Initializable {
     private GerenciaPost alert = new GerenciaPost();
     //botoes painel post-It
     @FXML
@@ -52,7 +51,7 @@ public class ControllerGPost {
             post.setNome(txt_nome.getText());
             post.setTempo(txt_tempo.getText());
             post.setDescricao(txtA_descricao.getText());
-            post.setSituacao(cb_situacao.getId());
+            post.setSituacao(cb_situacao.getSelectionModel().getSelectedIndex());
 
             erros = validacao.ValidaDados(post);
 
@@ -64,10 +63,8 @@ public class ControllerGPost {
             {
                 AcessarPostIt postSalvar = new AcessarPostIt();
                 Boolean cadastrado = postSalvar.salvarPostIt(post);
-                //tenta cadastrar no banco o novo post it
-                //cria o postIt na tela
-                AnchorPane pane = FXMLLoader.load(getClass().getResource("MiniPostIt.fxml"));
-                tela.an_do.getChildren().add(pane);
+                //AnchorPane pane = FXMLLoader.load(getClass().getResource("../../TelaMiniPostIt/MiniPostIt.fxml"));
+                //tela.an_do.getChildren().add(pane);
 
                 if(!cadastrado)
                 {
@@ -89,4 +86,10 @@ public class ControllerGPost {
         }
     }
 
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        ObservableList list = FXCollections.observableArrayList("Do","Development","Late","Done");
+        cb_situacao.setItems(list);
+    }
 }

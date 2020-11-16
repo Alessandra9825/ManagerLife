@@ -31,7 +31,7 @@ public class ValidaPostIt <E extends Entidade> extends Validacao  {
                 GerenciadorAuditoria.getInstancia().adicionaMsgAuditoria(meth + "Descrição vazio.\n");
             }
 
-            if(isNullorEmpty(post.getSituacao())){
+            if(post.getSituacao()==null){
                 erros.add("Informe uma situação inicial!");
                 GerenciadorAuditoria.getInstancia().adicionaMsgAuditoria(meth + "Situação vazia.\n");
             }

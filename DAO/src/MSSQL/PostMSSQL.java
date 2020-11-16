@@ -2,7 +2,6 @@ package MSSQL;
 import Basis.Entidade;
 import Basis.MSSQLDAO;
 import vos.PostIt;
-
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -21,7 +20,7 @@ public class PostMSSQL <E extends Entidade> extends MSSQLDAO {
         try{
             entidade.setId(rs.getInt("id"));
             entidade.setNome(rs.getString("nome"));
-            entidade.setSituacao(rs.getString("situacao"));
+            entidade.setSituacao(rs.getInt("situacao"));
             entidade.setDescricao(rs.getString("descricao"));
             entidade.setTempo(rs.getString("tempo"));
 
@@ -36,11 +35,15 @@ public class PostMSSQL <E extends Entidade> extends MSSQLDAO {
         return "INSERT INTO Post_it (nome,descricao,situacaoPostit_id,tempoEstimado) VALUES(?,?,?,?) ";
     }
 
-    protected void getInsertStatement(PostIt post, PreparedStatement stmt) throws SQLException {
+    @Override
+    protected PreparedStatement getInsertStatement(Entidade entidade, PreparedStatement stmt) throws SQLException
+    {
+        PostIt post = (PostIt) entidade;
         stmt.setString(1, post.getNome());
         stmt.setString(2, post.getDescricao());
-        stmt.setString(3,post.getSituacao());
+        stmt.setInt(3,post.getSituacao());
         stmt.setString(4,post.getTempo());
+        return stmt;
     }
     /*public Entidade buscaPost(String nome) throws SQLException
     {
