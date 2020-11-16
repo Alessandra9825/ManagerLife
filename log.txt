@@ -38,3 +38,9 @@
 2020-11-03T21:32:16.439-03:00[America/Sao_Paulo] - newPassword - Senha cadastrada com sucesso!
 2020-11-03T21:33:14.456-03:00[America/Sao_Paulo] - sendEmail - Sucesso!
 2020-11-03T21:33:14.464-03:00[America/Sao_Paulo] - newPassword - Senha cadastrada com sucesso!
+2020-11-10T17:10:48.550-03:00[America/Sao_Paulo] - Acesso - Usuário não cadastrado
+2020-11-10T17:10:48.563-03:00[America/Sao_Paulo] - Login - Usuário não cadastrado
+2020-11-10T17:11:07.381-03:00[America/Sao_Paulo] - Acesso - Usuário não cadastrado
+2020-11-10T17:11:07.381-03:00[America/Sao_Paulo] - Login - Usuário não cadastrado
+2020-11-10T17:12:05.898-03:00[America/Sao_Paulo] - Acesso - Usuário não cadastrado
+2020-11-10T17:12:05.898-03:00[America/Sao_Paulo] - Login - Usuário não cadastrado

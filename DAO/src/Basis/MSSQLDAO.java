@@ -84,7 +84,7 @@ public class MSSQLDAO <E extends Entidade> extends DAO {
         }
         if(campos.length() > 0)
             campos = campos.substring(0, campos.length()-1);
-        return "select " + campos + " from " + tabela + " where " + chave + " = ?";
+        return "select id," + campos + " from " + tabela + " where " + chave + " = ?";
         //return "select * from " + tabela;
     }
 

@@ -38,7 +38,7 @@ public class NovaSenha {
         try{
             UsuarioMSSQL dao = new UsuarioMSSQL();
             Usuario user = (Usuario)dao.buscaEmail(email);
-            if(user != null){
+            if(user != null) {
                 if(Utilitarios.getInstancia().isNullorEmpty(senha))
                     senha = generateRandomPassword();
 
