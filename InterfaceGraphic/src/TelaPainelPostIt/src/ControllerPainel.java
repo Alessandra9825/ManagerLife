@@ -23,6 +23,7 @@ public class ControllerPainel implements Initializable {
     @FXML
     public AnchorPane an_do;
 
+    String ret="";
     public void handleButtonAction(javafx.event.ActionEvent event) throws Exception {
         if (event.getSource() == btn_detalhar || event.getSource() == btn_adicionar)
         {
