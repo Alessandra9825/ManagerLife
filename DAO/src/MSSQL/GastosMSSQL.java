@@ -4,15 +4,15 @@ import Basis.Entidade;
 import Basis.MSSQLDAO;
 import com.sun.org.apache.xerces.internal.impl.dv.dtd.ENTITYDatatypeValidator;
 import vos.Gastos;
-
 import java.sql.*;
+import java.text.SimpleDateFormat;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class GastosMSSQL <E extends Entidade> extends MSSQLDAO {
     public GastosMSSQL() {
         super(Gastos.class);
-        setTabela("Gasto");
+        setTabela("Gastos");
     }
 
     @Override
@@ -31,22 +31,20 @@ public class GastosMSSQL <E extends Entidade> extends MSSQLDAO {
         return (E) entidade;
     }
 
-
     public Entidade inserirGastos(Entidade entidade) throws SQLException {
         Gastos gastos = (Gastos) entidade;
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
         try (Connection conexao = getConnection()) {
-            String insertSQL = "insert into Gasto(tipo , Valor, data, descricao, frequencia) " +
+            String insertSQL = "insert into Gastos(tipo , Valor, data, descricao, frequencia) " +
                     "values (?, ?, ?, ?, ?)";
-            try (PreparedStatement statement = getStatement(insertSQL, conexao)) {
+            try (PreparedStatement statement = conexao.prepareStatement(insertSQL)) {
                 statement.setString(1, gastos.getTipo());
                 statement.setDouble(2, gastos.getValor());
-                statement.setDate(3, (Date) gastos.getData());
+                statement.setString(3, formatter.format(gastos.getData()));
                 statement.setString(4, gastos.getDescricao());
                 statement.setString(5, gastos.getFrequencia());
-                try(ResultSet rs = statement.executeQuery()){
-                    if(rs.first())
-                        gastos = (Gastos) preencheEntidade(rs);
-                }
+
+                statement.executeUpdate();
             }
         }
         return gastos;

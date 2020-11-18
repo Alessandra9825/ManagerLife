@@ -6,13 +6,13 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import vos.Gastos;
+
+import javax.swing.*;
 import java.net.URL;
-import java.sql.Date;
+import java.util.Date;
 import java.sql.SQLException;
 import java.time.Instant;
-import java.time.LocalDate;
 import java.time.ZoneId;
-import java.time.format.DateTimeFormatter;
 import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
@@ -22,12 +22,6 @@ public class Controller implements Initializable {
     @FXML private TextArea txtDescricao;
     @FXML private ComboBox cbFrequencia;
     public GastosMSSQL dao;
-
-    private final LocalDate datePicker(String dateString){
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-        LocalDate localDate = LocalDate.parse(dateString, formatter);
-        return localDate;
-    }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -40,16 +34,23 @@ public class Controller implements Initializable {
 
     public void adicionarGasto(MouseEvent mouseEvent) throws SQLException {
         Gastos gasto = new Gastos();
+        try {
             gasto.setId(gasto.getId());
             gasto.setTipo(getTipoGasto());
             gasto.setValor(Double.parseDouble(txtValor.getText()));
             gasto.setDescricao(txtDescricao.getText());
-            if(dtpDataGasto.getValue() != null){
+            if (dtpDataGasto.getValue() != null) {
                 gasto.setData(Date.from(Instant.from(dtpDataGasto.getValue().atStartOfDay(ZoneId.systemDefault()))));
             }
             gasto.setFrequencia((String) cbFrequencia.getSelectionModel().getSelectedItem());
             dao = new GastosMSSQL();
             dao.inserirGastos(gasto);
+
+            JOptionPane.showMessageDialog(null, "Gasto inserido com sucesso! ");
+
+        } catch (Exception e) {
+                  JOptionPane.showMessageDialog(null, e);
+        }
     }
 
     public void cancelarCadastro(MouseEvent mouseEvent) {

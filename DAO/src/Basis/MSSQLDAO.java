@@ -8,9 +8,9 @@ import java.util.ArrayList;
 
 public class MSSQLDAO <E extends Entidade> extends DAO {
 
-    private final String stringConexao = "jdbc:sqlserver://DESKTOP-4ACHV2H:1433;databaseName=ManagerLife;";
-    private final String usuario = "sa";
-    private final String senha = "123456";
+    private final String stringConexao = "jdbc:sqlserver://sql5097.site4now.net:1433;databaseName=DB_A69CF7_ManagerLife;";
+    private final String usuario = "DB_A69CF7_ManagerLife_admin";
+    private final String senha = "managerLife1234";
     protected String tabela;
 
     public MSSQLDAO(Class entityClass) {
