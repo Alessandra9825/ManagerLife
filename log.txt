@@ -12,3 +12,7 @@
 2020-10-31T19:11:25.596-03:00[America/Sao_Paulo] - newPassword - Senha cadastrada com sucesso!
 2020-11-06T23:08:58.399-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!
 2020-11-08T19:08:50.219-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!
+2020-11-18T20:14:58.208-03:00[America/Sao_Paulo] - ValidaGasto - Valor zerado ou negativo. 
+
+2020-11-18T20:15:26.050-03:00[America/Sao_Paulo] - ValidaGasto - Descrição vazia. 
+

@@ -1,6 +1,7 @@
 package TelaCadastrarGastos.src;
 import Enums.EnumFrequencia;
 import MSSQL.GastosMSSQL;
+import Validacao.ValidaGasto;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
@@ -9,6 +10,7 @@ import vos.Gastos;
 
 import javax.swing.*;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.Date;
 import java.sql.SQLException;
 import java.time.Instant;
@@ -34,6 +36,9 @@ public class Controller implements Initializable {
 
     public void adicionarGasto(MouseEvent mouseEvent) throws SQLException {
         Gastos gasto = new Gastos();
+        ArrayList<String> erros;
+        ValidaGasto validacao = new ValidaGasto();
+
         try {
             gasto.setId(gasto.getId());
             gasto.setTipo(getTipoGasto());
@@ -46,10 +51,17 @@ public class Controller implements Initializable {
             dao = new GastosMSSQL();
             dao.inserirGastos(gasto);
 
-            JOptionPane.showMessageDialog(null, "Gasto inserido com sucesso! ");
+            erros = validacao.ValidaDados(gasto);
+
+            if(erros.size() > 0){
+                popupError(erros);
+            }
+            else {
+                JOptionPane.showMessageDialog(null, "Gasto inserido com sucesso! ");
+            }
 
         } catch (Exception e) {
-                  JOptionPane.showMessageDialog(null, e);
+                  JOptionPane.showMessageDialog(null, e.getMessage());
         }
     }
 
@@ -63,5 +75,21 @@ public class Controller implements Initializable {
         }
         else
             return rbGastoGeral.getText();
+    }
+
+    public void popupError(ArrayList<String> erros){
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("Error Dialog");
+        alert.setHeaderText("Ops, Ocorreu um erro!");
+
+        String text = "";
+
+        for (int i = 0; i < erros.size(); i++){
+            text += erros.get(i) + "\n";
+        }
+
+        alert.setContentText(text);
+
+        alert.showAndWait();
     }
 }
