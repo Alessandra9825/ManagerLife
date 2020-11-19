@@ -42,11 +42,10 @@ public class GerenciaPost extends Application {
         alert.showAndWait();
     }
     public void popupSuccess(Stage stage){
-        VBox raiz = new VBox(20);
-        raiz.setAlignment(Pos.CENTER);
-        raiz.getChildren().addAll();
-        Scene tela =new Scene(raiz,450,200);
-        stage.setScene(tela);
-        stage.show();
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Sucesso");
+        alert.setHeaderText("Post-It Cadastrado com sucesso!");
+
+        alert.showAndWait();
     }
 }

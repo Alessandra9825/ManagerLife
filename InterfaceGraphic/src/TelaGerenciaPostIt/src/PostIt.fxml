@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="345.0" prefWidth="496.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TelaGerenciaPostIt.src.ControllerGPost">
+<AnchorPane fx:id="an_PostIt" prefHeight="345.0" prefWidth="496.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TelaGerenciaPostIt.src.ControllerGPost">
    <children>
       <AnchorPane prefHeight="350.0" prefWidth="496.0" style="-fx-background-color: #66ccff;">
          <children>

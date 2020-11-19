@@ -21,7 +21,7 @@
       </Pane>
            <AnchorPane fx:id="an_do" layoutX="34.0" layoutY="135.0" prefWidth="134.0" style="-fx-background-color: #ccccff;">
          <children>
-            <Button fx:id="btn_adicionar" layoutX="95.0" layoutY="320.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="40.0" prefWidth="39.0" style="-fx-background-color: #ccccff;" text="+" textFill="#380d80">
+            <Button fx:id="btn_adicionar" layoutX="91.0" layoutY="320.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="40.0" prefWidth="39.0" style="-fx-background-color: #ccccff;" text="+" textFill="#380d80">
                <font>
                   <Font name="System Bold" size="17.0" />
                </font></Button>

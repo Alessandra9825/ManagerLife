@@ -1,21 +1,31 @@
 package TelaGerenciaPostIt.src;
 import AcessoPostIt.AcessarPostIt;
 import Auditoria.GerenciadorAuditoria;
+import TelaMenu.src.Controller;
+import TelaMiniPostIt.ControllerMiniPostIt;
+import TelaMiniPostIt.MiniPostIt;
 import TelaPainelPostIt.src.ControllerPainel;
+import TelaPainelPostIt.src.PainelPostIt;
 import Validacao.ValidaPostIt;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import vos.PostIt;
 
+import java.awt.*;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.Observable;
 import java.util.ResourceBundle;
 
 public class ControllerGPost implements Initializable {
@@ -29,8 +39,7 @@ public class ControllerGPost implements Initializable {
     @FXML private TextArea txtA_descricao;
     @FXML private TextField txt_tempo;
     @FXML private ComboBox cb_situacao;
-
-    ControllerPainel tela  = new ControllerPainel();
+    @FXML private AnchorPane an_PostIt;
 
     @FXML
     private void Cancelar(){
@@ -63,8 +72,6 @@ public class ControllerGPost implements Initializable {
             {
                 AcessarPostIt postSalvar = new AcessarPostIt();
                 Boolean cadastrado = postSalvar.salvarPostIt(post);
-                //AnchorPane pane = FXMLLoader.load(getClass().getResource("../../TelaMiniPostIt/MiniPostIt.fxml"));
-                //tela.an_do.getChildren().add(pane);
 
                 if(!cadastrado)
                 {
@@ -75,9 +82,22 @@ public class ControllerGPost implements Initializable {
                 else
                 {
                     alert.popupSuccess(stage);
+                    stage.close();
+
+                    //Inicializa a tela MiniPostIt
+                    //carrega os dados do postIt
+
+                    MiniPostIt mini = new MiniPostIt();
+                    mini.showPostIt(post);
+                    AnchorPane telaPost = FXMLLoader.load(getClass().getResource("../../TelaMiniPostIt/MiniPostIt.fxml"));
+                    PainelPostIt painel = new PainelPostIt();
+                    painel.tornaComponentesVisivel(telaPost);
+
+                    //ControllerMiniPostIt control = new ControllerMiniPostIt();
+                    //control.preenchePostItCriado( post);
+
                 }
            }
-            stage.close();
 
         }
         catch (Exception e)
@@ -86,10 +106,10 @@ public class ControllerGPost implements Initializable {
         }
     }
 
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         ObservableList list = FXCollections.observableArrayList("Do","Development","Late","Done");
         cb_situacao.setItems(list);
     }
+
 }

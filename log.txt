@@ -67,3 +67,105 @@
 2020-11-16T20:43:02.092-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!
 2020-11-16T20:48:00.634-03:00[America/Sao_Paulo] - PostIt - PostIt não cadastrado
 2020-11-16T20:48:00.643-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!
+2020-11-16T21:14:35.797-03:00[America/Sao_Paulo] - ValidaPostIt - Nome vazio.
+
+2020-11-16T21:14:35.806-03:00[America/Sao_Paulo] - ValidaPostIt - Descrição vazio.
+
+2020-11-16T21:14:35.806-03:00[America/Sao_Paulo] - ValidaPostIt - Tempo inválida.
+
+2020-11-16T21:22:18.310-03:00[America/Sao_Paulo] - ValidaPostIt - Nome vazio.
+
+2020-11-16T21:22:18.320-03:00[America/Sao_Paulo] - ValidaPostIt - Descrição vazio.
+
+2020-11-16T21:22:18.320-03:00[America/Sao_Paulo] - ValidaPostIt - Tempo inválida.
+
+2020-11-17T15:50:49.924-03:00[America/Sao_Paulo] - PostIt - PostIt não cadastrado
+2020-11-17T15:50:49.948-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!
+2020-11-17T15:50:55.500-03:00[America/Sao_Paulo] - ValidaPostIt - Nome vazio.
+
+2020-11-17T15:50:55.500-03:00[America/Sao_Paulo] - ValidaPostIt - Descrição vazio.
+
+2020-11-17T15:50:55.500-03:00[America/Sao_Paulo] - ValidaPostIt - Tempo inválida.
+
+2020-11-17T16:36:57.524-03:00[America/Sao_Paulo] - PostIt - PostIt não cadastrado
+2020-11-17T16:36:57.537-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!
+2020-11-17T16:37:11.921-03:00[America/Sao_Paulo] - PostIt - PostIt não cadastrado
+2020-11-17T16:37:11.921-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!
+2020-11-17T16:37:23.017-03:00[America/Sao_Paulo] - PostIt - PostIt não cadastrado
+2020-11-17T16:37:23.017-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!
+2020-11-17T16:38:13.320-03:00[America/Sao_Paulo] - PostIt - PostIt não cadastrado
+2020-11-17T16:38:13.328-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!
+2020-11-17T16:50:55.561-03:00[America/Sao_Paulo] - PostIt - PostIt não cadastrado
+2020-11-17T16:50:55.569-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!
+2020-11-17T19:46:35.271-03:00[America/Sao_Paulo] - PostIt - PostIt não cadastrado
+2020-11-17T19:46:38.954-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!
+2020-11-17T20:43:45.045-03:00[America/Sao_Paulo] - PostIt - PostIt não cadastrado
+2020-11-17T20:43:45.052-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!
+2020-11-17T20:43:58.426-03:00[America/Sao_Paulo] - PostIt - PostIt não cadastrado
+2020-11-17T20:43:58.426-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!
+2020-11-17T20:44:31.459-03:00[America/Sao_Paulo] - PostIt - PostIt não cadastrado
+2020-11-17T20:44:31.467-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!
+2020-11-17T20:46:14.725-03:00[America/Sao_Paulo] - PostIt - PostIt não cadastrado
+2020-11-17T20:46:14.733-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!
+2020-11-17T20:47:13.674-03:00[America/Sao_Paulo] - PostIt - PostIt não cadastrado
+2020-11-17T20:47:13.681-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!
+2020-11-17T20:47:20.215-03:00[America/Sao_Paulo] - PostIt - PostIt não cadastrado
+2020-11-17T20:47:20.215-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!
+2020-11-17T20:47:24.955-03:00[America/Sao_Paulo] - PostIt - PostIt não cadastrado
+2020-11-17T20:47:24.956-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!
+2020-11-17T20:47:40.093-03:00[America/Sao_Paulo] - PostIt - PostIt não cadastrado
+2020-11-17T20:47:40.093-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!
+2020-11-17T20:47:50.928-03:00[America/Sao_Paulo] - PostIt - PostIt não cadastrado
+2020-11-17T20:47:50.929-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!
+2020-11-17T21:06:21.385-03:00[America/Sao_Paulo] - PostIt - PostIt não cadastrado
+2020-11-17T21:06:28.454-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!
+2020-11-17T21:07:07.544-03:00[America/Sao_Paulo] - PostIt - PostIt não cadastrado
+2020-11-17T21:07:15.294-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!
+2020-11-17T21:08:02.486-03:00[America/Sao_Paulo] - PostIt - PostIt não cadastrado
+2020-11-17T21:08:11.900-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!
+2020-11-17T21:08:51.436-03:00[America/Sao_Paulo] - PostIt - PostIt não cadastrado
+2020-11-17T21:08:54.895-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!
+2020-11-17T21:15:15.196-03:00[America/Sao_Paulo] - PostIt - PostIt não cadastrado
+2020-11-17T21:48:39.931-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!
+2020-11-17T21:51:02.971-03:00[America/Sao_Paulo] - PostIt - PostIt não cadastrado
+2020-11-17T21:51:17.833-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!
+2020-11-17T21:51:50.738-03:00[America/Sao_Paulo] - PostIt - PostIt não cadastrado
+2020-11-17T21:51:53.893-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!
+2020-11-17T21:53:16.487-03:00[America/Sao_Paulo] - PostIt - PostIt não cadastrado
+2020-11-17T21:55:18.706-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!
+2020-11-17T21:56:02.419-03:00[America/Sao_Paulo] - PostIt - PostIt não cadastrado
+2020-11-17T21:56:12.446-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!
+2020-11-17T22:21:52.786-03:00[America/Sao_Paulo] - PostIt - PostIt não cadastrado
+2020-11-17T22:22:04.909-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!
+2020-11-17T22:22:42.071-03:00[America/Sao_Paulo] - PostIt - PostIt não cadastrado
+2020-11-17T22:22:46.599-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!
+2020-11-17T22:23:37.606-03:00[America/Sao_Paulo] - PostIt - PostIt não cadastrado
+2020-11-17T22:26:08.004-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!
+2020-11-17T22:26:44.681-03:00[America/Sao_Paulo] - PostIt - PostIt não cadastrado
+2020-11-17T22:27:33.220-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!
+2020-11-17T22:36:40.103-03:00[America/Sao_Paulo] - PostIt - PostIt não cadastrado
+2020-11-17T22:36:40.112-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!
+2020-11-18T19:52:35.832-03:00[America/Sao_Paulo] - PostIt - PostIt não cadastrado
+2020-11-18T19:52:38.873-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!
+2020-11-18T19:54:01.018-03:00[America/Sao_Paulo] - PostIt - PostIt não cadastrado
+2020-11-18T19:54:05.541-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!
+2020-11-18T19:54:35.232-03:00[America/Sao_Paulo] - PostIt - PostIt não cadastrado
+2020-11-18T19:54:38.611-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!
+2020-11-18T20:14:38.359-03:00[America/Sao_Paulo] - PostIt - PostIt não cadastrado
+2020-11-18T20:14:42.033-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!
+2020-11-18T21:00:36.045-03:00[America/Sao_Paulo] - ValidaPostIt - Nome vazio.
+
+2020-11-18T21:00:36.054-03:00[America/Sao_Paulo] - ValidaPostIt - Descrição vazio.
+
+2020-11-18T21:00:36.054-03:00[America/Sao_Paulo] - ValidaPostIt - Tempo inválida.
+
+2020-11-18T21:02:29.634-03:00[America/Sao_Paulo] - PostIt - PostIt não cadastrado
+2020-11-18T21:02:29.641-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!
+2020-11-18T21:02:35.043-03:00[America/Sao_Paulo] - PostIt - PostIt não cadastrado
+2020-11-18T21:02:35.043-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!
+2020-11-18T21:02:38.868-03:00[America/Sao_Paulo] - PostIt - PostIt não cadastrado
+2020-11-18T21:02:38.868-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!
+2020-11-18T21:02:43.001-03:00[America/Sao_Paulo] - PostIt - PostIt não cadastrado
+2020-11-18T21:02:43.001-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!
+2020-11-18T21:02:51.178-03:00[America/Sao_Paulo] - PostIt - PostIt não cadastrado
+2020-11-18T21:02:51.178-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!
