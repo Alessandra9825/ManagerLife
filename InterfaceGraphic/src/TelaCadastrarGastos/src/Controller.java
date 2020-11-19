@@ -6,6 +6,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
 import vos.Gastos;
 
 import javax.swing.*;
@@ -65,8 +66,10 @@ public class Controller implements Initializable {
         }
     }
 
+    @FXML private Button btnCancelar;
     public void cancelarCadastro(MouseEvent mouseEvent) {
-
+        Stage stage = (Stage) btnCancelar.getScene().getWindow();
+        stage.close();
     }
 
     public String getTipoGasto() {
