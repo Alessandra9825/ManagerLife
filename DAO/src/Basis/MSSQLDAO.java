@@ -7,18 +7,18 @@ import java.sql.*;
 import java.util.ArrayList;
 
 public class MSSQLDAO <E extends Entidade> extends DAO {
-/*
+
     private final String stringConexao = "jdbc:sqlserver://sql5097.site4now.net;databaseName=DB_A69CF7_ManagerLife;";
     private final String usuario = "DB_A69CF7_ManagerLife_admin";
     private final String senha = "managerLife1234";
     protected String tabela;
-*/
 
+/*
     private final String stringConexao = "jdbc:sqlserver://LOCALHOST:1433;databaseName=ManagerLife;";
     private final String usuario = "sa";
     private final String senha = "123456";
     protected String tabela;
-
+*/
     public MSSQLDAO(Class entityClass) {
         super(entityClass);
     }
@@ -68,7 +68,7 @@ public class MSSQLDAO <E extends Entidade> extends DAO {
             try(PreparedStatement statement = getStatement(SQL, conexao)){
                 statement.setString(1, codigo);
                 try(ResultSet rs = statement.executeQuery()){
-                    if(rs.first())
+                    if(rs.next())
                     {
                         entidade = preencheEntidade(rs);
                     }
@@ -121,10 +121,11 @@ public class MSSQLDAO <E extends Entidade> extends DAO {
         try(Connection conexao = getConnection()){
             String SQL = getInsertCommand(entidade);
             try(PreparedStatement stmt = getInsertStatement(entidade, conexao.prepareStatement(SQL))){
-                stmt.executeQuery();
+                stmt.execute();
+                return true;
             }
         }
-        return false;
+        //return false;
     }
 
     protected String getInsertCommand(Entidade entidade) {

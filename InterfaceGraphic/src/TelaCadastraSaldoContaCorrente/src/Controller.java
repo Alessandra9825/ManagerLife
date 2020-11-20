@@ -12,10 +12,12 @@ import javafx.stage.Stage;
 import javafx.scene.control.TextField;
 import vos.SaldoCC;
 
+import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.net.URL;
 import java.sql.SQLException;
+import java.time.Instant;
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.Date;
@@ -35,7 +37,7 @@ public class Controller implements Initializable {
     @FXML
     TextArea txtDescricao;
     @FXML
-    ChoiceBox cbSituacao;
+    //ChoiceBox cbSituacao;
 
     public void cancelar(ActionEvent event){
         Stage stage = (Stage) txtValor.getScene().getWindow();
@@ -44,16 +46,18 @@ public class Controller implements Initializable {
 
     public void adicionar(ActionEvent event) throws SQLException {
         SaldoCC saldo = new SaldoCC();
-        LocalDate dataLocal = DPDataPagamento.getValue();
-        Date data = Date.from(dataLocal.atStartOfDay(ZoneId.systemDefault()).toInstant());
-        saldo.setData(data);
+        if (DPDataPagamento.getValue() != null) {
+            saldo.setData(Date.from(Instant.from(DPDataPagamento.getValue().atStartOfDay(ZoneId.systemDefault()))));
+        }
         saldo.setDescricao(txtDescricao.getText());
         saldo.setCCId(id);
         saldo.setMensal(false); //revisar??
         saldo.setValor(Double.parseDouble(txtValor.getText()));
-        saldo.setId(2);
         SaldoCCMSSQL dao = new SaldoCCMSSQL();
-        dao.salvar(saldo);
+        if (dao.salvar(saldo))
+        {
+            JOptionPane.showMessageDialog(null, "Saldo inserido com sucesso! ");
+        }
     }
 
     @Override

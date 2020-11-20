@@ -29,34 +29,4 @@ public class Dashboard extends Application {
             GerenciadorAuditoria.getInstancia().desativar();
         });
     }
-
-    public void Gastos_btn(ActionEvent event){
-        try {
-            FXMLLoader fxml = new FXMLLoader(getClass().getResource("/TelaCadastrarGastos/src/Gastos.fxml"));
-            Parent root1 = (Parent) fxml.load();
-            Stage cenario = new Stage();
-            cenario.setTitle("Cadastro de Saldo");
-            cenario.setScene(new Scene(root1));
-            cenario.showAndWait();
-        }
-        catch (Exception e)
-        {
-
-        }
-    }
-
-    public void Saldo_btn(ActionEvent event){
-        try {
-            FXMLLoader fxml = new FXMLLoader(getClass().getResource("/TelaCadastraSaldoContaCorrente/src/SaldoContaCorrente.fxml"));
-            Parent root1 = (Parent) fxml.load();
-            Stage cenario = new Stage();
-            cenario.setTitle("Cadastro de Saldo");
-            cenario.setScene(new Scene(root1));
-            cenario.showAndWait();
-        }
-        catch (Exception e)
-        {
-
-        }
-    }
 }
