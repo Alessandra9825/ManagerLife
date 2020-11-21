@@ -20,7 +20,7 @@ public class PostMSSQL <E extends Entidade> extends MSSQLDAO {
         try{
             entidade.setId(rs.getInt("id"));
             entidade.setNome(rs.getString("nome"));
-            entidade.setSituacao(rs.getInt("situacao"));
+            //entidade.setSituacao(rs.getInt("situacao"));
             entidade.setDescricao(rs.getString("descricao"));
             entidade.setTempo(rs.getString("tempo"));
 
@@ -40,8 +40,8 @@ public class PostMSSQL <E extends Entidade> extends MSSQLDAO {
     {
         PostIt post = (PostIt) entidade;
         stmt.setString(1, post.getNome());
-        stmt.setString(2, post.getDescricao());
-        stmt.setInt(3,post.getSituacao());
+       //stmt.setString(2, post.getDescricao());
+       //stmt.setInt(3,post.getSituacao());
         stmt.setString(4,post.getTempo());
         return stmt;
     }

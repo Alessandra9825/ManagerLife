@@ -1,11 +1,14 @@
 package Enums;
 
 public enum enumCalendarsType {
+
     ANIVERSARIO("Aniversário"),
     REUNIAO("Reunião"),
     FOLGA("Folga"),
     LAZER("Lazer"),
-    GOOGLE("Google");
+    GOOGLE("Google"),
+    ERROR("Error - Calendar not Found");
+
 
     private String descricao;
 

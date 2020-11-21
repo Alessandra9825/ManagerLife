@@ -51,7 +51,7 @@ public class ControllerGPost implements Initializable {
             post.setNome(txt_nome.getText());
             post.setTempo(txt_tempo.getText());
             post.setDescricao(txtA_descricao.getText());
-            post.setSituacao(cb_situacao.getSelectionModel().getSelectedIndex());
+           //post.setSituacao(cb_situacao.getSelectionModel().getSelectedIndex());
 
             erros = validacao.ValidaDados(post);
 

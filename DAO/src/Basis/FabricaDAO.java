@@ -1,6 +1,7 @@
 package Basis;
 
 import Enums.enumEntidade;
+import MSSQL.EventoMSSQL;
 import MSSQL.PostMSSQL;
 import MSSQL.SenhasAntigasMSSQL;
 import MSSQL.UsuarioMSSQL;
@@ -18,8 +19,12 @@ public class FabricaDAO {
                     break;
                 case SENHA_ANTIGA:
                     retorno = new SenhasAntigasMSSQL();
+                    break;
                 case POSTIT:
                     retorno = new PostMSSQL();
+                    break;
+                case Evento:
+                    retorno =  new EventoMSSQL();
                     break;
                 default:
                     retorno = null;

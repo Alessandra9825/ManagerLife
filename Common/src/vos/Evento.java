@@ -14,6 +14,9 @@ public class Evento extends Entidade {
     @CampoNoBanco(nome = "titulo", chave = false)
     private String titulo;
 
+    @CampoNoBanco(nome = "local", chave = false)
+    private String local;
+
     @CampoNoBanco(nome = "fullday", chave = false)
     private Boolean fullday;
 
@@ -105,5 +108,13 @@ public class Evento extends Entidade {
 
     public void setUsuario_id(int usuario_id) {
         this.usuario_id = usuario_id;
+    }
+
+    public String getLocal() {
+        return local;
+    }
+
+    public void setLocal(String local) {
+        this.local = local;
     }
 }
