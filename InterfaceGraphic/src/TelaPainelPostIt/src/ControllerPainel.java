@@ -95,6 +95,7 @@ public class ControllerPainel implements Initializable {
             //To dev
             else if ( (post.get(i).getSituacao()) == 1)
             {
+                contadorDev++;
                 switch (contadorDev){
                     case 1:
                         an_dev1.getChildren().add(miniPost);
@@ -109,6 +110,7 @@ public class ControllerPainel implements Initializable {
             //To Late
             else if ( (post.get(i).getSituacao()) == 2)
             {
+                contadorLate++;
                 switch (contadorLate){
                     case 1:
                         an_late1.getChildren().add(miniPost);
@@ -123,6 +125,7 @@ public class ControllerPainel implements Initializable {
             //To Done
             else if ( (post.get(i).getSituacao()) == 3)
             {
+                contadorDone++;
                 switch (contadorDone){
                     case 1:
                         an_done1.getChildren().add(miniPost);
