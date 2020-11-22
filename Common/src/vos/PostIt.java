@@ -10,7 +10,7 @@ public class PostIt extends Entidade {
     private String nome;
 
     @CampoNoBanco(nome = "tempoEstimado", chave = false)
-    private String tempo;
+    private Integer tempo;
 
     @CampoNoBanco(nome = "descricao", chave = false)
     private String descricao;
@@ -26,11 +26,11 @@ public class PostIt extends Entidade {
         this.nome = nome;
     }
 
-    public String getTempo() {
+    public Integer getTempo() {
         return tempo;
     }
 
-    public void setTempo(String tempo) {
+    public void setTempo(Integer tempo) {
         this.tempo = tempo;
     }
 

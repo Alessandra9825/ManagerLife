@@ -6,6 +6,8 @@ import Enums.enumEntidade;
 import Repositorio.MSSQL.RepositorioMSSQL;
 import Repositorio.Repositorio;
 import javafx.scene.image.Image;
+import singleUsuario.usuarioSingleton;
+import vos.PostIt;
 import vos.SenhasAntigas;
 import vos.Usuario;
 
@@ -31,7 +33,6 @@ public class UsuarioMSSQL <E extends Entidade> extends MSSQLDAO {
             entidade.setCel(rs.getString("cel"));
             entidade.setEmail(rs.getString("email"));
             entidade.setSenha(rs.getString("senha"));
-            entidade.setFoto(rs.getBinaryStream("imagem") == null ? null : new Image(rs.getBinaryStream("imagem")));
             entidade.setDataNascimento(rs.getDate("dataNascimento"));
         } catch (SQLException ex) {
             Logger.getLogger(UsuarioMSSQL.class.getName()).log(Level.SEVERE, null, ex);
@@ -97,5 +98,28 @@ public class UsuarioMSSQL <E extends Entidade> extends MSSQLDAO {
         }
 
         return erro;
+    }
+
+    protected String getInsertCommand(Entidade entidade) {
+        return "INSERT INTO Usuario (nome,cel,email,senha,dataNascimento) VALUES(?,?,?,?,?) ";
+    }
+
+    protected PreparedStatement getInsertStatement(Entidade entidade, PreparedStatement stmt) throws SQLException {
+        Usuario user = (Usuario) entidade;
+        //converte p o padrão aceito pelo banco
+        java.util.Date dateNow = user.getDataNascimento();
+        java.sql.Date date = new java.sql.Date(dateNow.getTime());
+
+        stmt.setString(1, user.getNome());
+        stmt.setString(2, user.getCel());
+        stmt.setString(3, user.getEmail());
+        stmt.setString(4,user.getSenha());
+        stmt.setDate(5,date);
+        return stmt;
+    }
+
+    @Override
+    public boolean alterar(Entidade entidade) throws SQLException {
+        return false;
     }
 }

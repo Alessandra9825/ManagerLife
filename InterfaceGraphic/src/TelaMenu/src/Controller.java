@@ -1,5 +1,6 @@
 package TelaMenu.src;
 
+import TelaPainelPostIt.src.ControllerPainel;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -23,7 +24,7 @@ public class Controller implements Initializable {
     public void handleButtonAction(javafx.event.ActionEvent event) throws Exception {
         if(event.getSource()== btn_painel)
         {
-            AnchorPane panePainel = FXMLLoader.load(getClass().getResource("../../TelaPainelPostIt/src/Painel.fxml"));
+            AnchorPane panePainel = FXMLLoader.load(ControllerPainel.class.getResource("../../TelaPainelPostIt/src/Painel.fxml"));
             an_painelCentral.getChildren().setAll(panePainel);
         }
         else if(event.getSource()== btn_home)

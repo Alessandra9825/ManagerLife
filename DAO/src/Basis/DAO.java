@@ -19,7 +19,6 @@ public abstract class DAO <E extends Entidade> {
     public abstract E seleciona(int id);
     public abstract E localiza(String codigo) throws SQLException;
     public abstract ArrayList<E> lista() throws SQLException;
-
     protected E getInstanceOfE(){
         try
         {
@@ -29,6 +28,9 @@ public abstract class DAO <E extends Entidade> {
             throw new RuntimeException(e);
         }
     }
-
     public abstract boolean salvar(Entidade entidade) throws SQLException;
+    public abstract int busca () throws  SQLException;
+    public abstract ArrayList listarExpecifico() throws SQLException ;
+    public abstract boolean alterar(Entidade entidade) throws SQLException;
+
 }

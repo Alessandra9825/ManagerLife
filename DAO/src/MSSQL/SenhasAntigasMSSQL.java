@@ -50,4 +50,9 @@ public class SenhasAntigasMSSQL <E extends Entidade> extends MSSQLDAO {
         }
         return entidade;
     }
+
+    @Override
+    public boolean alterar(Entidade entidade) throws SQLException {
+        return false;
+    }
 }

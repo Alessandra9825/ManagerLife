@@ -36,7 +36,7 @@ public class ValidaPostIt <E extends Entidade> extends Validacao  {
                 GerenciadorAuditoria.getInstancia().adicionaMsgAuditoria(meth + "Situação vazia.\n");
             }
 
-            if(isNullorEmpty(post.getTempo())){
+            if(post.getTempo()<=0 ){
                 erros.add("Informe um tempo valido!");
                 GerenciadorAuditoria.getInstancia().adicionaMsgAuditoria(meth + "Tempo inválida.\n");
             }

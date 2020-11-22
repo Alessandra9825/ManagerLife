@@ -5,8 +5,8 @@ import Basis.Entidade;
 import Basis.FabricaDAO;
 import Enums.enumEntidade;
 import Repositorio.Repositorio;
-
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -42,6 +42,33 @@ public class RepositorioMSSQL extends Repositorio {
             throwables.printStackTrace();
         }
 
+        return salvado;
+    }
+
+    @Override
+    public int busca(enumEntidade tipoEntidade,Entidade entidadde) throws Exception {
+        DAO dao = FabricaDAO.fabrica(tipoEntidade);
+        Integer dados = dao.busca();
+        return dados;
+    }
+
+    @Override
+    public ArrayList listar() throws Exception {
+        DAO dao = FabricaDAO.fabrica(enumEntidade.POSTIT);
+        ArrayList<Entidade> listPost = dao.listarExpecifico();
+        return listPost;
+    }
+
+    @Override
+    public boolean alterar(Entidade entidade, enumEntidade tipoEntidade) throws Exception {
+        DAO dao = FabricaDAO.fabrica(tipoEntidade);
+        boolean salvado = false;
+
+        try {
+            salvado = dao.alterar(entidade);
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
         return salvado;
     }
 }

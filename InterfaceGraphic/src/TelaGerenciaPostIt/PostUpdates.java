@@ -1,17 +1,15 @@
-package TelaMiniPostIt;
+package TelaGerenciaPostIt;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
 
-public class MiniPostIt extends Application implements Initializable {
+import java.io.IOException;
+
+public class PostUpdates extends Application {
 
     public static void main(String[] args) {
         launch(args);
@@ -20,13 +18,8 @@ public class MiniPostIt extends Application implements Initializable {
     @Override
     public void start(Stage primaryStage) throws IOException {
         primaryStage.initStyle(StageStyle.UNDECORATED);
-        Parent root = FXMLLoader.load(getClass().getResource("MiniPostIt.fxml"));
-        primaryStage.setScene(new Scene(root, 131, 115));
+        Parent root = FXMLLoader.load(getClass().getResource("PostUpdates.fxml"));
+        primaryStage.setScene(new Scene(root, 495, 350));
         primaryStage.show();
-    }
-
-
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
     }
 }

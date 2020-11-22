@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="500.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TelaPainelPostIt.src.ControllerPainel">
+<AnchorPane fx:id="an_central" prefHeight="500.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TelaPainelPostIt.src.ControllerPainel">
    <children>
       <Pane layoutY="45.0" prefHeight="78.0" prefWidth="600.0" style="-fx-background-color: #99ccff;" AnchorPane.topAnchor="45.0">
          <opaqueInsets>
@@ -19,12 +19,8 @@
             </Label>
          </children>
       </Pane>
-           <AnchorPane fx:id="an_do" layoutX="34.0" layoutY="135.0" prefWidth="134.0" style="-fx-background-color: #ccccff;">
+           <AnchorPane fx:id="an_do1" layoutX="43.0" layoutY="135.0" minHeight="115.0" minWidth="131.0" prefHeight="115.0" prefWidth="131.0" style="-fx-background-color: #ccccff;">
          <children>
-            <Button fx:id="btn_adicionar" layoutX="91.0" layoutY="320.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="40.0" prefWidth="39.0" style="-fx-background-color: #ccccff;" text="+" textFill="#380d80">
-               <font>
-                  <Font name="System Bold" size="17.0" />
-               </font></Button>
             <AnchorPane layoutX="5.0" layoutY="6.0" prefHeight="30.0" prefWidth="125.0" style="-fx-background-color: #f5f5dc;">
                <children>
                   <Label layoutX="46.0" layoutY="4.0" text="To Do" textFill="#00089e">
@@ -36,7 +32,7 @@
             </AnchorPane>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="an_dev" layoutX="168.0" layoutY="134.0" prefHeight="362.0" prefWidth="139.0" style="-fx-background-color: #ffcc99;">
+      <AnchorPane fx:id="an_dev1" layoutX="174.0" layoutY="135.0" minHeight="115.0" minWidth="131.0" prefHeight="115.0" prefWidth="131.0" style="-fx-background-color: #ffcc99;">
          <children>
             <AnchorPane layoutX="7.0" layoutY="7.0" prefHeight="30.0" prefWidth="125.0" style="-fx-background-color: #f5f5dc;">
                <children>
@@ -45,7 +41,7 @@
             </AnchorPane>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="an_late" layoutX="307.0" layoutY="134.0" prefHeight="362.0" prefWidth="139.0" style="-fx-background-color: #ff9999;">
+      <AnchorPane fx:id="an_late1" layoutX="304.0" layoutY="135.0" prefHeight="115.0" prefWidth="131.0" style="-fx-background-color: #ff9999;">
          <children>
             <AnchorPane layoutX="7.0" layoutY="7.0" prefHeight="30.0" prefWidth="125.0" style="-fx-background-color: #f5f5dc;">
                <children>
@@ -54,7 +50,7 @@
             </AnchorPane>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="an_done" layoutX="446.0" layoutY="134.0" prefHeight="362.0" prefWidth="139.0" style="-fx-background-color: #ccffcc;">
+      <AnchorPane fx:id="an_done1" layoutX="436.0" layoutY="135.0" prefHeight="115.0" prefWidth="131.0" style="-fx-background-color: #ccffcc;">
          <children>
             <AnchorPane layoutX="7.0" layoutY="8.0" prefHeight="30.0" prefWidth="125.0" style="-fx-background-color: #f5f5dc;">
                <children>
@@ -67,5 +63,33 @@
             </AnchorPane>
          </children>
       </AnchorPane>
+      <AnchorPane fx:id="an_do2" layoutX="43.0" layoutY="250.0" minHeight="115.0" minWidth="131.0" prefHeight="115.0" prefWidth="131.0" style="-fx-background-color: #ccccff;">
+         <children>
+            <Button fx:id="btn_adicionar1" layoutX="91.0" layoutY="320.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="40.0" prefWidth="39.0" style="-fx-background-color: #ccccff;" text="+" textFill="#380d80">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="an_do3" layoutX="43.0" layoutY="365.0" minHeight="115.0" minWidth="131.0" prefHeight="115.0" prefWidth="131.0" style="-fx-background-color: #ccccff;">
+         <children>
+            <Button fx:id="btn_adicionar11" layoutX="91.0" layoutY="320.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="40.0" prefWidth="39.0" style="-fx-background-color: #ccccff;" text="+" textFill="#380d80">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_adicionar" layoutX="91.0" layoutY="68.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="40.0" prefWidth="39.0" style="-fx-background-color: #ccccff;" text="+" textFill="#380d80">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font></Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="an_dev2" layoutX="174.0" layoutY="250.0" minHeight="115.0" minWidth="131.0" prefHeight="115.0" prefWidth="131.0" style="-fx-background-color: #ffcc99;" />
+      <AnchorPane fx:id="an_dev3" layoutX="174.0" layoutY="365.0" minHeight="115.0" minWidth="131.0" prefHeight="115.0" prefWidth="131.0" style="-fx-background-color: #ffcc99;" />
+      <AnchorPane fx:id="an_late2" layoutX="305.0" layoutY="250.0" prefHeight="115.0" prefWidth="131.0" style="-fx-background-color: #ff9999;" />
+      <AnchorPane fx:id="an_late3" layoutX="305.0" layoutY="365.0" prefHeight="115.0" prefWidth="131.0" style="-fx-background-color: #ff9999;" />
+      <AnchorPane fx:id="an_done2" layoutX="436.0" layoutY="250.0" prefHeight="115.0" prefWidth="131.0" style="-fx-background-color: #ccffcc;" />
+      <AnchorPane fx:id="an_done3" layoutX="436.0" layoutY="365.0" prefHeight="115.0" prefWidth="131.0" style="-fx-background-color: #ccffcc;" />
    </children>
 </AnchorPane>

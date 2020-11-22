@@ -1,20 +1,12 @@
 package Basis;
 
 import Annotations.CampoNoBanco;
-import vos.PostIt;
-
+import singleUsuario.usuarioSingleton;
 import java.lang.reflect.Field;
 import java.sql.*;
 import java.util.ArrayList;
 
 public abstract class MSSQLDAO <E extends Entidade> extends DAO {
-/*
-    private final String stringConexao = "jdbc:sqlserver://sql5097.site4now.net;databaseName=DB_A69CF7_ManagerLife;";
-    private final String usuario = "DB_A69CF7_ManagerLife_admin";
-    private final String senha = "managerLife1234";
-    protected String tabela;
-*/
-
     private final String stringConexao = "jdbc:sqlserver://SQL5097.site4now.net;databaseName= DB_A69CF7_ManagerLife;";
     private final String usuario = "DB_A69CF7_ManagerLife_admin";
     private final String senha = "managerLife1234";
@@ -78,7 +70,6 @@ public abstract class MSSQLDAO <E extends Entidade> extends DAO {
         }
         return entidade;
     }
-
     protected String getLocalizaCommand(){
         String campos = "";
         String chave = "";
@@ -92,7 +83,7 @@ public abstract class MSSQLDAO <E extends Entidade> extends DAO {
         }
         if(campos.length() > 0)
             campos = campos.substring(0, campos.length()-1);
-        return "select " + campos + " from " + tabela + " where " + chave + " = ?";
+        return "select id," + campos + " from " + tabela + " where " + chave + " = ?";
         //return "select * from " + tabela;
     }
 
@@ -112,8 +103,28 @@ public abstract class MSSQLDAO <E extends Entidade> extends DAO {
         }
         return entidades;
     }
+    @Override
+    public  int busca () throws  SQLException {
+        ArrayList<E> entidades = new ArrayList();
+        try(Connection conexao = getConnection())
+        {
+            String SQL = "Select * from Post_It where situacaoPostit_id = 0";
+            try(PreparedStatement stmt = getStatement(SQL, conexao))
+            {
+                try (ResultSet rs = stmt.executeQuery())
+                {
+                    while (rs.next())
+                    {
+                        E entidade = preencheEntidade(rs);
+                        entidades.add(entidade);
+                    }
+                }
+            }
+        }
+        return entidades.size();
+    }
 
-    protected String getListaCommand() {
+    public String getListaCommand() {
         return "select * from " + tabela;
     }
 
@@ -141,9 +152,54 @@ public abstract class MSSQLDAO <E extends Entidade> extends DAO {
         throw new UnsupportedOperationException("Implementar na classe filha.");
     }
 
+    protected String getUpdateCommand(Entidade entidade) {
+        //To change body of generated methods, choose Tools | Templates.
+        throw new UnsupportedOperationException("Implementar na classe filha.");
+    }
+
     protected PreparedStatement getInsertStatement(Entidade entidade, PreparedStatement stmt) throws SQLException {
         //To change body of generated methods, choose Tools | Templates.
         throw new UnsupportedOperationException("Implementar na classe filha.");
     }
+
+    public ArrayList listarExpecifico() throws SQLException {
+        ArrayList<E> entidades = new ArrayList();
+        try (Connection conexao = getConnection()) {
+            String SQL = "select * from "+tabela+" where usuario_id = "+ usuarioSingleton.idUsuario;
+            try (PreparedStatement stmt = conexao.prepareStatement(SQL)) {
+                try (ResultSet rs = stmt.executeQuery()) {
+                    while (rs.next()){
+                        E entidade = preencheEntidade(rs);
+                        entidades.add(entidade);
+                    }
+                }
+            }
+        }
+        return entidades;
+    }
+
+    @Override
+    public  boolean alterar(Entidade entidade) throws SQLException{
+        try(Connection conexao = getConnection()){
+            String SQL = getUpdateCommand(entidade);
+            try(PreparedStatement stmt = getUpdateStatement(entidade, conexao.prepareStatement(SQL))){
+
+                if (stmt.executeUpdate() == 1)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+
+                }
+            }
+        }
+    }
+
+    protected  PreparedStatement getUpdateStatement(Entidade entidade, PreparedStatement prepareStatement) throws SQLException{
+        throw new UnsupportedOperationException("Implementar na classe filha.");
+    };
+
 
 }

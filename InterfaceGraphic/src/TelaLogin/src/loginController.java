@@ -3,6 +3,7 @@ package TelaLogin.src;
 import Acesso.Acesso;
 import Auditoria.GerenciadorAuditoria;
 import TelaCadastraUsuario.src.CadastrarUsuario;
+import TelaMenu.src.home;
 import TelaRecuperarSenha.src.RecuperarSenha;
 import Validacao.ValidaLogin;
 import javafx.event.ActionEvent;
@@ -17,6 +18,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import singleUsuario.usuarioSingleton;
 import vos.Usuario;
 
 import java.io.File;
@@ -78,8 +80,10 @@ public class loginController implements Initializable {
 
             if(logado){
                 home();
+                stage = (Stage)imageLogin.getScene().getWindow();
+                stage.close();
             }
-            else{
+            else {
                 erros.add("Usuário não cadastrado");
                 GerenciadorAuditoria.getInstancia().adicionaMsgAuditoria("Login - Usuário não cadastrado");
                 popupError(erros);
@@ -103,24 +107,16 @@ public class loginController implements Initializable {
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle("Error Dialog");
         alert.setHeaderText("Ops, Ocorreu um erro!");
-
         String text = "";
-
         for (int i = 0; i < erros.size(); i++){
             text += erros.get(i) + "\n";
         }
-
         alert.setContentText(text);
-
         alert.showAndWait();
     }
 
-    public void home(){
-        Alert alert = new Alert(Alert.AlertType.ERROR);
-        alert.setTitle("Error Dialog");
-        alert.setHeaderText("Ops, Não temos a tela Home!");
-        alert.setContentText("Parabéns!!!");
-
-        alert.showAndWait();
+    public void home() throws IOException {
+        home tela = new home();
+        tela.start(new Stage());
     }
 }

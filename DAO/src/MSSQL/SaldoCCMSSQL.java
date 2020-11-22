@@ -53,4 +53,9 @@ public class SaldoCCMSSQL <E extends Entidade> extends MSSQLDAO {
         stmt.setBoolean(6,saldo.isMensal());
         return stmt;
     }
+
+    @Override
+    public boolean alterar(Entidade entidade) throws SQLException {
+        return false;
+    }
 }

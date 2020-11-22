@@ -1,5 +1,6 @@
 package TelaCadastraUsuario.src;
 
+import AcessoUsuario.AcessarUsuario;
 import Auditoria.GerenciadorAuditoria;
 import Validacao.ValidaUsuario;
 import javafx.application.Application;
@@ -8,11 +9,13 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import vos.Usuario;
 
 import java.sql.Date;
@@ -33,28 +36,21 @@ public class CadastrarUsuario extends Application {
     @FXML private TextField celTxt;
     @FXML private DatePicker dataNasc;
 
-    //Credito
-    @FXML private TextField dataFaturaTxt;
-    @FXML private TextField limiteTxt;
-    @FXML private TextField indentificadorTxt;
-
-    //Corrente
-    @FXML private TextField dataPagTxt;
-    @FXML private TextField valorTxt;
-    @FXML private TextField descricaoTxt;
-    @FXML private ComboBox situacao;
+    @FXML private Button btn_cancelar,btn_salvar;
 
     public static void main(String[] args) {
         launch(args);
     }
 
     private CadastrarUsuarioController controller = new CadastrarUsuarioController();
+    private AcessarUsuario acessar = new AcessarUsuario();
 
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("Cadastrar.fxml"));
+        primaryStage.initStyle(StageStyle.UNDECORATED);
         primaryStage.setTitle("Cadastre-se");
-        primaryStage.setScene(new Scene(root, 597, 552));
+        primaryStage.setScene(new Scene(root, 597, 387));
         primaryStage.show();
         primaryStage.setOnCloseRequest(event -> {
             System.out.println("Thread is closing");
@@ -78,6 +74,7 @@ public class CadastrarUsuario extends Application {
             user.setNome(nomeTxt.getText());
             user.setEmail(emailTxt.getText());
             user.setSenha(celTxt.getText());
+            user.setCel(celTxt.getText());
 
             if(dataNasc.getValue() != null){
                 user.setDataNascimento(Date.from(Instant.from(dataNasc.getValue().atStartOfDay(ZoneId.systemDefault()))));
@@ -89,15 +86,17 @@ public class CadastrarUsuario extends Application {
                 controller.popupError(erros);
             }
             else{
+                Stage stage = (Stage)  celTxt.getScene().getWindow(); //pega a janela atual
                 //tenta cadastrar no banco o novo usuario
+                 cadastrado = acessar.salvarUsuario(user);
 
-                if(!cadastrado){
+                if (!cadastrado) {
                     erros.add("Sistema fora de serviço!");
                     GerenciadorAuditoria.getInstancia().adicionaMsgAuditoria("DataBase - Sistema fora de serviço!");
                     controller.popupError(erros);
-                }
-                else{
-                    //cadastro realizado com sucesso
+                } else {
+                    controller.popupSuccess(stage);
+                    stage.close();
                 }
             }
         }
@@ -106,4 +105,10 @@ public class CadastrarUsuario extends Application {
             System.out.println(e.getMessage());
         }
     }
+
+    public void Cancelar_btn(){
+        Stage stage = (Stage)  btn_cancelar.getScene().getWindow(); //pega a janela atual
+        stage.close();
+    }
+
 }

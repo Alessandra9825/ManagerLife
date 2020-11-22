@@ -36,5 +36,6 @@
       </library>
     </orderEntry>
     <orderEntry type="library" exported="" name="mssql-jdbc-8.4.1.jre8" level="application" />
+    <orderEntry type="module" module-name="Bussiness" />
   </component>
 </module>
