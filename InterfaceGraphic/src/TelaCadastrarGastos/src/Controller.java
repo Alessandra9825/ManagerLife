@@ -1,12 +1,14 @@
 package TelaCadastrarGastos.src;
 import Enums.EnumFrequencia;
 import MSSQL.SaldoCCMSSQL;
+import Utilitarios.Utilitarios;
 import Validacao.ValidaSaldoCC;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+import singleUsuario.usuarioSingleton;
 import vos.SaldoCC;
 
 import javax.swing.*;
@@ -24,7 +26,6 @@ public class Controller implements Initializable {
     @FXML private DatePicker dtpDataGasto;
     @FXML private TextArea txtDescricao;
     public SaldoCCMSSQL dao;
-    public int id = 7; //AJUSTAR
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -32,6 +33,7 @@ public class Controller implements Initializable {
     }
 
     public void adicionarGasto(MouseEvent mouseEvent) throws SQLException {
+        Utilitarios util = Utilitarios.getInstancia();
         SaldoCC gasto = new SaldoCC();
         ArrayList<String> erros;
         ValidaSaldoCC validacao = new ValidaSaldoCC();
@@ -42,7 +44,7 @@ public class Controller implements Initializable {
             if (dtpDataGasto.getValue() != null) {
                 gasto.setData(Date.from(Instant.from(dtpDataGasto.getValue().atStartOfDay(ZoneId.systemDefault()))));
             }
-            gasto.setCCId(id); //AJUSTAR
+            gasto.setCCId(util.idConta); //AJUSTAR
             dao = new SaldoCCMSSQL();
             erros = validacao.ValidaDados(gasto);
             gasto.setValor(gasto.getValor()*-1); //ajustando o valor para negativo, pois é um gasto

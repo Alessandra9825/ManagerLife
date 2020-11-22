@@ -25,19 +25,40 @@ public class ContaCorrenteMSSQL <E extends Entidade> extends MSSQLDAO {
         try{
             conta.setId(rs.getInt("id"));
             conta.setValor(rs.getDouble("valorAtual"));
-            conta.setFinancasId(rs.getInt("usuario_id"));
+            conta.setUsuarioId(rs.getInt("usuario_id"));
         } catch (SQLException ex) {
             Logger.getLogger(SaldoCCMSSQL.class.getName()).log(Level.SEVERE, null, ex);
         }
         return conta;
     }
 
-    public ContaCorrente localiza(int codigo) throws SQLException {
+    public ContaCorrente localizaPorIdUser(int codUser) throws SQLException {
+        ContaCorrente conta = null;
+        try(Connection conexao = getConnection()){
+            String SQL = getLocalizaPorIdUserCommand();
+            try(PreparedStatement statement = getStatement(SQL, conexao)){
+                statement.setInt(1, codUser);
+                try(ResultSet rs = statement.executeQuery()){
+                    if(rs.next())
+                    {
+                        conta = preencheEntidade(rs);
+                    }
+                }
+            }
+        }
+        return conta;
+    }
+
+    protected String getLocalizaPorIdUserCommand(){
+        return "select * from ContaCorrente where usuario_id = ?";
+    }
+
+    public ContaCorrente localiza(int codCC) throws SQLException {
         ContaCorrente conta = null;
         try(Connection conexao = getConnection()){
             String SQL = getLocalizaCommand();
             try(PreparedStatement statement = getStatement(SQL, conexao)){
-                statement.setInt(1, codigo);
+                statement.setInt(1, codCC);
                 try(ResultSet rs = statement.executeQuery()){
                     if(rs.next())
                     {

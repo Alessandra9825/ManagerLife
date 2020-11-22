@@ -15,4 +15,5 @@ public class usuarioSingleton {
     static public int getIdUsuario(){
         return  idUsuario;
     }
+
 }

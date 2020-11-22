@@ -79,6 +79,7 @@ public class loginController implements Initializable {
             logado = buscaUsuario.validaUsuario(user);
 
             if(logado){
+                usuarioSingleton singuser = usuarioSingleton.Instancia();
                 home();
                 stage = (Stage)imageLogin.getScene().getWindow();
                 stage.close();

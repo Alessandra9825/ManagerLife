@@ -103,6 +103,23 @@ public class SaldoCCMSSQL <E extends Entidade> extends MSSQLDAO {
         return listaSaldo;
     }
 
+    public ArrayList localizaUltima7Transicoes(int codCC) throws SQLException{
+        ArrayList<SaldoCC> listaSaldo = new ArrayList();
+        try (Connection conexao = getConnection()) {
+            String SQL = getLocalizaUltimas7Command();
+            try (PreparedStatement stmt = getStatement(SQL, conexao)) {
+                stmt.setInt(1,codCC);
+                try (ResultSet rs = stmt.executeQuery()) {
+                    while (rs.next()){
+                        SaldoCC saldo = montaUltima30(rs);
+                        listaSaldo.add(saldo);
+                    }
+                }
+            }
+        }
+        return listaSaldo;
+    }
+
     protected String getLocalizaTodasCommand()
     {
         return "select * from HistoricoCorrente where contaCorrente_id = ? order by [data] desc";
@@ -110,7 +127,12 @@ public class SaldoCCMSSQL <E extends Entidade> extends MSSQLDAO {
 
     protected String getLocalizaUltimas30Command()
     {
-        return "select sum(valor) as valor, [data] from HistoricoCorrente where contaCorrente_id = ? and [data] >= getdate() - 30 and [data] <= GETDATE() group by [data] order by [data]";
+        return "select sum(valor) as valor, [data] from HistoricoCorrente where contaCorrente_id = ? and [data] >= getdate() - 30 and [data] <= GETDATE() +1 group by [data] order by [data]";
+    }
+
+    protected String getLocalizaUltimas7Command()
+    {
+        return "select sum(valor) as valor, [data] from HistoricoCorrente where contaCorrente_id = ? and [data] >= getdate() - 7 and [data] <= GETDATE() +1 group by [data] order by [data]";
     }
 
     @Override

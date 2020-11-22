@@ -8,8 +8,8 @@ public class ContaCorrente extends Entidade{
     @CampoNoBanco(nome="valorAtual",chave=false)
     private double valor;
 
-    @CampoNoBanco(nome="financas_id",chave=false)
-    private int financasId;
+    @CampoNoBanco(nome="usuario_id",chave=false)
+    private int usuarioId;
 
     public double getValor() {
         return valor;
@@ -19,11 +19,11 @@ public class ContaCorrente extends Entidade{
         this.valor = valor;
     }
 
-    public int getFinancasId() {
-        return financasId;
+    public int getUsuarioId() {
+        return usuarioId;
     }
 
-    public void setFinancasId(int financasId) {
-        this.financasId = financasId;
+    public void setUsuarioId(int financasId) {
+        this.usuarioId = financasId;
     }
 }

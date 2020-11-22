@@ -48,7 +48,7 @@
         <jarDirectory url="file://$MODULE_DIR$/../../lib java/sqljdbc_8.4/ptb" recursive="false" />
       </library>
     </orderEntry>
-    <orderEntry type="module-library">
+    <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
           <root url="jar://$MODULE_DIR$/../../Bibliotecas/activation.jar!/" />
@@ -57,13 +57,33 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="module-library">
+    <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
           <root url="jar://$MODULE_DIR$/../../Bibliotecas/mail.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/../../Bibliotecas/sqljdbc_8.4/ptb" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/../../Bibliotecas/sqljdbc_8.4/ptb/samples/adaptive" />
+          <root url="file://$MODULE_DIR$/../../Bibliotecas/sqljdbc_8.4/ptb/samples/alwaysencrypted" />
+          <root url="file://$MODULE_DIR$/../../Bibliotecas/sqljdbc_8.4/ptb/samples/azureactivedirectoryauthentication" />
+          <root url="file://$MODULE_DIR$/../../Bibliotecas/sqljdbc_8.4/ptb/samples/connections" />
+          <root url="file://$MODULE_DIR$/../../Bibliotecas/sqljdbc_8.4/ptb/samples/constrained" />
+          <root url="file://$MODULE_DIR$/../../Bibliotecas/sqljdbc_8.4/ptb/samples/dataclassification" />
+          <root url="file://$MODULE_DIR$/../../Bibliotecas/sqljdbc_8.4/ptb/samples/datatypes" />
+          <root url="file://$MODULE_DIR$/../../Bibliotecas/sqljdbc_8.4/ptb/samples/resultsets" />
+          <root url="file://$MODULE_DIR$/../../Bibliotecas/sqljdbc_8.4/ptb/samples/sparse" />
+        </SOURCES>
+        <jarDirectory url="file://$MODULE_DIR$/../../Bibliotecas/sqljdbc_8.4/ptb" recursive="false" />
       </library>
     </orderEntry>
   </component>

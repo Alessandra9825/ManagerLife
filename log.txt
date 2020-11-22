@@ -206,3 +206,26 @@
 2020-11-18T20:15:26.050-03:00[America/Sao_Paulo] - ValidaGasto - Descrição vazia. 
 
 >>>>>>>>> Temporary merge branch 2
+2020-11-22T03:02:50.637-03:00[America/Sao_Paulo] - Login - Usuário não cadastrado
+2020-11-22T03:02:52.421-03:00[America/Sao_Paulo] - Login - Usuário não cadastrado
+2020-11-22T03:03:06.656-03:00[America/Sao_Paulo] - Login - Usuário não cadastrado
+2020-11-22T03:24:39.236-03:00[America/Sao_Paulo] - ValidaSaldoCC - Data nula. 
+
+2020-11-22T03:24:45.734-03:00[America/Sao_Paulo] - ValidaSaldoCC - Data nula. 
+
+2020-11-22T03:24:57.393-03:00[America/Sao_Paulo] - ValidaSaldoCC - Data nula. 
+
+2020-11-22T03:24:57.393-03:00[America/Sao_Paulo] - ValidaSaldoCC - Data invalida. 
+
+2020-11-22T03:25:05.004-03:00[America/Sao_Paulo] - ValidaSaldoCC - Data nula. 
+
+2020-11-22T03:25:05.004-03:00[America/Sao_Paulo] - ValidaSaldoCC - Data invalida. 
+
+2020-11-22T03:25:08.798-03:00[America/Sao_Paulo] - ValidaSaldoCC - Data nula. 
+
+2020-11-22T03:25:29.434-03:00[America/Sao_Paulo] - ValidaSaldoCC - Data nula. 
+
+2020-11-22T03:25:35.868-03:00[America/Sao_Paulo] - ValidaSaldoCC - Data nula. 
+
+2020-11-22T03:30:14.535-03:00[America/Sao_Paulo] - ValidaSaldoCC - Data invalida. 
+

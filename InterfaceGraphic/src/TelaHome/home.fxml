@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TelaMenu.src.home">
+<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TelaHome.src.Controller">
    <children>
       <AnchorPane fx:id="an_home" prefHeight="500.0" prefWidth="600.0">
          <children>
@@ -15,7 +15,7 @@
                   <content>
                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
-                              <LineChart prefHeight="280.0" prefWidth="500.0">
+                              <LineChart fx:id="lcGrafico" legendVisible="false" prefHeight="280.0" prefWidth="500.0" verticalZeroLineVisible="false">
                                 <xAxis>
                                   <CategoryAxis side="BOTTOM" />
                                 </xAxis>

@@ -1,6 +1,7 @@
 package Basis;
 
 import Annotations.CampoNoBanco;
+import singleUsuario.usuarioSingleton;
 
 import java.lang.reflect.Field;
 import java.sql.*;
@@ -72,7 +73,7 @@ public abstract class MSSQLDAO <E extends Entidade> extends DAO {
     }
 
     protected String getLocalizaCommand(){
-        String campos = "";
+        String campos = "id,";
         String chave = "";
         for(Field campo : entityClass.getDeclaredFields()) {
             if (campo.isAnnotationPresent(CampoNoBanco.class)) {

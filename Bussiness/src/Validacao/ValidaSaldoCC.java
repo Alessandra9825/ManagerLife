@@ -36,7 +36,7 @@ public class ValidaSaldoCC <E extends Entidade> extends Validacao{
                 GerenciadorAuditoria.getInstancia().adicionaMsgAuditoria(meth + "Valor invalido. \n");
             }
 
-            if(!ValidaData(saldo.getData().toString()))
+            if(ValidaData(saldo.getData().toString()))
             {
                 erros.add("Informe uma data!");
                 GerenciadorAuditoria.getInstancia().adicionaMsgAuditoria(meth + "Data nula. \n");

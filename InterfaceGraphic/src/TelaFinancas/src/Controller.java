@@ -4,6 +4,7 @@ import MSSQL.ContaCorrenteMSSQL;
 import MSSQL.SaldoCCMSSQL;
 import TelaCadastraSaldoContaCorrente.src.SaldoContaCorrente;
 import TelaCadastrarGastos.src.GastosMain;
+import Utilitarios.Utilitarios;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.chart.CategoryAxis;
@@ -16,7 +17,7 @@ import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
 import vos.ContaCorrente;
 import vos.SaldoCC;
-
+import singleUsuario.usuarioSingleton;
 import javax.swing.text.LabelView;
 import java.net.URL;
 import java.sql.SQLException;
@@ -64,19 +65,20 @@ public class Controller implements Initializable {
     }
 
     public void AtualizaTela(){
+        Utilitarios util = Utilitarios.getInstancia();
         SaldoCCMSSQL daoSaldo = new SaldoCCMSSQL();
         ContaCorrenteMSSQL daoConta = new ContaCorrenteMSSQL();
         try {
-            ArrayList<SaldoCC> historico = daoSaldo.localizaTodasTransicoes(7); //AJUSTAR
+            ArrayList<SaldoCC> historico = daoSaldo.localizaTodasTransicoes(util.idConta); //AJUSTAR
             SimpleDateFormat formatacao = new SimpleDateFormat("dd/MM/yy");
             txtHistorico.clear();
             for (SaldoCC transacao: historico) {
-                txtHistorico.appendText(formatacao.format(transacao.getData()) + " - R$" + String.format("%.2f", transacao.getValor()) + "\n");
+                txtHistorico.appendText(formatacao.format(transacao.getData()) + " - R$" + String.format("%.2f", transacao.getValor()) + " ("+transacao.getDescricao() +")\n");
             }
-            ContaCorrente conta = daoConta.localiza(7);
+            ContaCorrente conta = daoConta.localiza(util.idConta);
             double valor = conta.getValor();
             lblSaldo.setText("R$ "+String.format("%.2f",valor));
-            ArrayList<SaldoCC> ultimas30 = daoSaldo.localizaUltima30Transicoes(7);
+            ArrayList<SaldoCC> ultimas30 = daoSaldo.localizaUltima30Transicoes(util.idConta);
             XYChart.Series linha = new XYChart.Series();
             int aux = ultimas30.size();
             double[] valorAPlotar = new double[aux];

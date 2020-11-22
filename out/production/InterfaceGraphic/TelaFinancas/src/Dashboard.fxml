@@ -21,7 +21,7 @@
             </Label>
          </children>
       </Pane>
-      <LineChart fx:id="lcGrafico" layoutX="300.0" layoutY="179.0" prefHeight="250.0" prefWidth="288.0">
+      <LineChart fx:id="lcGrafico" layoutX="300.0" layoutY="179.0" legendVisible="false" prefHeight="250.0" prefWidth="288.0" verticalZeroLineVisible="false">
         <xAxis>
           <CategoryAxis side="BOTTOM" fx:id="x" />
         </xAxis>
