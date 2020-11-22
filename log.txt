@@ -10,6 +10,7 @@
 2020-10-31T19:10:12.665-03:00[America/Sao_Paulo] - newPassword - Senha cadastrada com sucesso!
 2020-10-31T19:11:25.589-03:00[America/Sao_Paulo] - sendEmail - Sucesso!
 2020-10-31T19:11:25.596-03:00[America/Sao_Paulo] - newPassword - Senha cadastrada com sucesso!
+<<<<<<<<< Temporary merge branch 1
 2020-11-02T18:46:03.735-03:00[America/Sao_Paulo] - sendEmail - Sucesso!
 2020-11-02T18:46:03.742-03:00[America/Sao_Paulo] - newPassword - Senha cadastrada com sucesso!
 2020-11-02T18:49:36.051-03:00[America/Sao_Paulo] - sendEmail - Sucesso!
@@ -172,6 +173,36 @@
 2020-11-06T23:08:58.399-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!
 2020-11-08T19:08:50.219-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!
 2020-11-18T20:14:58.208-03:00[America/Sao_Paulo] - ValidaGasto - Valor zerado ou negativo.
+2020-11-11T20:14:15.942-03:00[America/Sao_Paulo] - Acesso - Usuário não cadastrado
+2020-11-11T20:14:15.954-03:00[America/Sao_Paulo] - Login - Usuário não cadastrado
+2020-11-11T20:14:26.362-03:00[America/Sao_Paulo] - Acesso - Usuário não cadastrado
+2020-11-11T20:14:26.362-03:00[America/Sao_Paulo] - Login - Usuário não cadastrado
+2020-11-11T20:14:36.326-03:00[America/Sao_Paulo] - Acesso - Usuário não cadastrado
+2020-11-11T20:14:36.327-03:00[America/Sao_Paulo] - Login - Usuário não cadastrado
+2020-11-11T20:14:56.154-03:00[America/Sao_Paulo] - Acesso - Usuário não cadastrado
+2020-11-11T20:14:56.154-03:00[America/Sao_Paulo] - Login - Usuário não cadastrado
+2020-11-21T20:21:16.573-03:00[America/Sao_Paulo] - ValidaUsuario - Nome vazio.
 
-2020-11-18T20:15:26.050-03:00[America/Sao_Paulo] - ValidaGasto - Descrição vazia.
+2020-11-21T20:21:16.584-03:00[America/Sao_Paulo] - ValidaUsuario - Email vazio.
 
+2020-11-21T20:21:16.584-03:00[America/Sao_Paulo] - ValidaUsuario - Senha vazia.
+
+2020-11-21T20:21:16.584-03:00[America/Sao_Paulo] - ValidaUsuario - Data de nascimento inválida.
+
+2020-11-21T22:33:59.638-03:00[America/Sao_Paulo] - ValidaGasto - Data invalida.
+
+2020-11-21T22:36:30.967-03:00[America/Sao_Paulo] - ValidaGasto - Data invalida.
+
+2020-11-22T00:05:08.227-03:00[America/Sao_Paulo] - ValidaGasto - Descrição vazia.
+
+2020-11-22T00:09:22.431-03:00[America/Sao_Paulo] - ValidaSaldoCC - Descrição vazia.
+
+2020-11-22T00:09:22.431-03:00[America/Sao_Paulo] - ValidaSaldoCC - Descrição vazia.
+
+2020-11-22T00:16:44.192-03:00[America/Sao_Paulo] - ValidaSaldoCC - Descrição vazia.
+
+2020-11-22T00:16:44.192-03:00[America/Sao_Paulo] - ValidaSaldoCC - Descrição vazia.
+
+2020-11-18T20:15:26.050-03:00[America/Sao_Paulo] - ValidaGasto - Descrição vazia. 
+
+>>>>>>>>> Temporary merge branch 2

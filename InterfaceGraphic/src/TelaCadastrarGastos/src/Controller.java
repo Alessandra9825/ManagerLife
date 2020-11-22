@@ -1,13 +1,13 @@
 package TelaCadastrarGastos.src;
 import Enums.EnumFrequencia;
-import MSSQL.GastosMSSQL;
-import Validacao.ValidaGasto;
+import MSSQL.SaldoCCMSSQL;
+import Validacao.ValidaSaldoCC;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
-import vos.Gastos;
+import vos.SaldoCC;
 
 import javax.swing.*;
 import java.net.URL;
@@ -19,50 +19,43 @@ import java.time.ZoneId;
 import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
-    @FXML private RadioButton rbGastoGeral, rbGastoCartaoCredito;
+
     @FXML private TextField txtValor;
     @FXML private DatePicker dtpDataGasto;
     @FXML private TextArea txtDescricao;
-    @FXML private ComboBox cbFrequencia;
-    public GastosMSSQL dao;
+    public SaldoCCMSSQL dao;
+    public int id = 7; //AJUSTAR
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        cbFrequencia.getItems().addAll(EnumFrequencia.GASTO_UNICO.getDescricao(),
-                                       EnumFrequencia.MENSAL.getDescricao());
-        cbFrequencia.getSelectionModel().select(0);
-        dao = new GastosMSSQL();
         txtValor.setText("0");
     }
 
     public void adicionarGasto(MouseEvent mouseEvent) throws SQLException {
-        Gastos gasto = new Gastos();
+        SaldoCC gasto = new SaldoCC();
         ArrayList<String> erros;
-        ValidaGasto validacao = new ValidaGasto();
+        ValidaSaldoCC validacao = new ValidaSaldoCC();
 
         try {
-            gasto.setId(gasto.getId());
-            gasto.setTipo(getTipoGasto());
             gasto.setValor(Double.parseDouble(txtValor.getText()));
             gasto.setDescricao(txtDescricao.getText());
             if (dtpDataGasto.getValue() != null) {
                 gasto.setData(Date.from(Instant.from(dtpDataGasto.getValue().atStartOfDay(ZoneId.systemDefault()))));
             }
-            gasto.setFrequencia((String) cbFrequencia.getSelectionModel().getSelectedItem());
-            dao = new GastosMSSQL();
-            dao.inserirGastos(gasto);
-
+            gasto.setCCId(id); //AJUSTAR
+            dao = new SaldoCCMSSQL();
             erros = validacao.ValidaDados(gasto);
-
+            gasto.setValor(gasto.getValor()*-1); //ajustando o valor para negativo, pois é um gasto
             if(erros.size() > 0){
                 popupError(erros);
             }
             else {
+                dao.salvar(gasto);
                 JOptionPane.showMessageDialog(null, "Gasto inserido com sucesso! ");
             }
 
         } catch (Exception e) {
-                  JOptionPane.showMessageDialog(null, e.getMessage());
+            JOptionPane.showMessageDialog(null, e.getMessage());
         }
     }
 
@@ -70,14 +63,6 @@ public class Controller implements Initializable {
     public void cancelarCadastro(MouseEvent mouseEvent) {
         Stage stage = (Stage) btnCancelar.getScene().getWindow();
         stage.close();
-    }
-
-    public String getTipoGasto() {
-        if(rbGastoCartaoCredito.isSelected()) {
-            return rbGastoCartaoCredito.getText();
-        }
-        else
-            return rbGastoGeral.getText();
     }
 
     public void popupError(ArrayList<String> erros){
