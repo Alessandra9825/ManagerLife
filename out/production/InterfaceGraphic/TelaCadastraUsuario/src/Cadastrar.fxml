@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="princPanel" prefHeight="387.0" prefWidth="597.0" style="-fx-background-color: #66ccff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TelaCadastraUsuario.src.CadastrarUsuario">
+   <children>
+      <AnchorPane layoutX="21.0" layoutY="20.0" prefHeight="356.0" prefWidth="558.0" style="-fx-background-color: white;">
+         <children>
+            <Button id="btn_salvar" fx:id="btn_salvar" layoutX="88.0" layoutY="300.0" mnemonicParsing="false" onAction="#Salvar_btn" prefHeight="25.0" prefWidth="104.0" text="Salvar" />
+            <Button id="btn_cancelar" fx:id="btn_cancelar" layoutX="332.0" layoutY="300.0" mnemonicParsing="false" onAction="#Cancelar_btn" prefHeight="25.0" prefWidth="104.0" text="Cancelar" />
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="45.0" prefWidth="559.0" style="-fx-background-color: #99ccff;">
+               <children>
+                  <Label layoutX="114.0" layoutY="-3.0" text="Cadastro de Usuário" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="35.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+         </children>
+      </AnchorPane>
+      <SplitPane layoutX="64.0" layoutY="78.0" orientation="VERTICAL" prefHeight="206.0" prefWidth="470.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="154.0" prefWidth="468.0" style="-fx-background-color: white;">
+               <children>
+                  <Label layoutX="12.0" layoutY="16.0" text="Nome" textFill="#0b0051">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <Label layoutX="12.0" layoutY="50.0" text="E-mail" textFill="#0b0051">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <Label layoutX="10.0" layoutY="93.0" text="Celular" textFill="#0b0051">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <Label layoutX="10.0" layoutY="135.0" text="Data Nascimento" textFill="#0b0051">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <TextField fx:id="nomeTxt" layoutX="123.0" layoutY="13.0" prefHeight="25.0" prefWidth="334.0" />
+                  <TextField fx:id="emailTxt" layoutX="123.0" layoutY="47.0" prefHeight="25.0" prefWidth="334.0" />
+                  <TextField fx:id="celTxt" layoutX="123.0" layoutY="90.0" prefHeight="25.0" prefWidth="174.0" />
+                  <DatePicker fx:id="dataNasc" layoutX="123.0" layoutY="133.0" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
