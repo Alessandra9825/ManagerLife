@@ -22,9 +22,6 @@ public class SaldoCC extends Entidade {
     @CampoNoBanco(nome = "contaCorrente_id", chave = false)
     private int CCId;
 
-    @CampoNoBanco(nome="mensal", chave=false)
-    private boolean mensal;
-
     public Date getData() {
         return data;
     }
@@ -56,13 +53,5 @@ public class SaldoCC extends Entidade {
 
     public void setCCId(int CCId) {
         this.CCId = CCId;
-    }
-
-    public boolean isMensal() {
-        return mensal;
-    }
-
-    public void setMensal(boolean mensal) {
-        this.mensal = mensal;
     }
 }

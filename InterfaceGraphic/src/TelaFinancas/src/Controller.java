@@ -3,7 +3,7 @@ package TelaFinancas.src;
 import MSSQL.ContaCorrenteMSSQL;
 import MSSQL.SaldoCCMSSQL;
 import TelaCadastraSaldoContaCorrente.src.SaldoContaCorrente;
-import TelaCadastrarGastos.src.Gastos;
+import TelaCadastrarGastos.src.GastosMain;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.chart.CategoryAxis;
@@ -49,7 +49,7 @@ public class Controller implements Initializable {
     public void handleButtonAction(javafx.event.ActionEvent event) throws Exception {
         if (event.getSource() == btn_adicionarGasto)
         {
-            Gastos tela = new Gastos();
+            GastosMain tela = new GastosMain();
             tela.start(new Stage());
         }
         else if(event.getSource() == btn_adicionarSaldo)
@@ -60,19 +60,23 @@ public class Controller implements Initializable {
     }
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        AtualizaTela();
+    }
+
+    public void AtualizaTela(){
         SaldoCCMSSQL daoSaldo = new SaldoCCMSSQL();
         ContaCorrenteMSSQL daoConta = new ContaCorrenteMSSQL();
         try {
-            ArrayList<SaldoCC> historico = daoSaldo.localizaTodasTransicoes(1);
+            ArrayList<SaldoCC> historico = daoSaldo.localizaTodasTransicoes(7); //AJUSTAR
             SimpleDateFormat formatacao = new SimpleDateFormat("dd/MM/yy");
             txtHistorico.clear();
             for (SaldoCC transacao: historico) {
                 txtHistorico.appendText(formatacao.format(transacao.getData()) + " - R$" + String.format("%.2f", transacao.getValor()) + "\n");
             }
-            ContaCorrente conta = daoConta.localiza(1);
+            ContaCorrente conta = daoConta.localiza(7);
             double valor = conta.getValor();
             lblSaldo.setText("R$ "+String.format("%.2f",valor));
-            ArrayList<SaldoCC> ultimas30 = daoSaldo.localizaUltima30Transicoes(1);
+            ArrayList<SaldoCC> ultimas30 = daoSaldo.localizaUltima30Transicoes(7);
             XYChart.Series linha = new XYChart.Series();
             int aux = ultimas30.size();
             double[] valorAPlotar = new double[aux];
@@ -92,6 +96,7 @@ public class Controller implements Initializable {
             for (int i = 0; i< valorAPlotar.length;i++) {
                 linha.getData().add(new XYChart.Data(dataAPlotar[i],valorAPlotar[i]));
             }
+            lcGrafico.getData().clear();
             lcGrafico.getData().addAll(linha);
         } catch (SQLException throwables) {
             throwables.printStackTrace();

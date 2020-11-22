@@ -36,5 +36,10 @@
          </font></Label>
       <Button fx:id="btn_adicionarGasto" layoutX="18.0" layoutY="436.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="243.0" text="Adicionar Gastos" />
       <Button fx:id="btn_adicionarSaldo" layoutX="340.0" layoutY="436.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="243.0" text="Adicionar Saldo" />
+      <Button fx:id="btnRefresh" layoutX="497.0" layoutY="122.0" mnemonicParsing="false" onAction="#AtualizaTela" prefHeight="67.0" prefWidth="90.0" style="-fx-background-color: transparent;" text="⟳">
+         <font>
+            <Font name="Candara Bold" size="35.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

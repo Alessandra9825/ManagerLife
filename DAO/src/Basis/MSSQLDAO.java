@@ -121,11 +121,16 @@ public class MSSQLDAO <E extends Entidade> extends DAO {
         try(Connection conexao = getConnection()){
             String SQL = getInsertCommand(entidade);
             try(PreparedStatement stmt = getInsertStatement(entidade, conexao.prepareStatement(SQL))){
-                stmt.execute();
-                return true;
+                if (stmt.executeUpdate() == 1)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
         }
-        //return false;
     }
 
     protected String getInsertCommand(Entidade entidade) {
