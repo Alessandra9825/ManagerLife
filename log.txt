@@ -169,53 +169,9 @@
 2020-11-18T21:02:43.001-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!
 2020-11-18T21:02:51.178-03:00[America/Sao_Paulo] - PostIt - PostIt não cadastrado
 2020-11-18T21:02:51.178-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!
-2020-11-19T16:50:29.494-03:00[America/Sao_Paulo] - ValidaPostIt - Descrição vazio.
+2020-11-06T23:08:58.399-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!
+2020-11-08T19:08:50.219-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!
+2020-11-18T20:14:58.208-03:00[America/Sao_Paulo] - ValidaGasto - Valor zerado ou negativo.
 
-2020-11-20T12:20:37.729-03:00[America/Sao_Paulo] - ValidaUsuario - Nome vazio.
+2020-11-18T20:15:26.050-03:00[America/Sao_Paulo] - ValidaGasto - Descrição vazia.
 
-2020-11-20T12:20:37.749-03:00[America/Sao_Paulo] - ValidaUsuario - Email vazio.
-
-2020-11-20T12:20:37.749-03:00[America/Sao_Paulo] - ValidaUsuario - Senha vazia.
-
-2020-11-20T12:20:37.749-03:00[America/Sao_Paulo] - ValidaUsuario - Data de nascimento inválida.
-
-2020-11-20T12:21:29.383-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!
-2020-11-20T19:47:28.084-03:00[America/Sao_Paulo] - Acesso - Usuário não cadastrado
-2020-11-20T19:47:28.112-03:00[America/Sao_Paulo] - Login - Usuário não cadastrado
-2020-11-20T19:49:12.508-03:00[America/Sao_Paulo] - Acesso - Usuário não cadastrado
-2020-11-20T19:49:12.508-03:00[America/Sao_Paulo] - Login - Usuário não cadastrado
-2020-11-20T19:54:18.160-03:00[America/Sao_Paulo] - Acesso - Usuário não cadastrado
-2020-11-20T19:54:18.172-03:00[America/Sao_Paulo] - Login - Usuário não cadastrado
-2020-11-20T19:56:23.556-03:00[America/Sao_Paulo] - Acesso - Usuário não cadastrado
-2020-11-20T19:56:23.564-03:00[America/Sao_Paulo] - Login - Usuário não cadastrado
-2020-11-20T20:12:16.795-03:00[America/Sao_Paulo] - PostIt - PostIt não cadastrado
-2020-11-20T20:12:16.801-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!
-2020-11-20T20:12:33.221-03:00[America/Sao_Paulo] - PostIt - PostIt não cadastrado
-2020-11-20T20:12:33.221-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!
-2020-11-20T20:15:43.804-03:00[America/Sao_Paulo] - PostIt - PostIt não cadastrado
-2020-11-20T20:17:19.938-03:00[America/Sao_Paulo] - PostIt - PostIt não cadastrado
-2020-11-20T20:17:25.819-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!
-2020-11-20T20:18:58.656-03:00[America/Sao_Paulo] - PostIt - PostIt não cadastrado
-2020-11-20T20:19:13.947-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!
-2020-11-20T20:21:47.422-03:00[America/Sao_Paulo] - PostIt - PostIt não cadastrado
-2020-11-20T20:21:49.763-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!
-2020-11-20T22:32:13.475-03:00[America/Sao_Paulo] - Usuario - Usuario não cadastrado
-2020-11-20T22:32:15.477-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!
-2020-11-20T22:32:46.232-03:00[America/Sao_Paulo] - Usuario - Usuario não cadastrado
-2020-11-20T22:32:51.898-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!
-2020-11-20T22:34:12.461-03:00[America/Sao_Paulo] - Usuario - Usuario não cadastrado
-2020-11-20T22:34:12.461-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!
-2020-11-20T22:37:04.426-03:00[America/Sao_Paulo] - Usuario - Usuario não cadastrado
-2020-11-20T22:37:04.426-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!
-2020-11-20T22:41:02.414-03:00[America/Sao_Paulo] - Usuario - Usuario não cadastrado
-2020-11-20T22:41:02.414-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!
-2020-11-20T22:47:19.494-03:00[America/Sao_Paulo] - Usuario - Usuario não cadastrado
-2020-11-20T22:47:19.494-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!
-2020-11-21T18:18:36.716-03:00[America/Sao_Paulo] - Acesso - Usuário não cadastrado
-2020-11-21T18:18:43.072-03:00[America/Sao_Paulo] - Login - Usuário não cadastrado
-2020-11-21T18:23:15.674-03:00[America/Sao_Paulo] - Acesso - Usuário não cadastrado
-2020-11-21T18:23:15.686-03:00[America/Sao_Paulo] - Login - Usuário não cadastrado
-2020-11-21T18:46:58.398-03:00[America/Sao_Paulo] - PostIt - PostIt não cadastrado
-2020-11-21T18:46:58.405-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!
-2020-11-21T18:47:08.762-03:00[America/Sao_Paulo] - PostIt - PostIt não cadastrado
-2020-11-21T18:47:08.762-03:00[America/Sao_Paulo] - DataBase - Sistema fora de serviço!
