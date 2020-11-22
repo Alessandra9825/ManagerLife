@@ -32,3 +32,11 @@
 2020-11-11T20:14:36.327-03:00[America/Sao_Paulo] - Login - Usuário não cadastrado
 2020-11-11T20:14:56.154-03:00[America/Sao_Paulo] - Acesso - Usuário não cadastrado
 2020-11-11T20:14:56.154-03:00[America/Sao_Paulo] - Login - Usuário não cadastrado
+2020-11-21T20:21:16.573-03:00[America/Sao_Paulo] - ValidaUsuario - Nome vazio.
+
+2020-11-21T20:21:16.584-03:00[America/Sao_Paulo] - ValidaUsuario - Email vazio.
+
+2020-11-21T20:21:16.584-03:00[America/Sao_Paulo] - ValidaUsuario - Senha vazia.
+
+2020-11-21T20:21:16.584-03:00[America/Sao_Paulo] - ValidaUsuario - Data de nascimento inválida.
+

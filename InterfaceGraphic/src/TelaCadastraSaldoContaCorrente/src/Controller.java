@@ -27,7 +27,7 @@ public class Controller implements Initializable {
 
 
     //Debugging area
-    int id = 1; //id conta corrente TEMP
+    int id = 7; //id conta corrente TEMP
     //
 
     @FXML
