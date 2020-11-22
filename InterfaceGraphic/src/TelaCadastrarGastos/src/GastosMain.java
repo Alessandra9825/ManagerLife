@@ -7,7 +7,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
-public class Gastos extends Application {
+public class GastosMain extends Application {
 
     public static void main(String[] args) {
         launch(args);
