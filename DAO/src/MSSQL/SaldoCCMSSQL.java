@@ -34,7 +34,6 @@ public class SaldoCCMSSQL <E extends Entidade> extends MSSQLDAO {
             saldo.setData(rs.getDate("data"));
             saldo.setDescricao(rs.getString("descricao"));
             saldo.setCCId(rs.getInt("contaCorrente_id"));
-            saldo.setMensal(rs.getBoolean("mensal"));
         } catch (SQLException ex) {
             Logger.getLogger(SaldoCCMSSQL.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -44,7 +43,7 @@ public class SaldoCCMSSQL <E extends Entidade> extends MSSQLDAO {
 
     @Override
     protected String getInsertCommand(Entidade entidade) {
-        return "insert into HistoricoCorrente (valor, [data], descricao, contaCorrente_id, mensal) values (?,?,?,?,?)";
+        return "insert into HistoricoCorrente (valor, [data], descricao, contaCorrente_id) values (?,?,?,?)";
     }
 
     @Override
@@ -55,7 +54,6 @@ public class SaldoCCMSSQL <E extends Entidade> extends MSSQLDAO {
         stmt.setString(2,formatter.format(saldo.getData()));
         stmt.setString(3,saldo.getDescricao());
         stmt.setInt(4,saldo.getCCId());
-        stmt.setBoolean(5,saldo.isMensal());
         return stmt;
     }
 

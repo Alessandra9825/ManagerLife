@@ -25,7 +25,7 @@ public class ContaCorrenteMSSQL <E extends Entidade> extends MSSQLDAO {
         try{
             conta.setId(rs.getInt("id"));
             conta.setValor(rs.getDouble("valorAtual"));
-            conta.setFinancasId(rs.getInt("financas_id"));
+            conta.setFinancasId(rs.getInt("usuario_id"));
         } catch (SQLException ex) {
             Logger.getLogger(SaldoCCMSSQL.class.getName()).log(Level.SEVERE, null, ex);
         }
