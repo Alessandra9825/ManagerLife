@@ -1,12 +1,6 @@
 package sample;
 
-import TelaLogin.src.login;
-import TelaRecadastrarSenha.src.RecadastrarSenha;
-import TelaRecuperarSenha.src.RecuperarSenha;
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class Main extends Application {

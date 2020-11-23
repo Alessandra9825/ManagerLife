@@ -31,7 +31,6 @@ public class UsuarioMSSQL <E extends Entidade> extends MSSQLDAO {
             entidade.setCel(rs.getString("cel"));
             entidade.setEmail(rs.getString("email"));
             entidade.setSenha(rs.getString("senha"));
-            entidade.setFoto(rs.getBinaryStream("imagem") == null ? null : new Image(rs.getBinaryStream("imagem")));
             entidade.setDataNascimento(rs.getDate("dataNascimento"));
         } catch (SQLException ex) {
             Logger.getLogger(UsuarioMSSQL.class.getName()).log(Level.SEVERE, null, ex);

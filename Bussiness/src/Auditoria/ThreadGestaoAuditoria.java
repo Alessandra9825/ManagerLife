@@ -1,6 +1,6 @@
 package Auditoria;
 
-import Validacao.TextoLog;
+import TextoLog.TextoLog;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;

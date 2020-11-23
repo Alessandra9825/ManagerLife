@@ -23,9 +23,6 @@ public class Usuario extends Entidade {
     @CampoNoBanco(nome = "dataNascimento", chave = false)
     private Date dataNascimento;
 
-    @CampoNoBanco(nome = "imagem", chave = false)
-    private Image foto;
-
     public String getNome() {
         return nome;
     }
@@ -64,13 +61,5 @@ public class Usuario extends Entidade {
 
     public void setDataNascimento(Date dataNascimento) {
         this.dataNascimento = dataNascimento;
-    }
-
-    public Image getFoto() {
-        return foto;
-    }
-
-    public void setFoto(Image foto) {
-        this.foto = foto;
     }
 }

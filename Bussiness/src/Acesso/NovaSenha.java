@@ -15,25 +15,10 @@ import java.util.stream.Stream;
 
 public class NovaSenha {
 
-    //testes
-    //public static void main(String[] args){
-    //    GerenciadorAuditoria.getInstancia().ativar();
-    //    System.out.println("Testando o envio de mensagem:");
-    //    //String email = "081180001@ftt.cefsa.edu.br, 081180003@ftt.cefsa.edu.br, 081180011@ftt.cefsa.edu.br, 081180021@ftt.cefsa.edu.br";
-    //
-    //    String erro = newPassword("lucas@russo", "");
-    //
-    //    if(erro.isEmpty() || erro.trim().length() == 0)
-    //        System.out.println("Salvo com sucesso");
-    //    else
-    //        System.out.println("Erro");
-    //
-    //    GerenciadorAuditoria.getInstancia().desativar();
-    //}
-
     public String newPassword(String email, String senha){
         String erro = "";
         String meth = "newPassword - ";
+
         boolean emailEnviado = false;
         try{
             UsuarioMSSQL dao = new UsuarioMSSQL();
@@ -56,6 +41,7 @@ public class NovaSenha {
                 }
             }
             else{
+                erro = "Usuário não encontrado!";
                 GerenciadorAuditoria.getInstancia().adicionaMsgAuditoria(meth + "Usuário não encontrado.");
             }
         } catch (SQLException e){
@@ -98,7 +84,7 @@ public class NovaSenha {
         return specialChars.mapToObj(data -> (char) data);
     }
 
-    public boolean sendEmail(String email, String newPass){
+    private boolean sendEmail(String email, String newPass){
         String meth = "sendEmail - ";
         final String user = "suporte.ManagerLife@gmail.com"; //change accordingly
         final String password = "managerLife1234"; //change accordingly

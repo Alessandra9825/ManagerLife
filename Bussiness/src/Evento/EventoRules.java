@@ -56,7 +56,6 @@ public class EventoRules {
         for (Entry entry : backup)
             entryListUpdate.remove(entry);
     }
-
     private void clearDeleteUpdate(List<Entry> entryListDelete, List<Entry> entryListUpdate){
 
         List<Entry> backup = new ArrayList<>();
@@ -70,7 +69,6 @@ public class EventoRules {
         for (Entry entry : backup)
             entryListUpdate.remove(entry);
     }
-
     private void clearDeleteDabatase(List<Entry> entryListDelete, List<Entry> entryListDB){
         boolean delete;
 
@@ -201,7 +199,7 @@ public class EventoRules {
     //Faz a busca de todos os eventos no banco
     public List<Entry> findAllEntry(int usuarioId, List<Calendar> calendars) {
         EventoMSSQL evento =  new EventoMSSQL();
-        List<Evento> eventoDB = new ArrayList<>();
+        List<Evento> eventoDB;
         List<Entry> entryDB = new ArrayList<>();
         Entry entry;
 

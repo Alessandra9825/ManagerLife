@@ -1,0 +1,10 @@
+Um log de teste
+Um log de teste
+2020-11-22T21:36:08.201-03:00[America/Sao_Paulo] - ValidaLogin - Senha vazio.
+
+2020-11-22T21:53:34.022-03:00[America/Sao_Paulo] - ValidaUsuario - Nome vazio.
+
+2020-11-22T21:53:34.040-03:00[America/Sao_Paulo] - ValidaUsuario - Email vazio.
+
+2020-11-22T21:53:34.040-03:00[America/Sao_Paulo] - ValidaUsuario - Senha vazia.
+

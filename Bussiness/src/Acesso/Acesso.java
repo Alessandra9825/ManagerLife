@@ -14,9 +14,16 @@ public class Acesso {
         return userRepo.getSenha().equals(user.getSenha());
     }
 
-    public boolean validaUsuario(Usuario user) throws Exception {
+    public boolean validaUsuario(Usuario user) {
         Repositorio repositorio = new RepositorioMSSQL();
-        Usuario usuario = (Usuario)repositorio.localiza(user.getEmail(), enumEntidade.USUARIO);
+        Usuario usuario = null;
+
+        try {
+            usuario = (Usuario)repositorio.localiza(user.getEmail(), enumEntidade.USUARIO);
+        } catch (Exception e) {
+            GerenciadorAuditoria.getInstancia().adicionaMsgAuditoria(meth + "Error - Probelmas de Conexao");
+        }
+
         if(usuario != null && validaSenha(usuario, user))
             //grava no singleton
             return true;
