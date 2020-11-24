@@ -1,7 +1,7 @@
 package Basis;
 
 import Annotations.CampoNoBanco;
-import singleUsuario.usuarioSingleton;
+import vos.PostIt;
 
 import java.lang.reflect.Field;
 import java.sql.*;
@@ -73,7 +73,7 @@ public abstract class MSSQLDAO <E extends Entidade> extends DAO {
     }
 
     protected String getLocalizaCommand(){
-        String campos = "id,";
+        String campos = "";
         String chave = "";
         for(Field campo : entityClass.getDeclaredFields()) {
             if (campo.isAnnotationPresent(CampoNoBanco.class)) {
@@ -85,7 +85,7 @@ public abstract class MSSQLDAO <E extends Entidade> extends DAO {
         }
         if(campos.length() > 0)
             campos = campos.substring(0, campos.length()-1);
-        return "select " + campos + " from " + tabela + " where " + chave + " = ?";
+        return "select id," + campos + " from " + tabela + " where " + chave + " = ?";
         //return "select * from " + tabela;
     }
 
@@ -135,14 +135,7 @@ public abstract class MSSQLDAO <E extends Entidade> extends DAO {
         try(Connection conexao = getConnection()){
             String SQL = getInsertCommand(entidade);
             try(PreparedStatement stmt = getInsertStatement(entidade, conexao.prepareStatement(SQL))){
-                if (stmt.executeUpdate() == 1)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
+                return stmt.executeUpdate() >= 1;
             }
         }
     }

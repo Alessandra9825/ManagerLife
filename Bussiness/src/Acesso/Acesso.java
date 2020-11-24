@@ -17,16 +17,21 @@ public class Acesso {
 
     public boolean validaUsuario(Usuario user) throws Exception {
         Repositorio repositorio = new RepositorioMSSQL();
-        Usuario usuario = (Usuario)repositorio.localiza(user.getEmail(), enumEntidade.USUARIO);
-        if(usuario != null) {
-            //instancia um unico usuario para a aplicação
+        Usuario usuario = null;
+
+        try {
+            usuario = (Usuario)repositorio.localiza(user.getEmail(), enumEntidade.USUARIO);
+        } catch (Exception e) {
+            GerenciadorAuditoria.getInstancia().adicionaMsgAuditoria(meth + "Error - Probelmas de Conexao");
+        }
+
+        if(usuario != null && validaSenha(usuario, user))
             usuarioSingleton.Instancia();
             usuarioSingleton.idUsuario = usuario.getId();
-            return validaSenha(usuario, user);
-        }
-        else {
+            return true;
+        else
             GerenciadorAuditoria.getInstancia().adicionaMsgAuditoria(meth + "Usuário não cadastrado");
-        }
+
         return false;
     }
 }

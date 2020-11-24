@@ -11,8 +11,6 @@ public abstract class Validacao<E extends Entidade> {
         this.entityClass = entityClass;
     }
 
-
-
     public boolean isNullorEmpty(String param){
         return param == null || param.isEmpty();
     }

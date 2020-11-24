@@ -6,6 +6,7 @@ public enum enumEntidade {
 
     USUARIO("usuario"),
     SENHA_ANTIGA("senhaAntiga"),
+    Evento("evento"),
     POSTIT("postIt");
 
     private String descricao;

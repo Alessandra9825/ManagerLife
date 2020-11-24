@@ -76,8 +76,6 @@ public class UsuarioMSSQL <E extends Entidade> extends MSSQLDAO {
                     PreparedStatement newPassStatement = getStatement(saveNewPass_SQL, conexao)) {
                     conexao.setAutoCommit(false);
 
-                    System.out.println(user.getId());
-
                     //salva a antiga senha
                     oldPassStatement.setInt(1, user.getId());
                     oldPassStatement.setString(2, user.getSenha());

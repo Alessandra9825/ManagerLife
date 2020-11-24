@@ -34,12 +34,7 @@ GO
 CREATE TABLE [Eventos](
     id INT IDENTITY(1, 1) PRIMARY KEY NOT NULL,
     usuario_id INT NOT NULL,
-    data DATETIME NOT NULL,
-    tipo_id INT NOT NULL,
-    nome VARCHAR(100) NOT NULL,    
-    descricao VARCHAR(1000),
-    notificacao INT,
-    cor VARCHAR(20)
+
 )
 GO
 
