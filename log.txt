@@ -1,0 +1,53 @@
+2020-11-23T21:46:27.941-03:00[America/Sao_Paulo] - EventoRules -  Sucesso - deleteAllEntry - Evento Nova Entrada 1
+2020-11-23T21:46:29.135-03:00[America/Sao_Paulo] - EventoRules -  Sucesso - deleteAllEntry - Evento Nova Entrada 2
+2020-11-23T21:46:30.372-03:00[America/Sao_Paulo] - EventoRules -  Sucesso - deleteAllEntry - Evento Nova Entrada 3
+2020-11-23T21:47:38.331-03:00[America/Sao_Paulo] - EventoRules - Sucesso - saveAllEntry - Evento: Nova Entrada 4
+2020-11-23T21:47:39.528-03:00[America/Sao_Paulo] - EventoRules - Sucesso - saveAllEntry - Evento: Nova Entrada 2
+2020-11-23T21:47:40.729-03:00[America/Sao_Paulo] - EventoRules - Sucesso - saveAllEntry - Evento: Nova Entrada 3
+2020-11-23T21:50:13.189-03:00[America/Sao_Paulo] - EventoRules - Sucesso - saveAllEntry - Evento: Nova Entrada 1
+2020-11-23T21:50:14.375-03:00[America/Sao_Paulo] - EventoRules - Sucesso - saveAllEntry - Evento: Nova Entrada 2
+2020-11-23T21:50:16.450-03:00[America/Sao_Paulo] - EventoRules - Sucesso - saveAllEntry - Evento: Nova Entrada 3
+2020-11-23T21:54:06.017-03:00[America/Sao_Paulo] - EventoRules -  Sucesso - deleteAllEntry - Evento Nova Entrada 1
+2020-11-23T21:54:07.218-03:00[America/Sao_Paulo] - EventoRules -  Sucesso - deleteAllEntry - Evento Nova Entrada 2
+2020-11-23T21:54:08.410-03:00[America/Sao_Paulo] - EventoRules -  Sucesso - deleteAllEntry - Evento Nova Entrada 2
+2020-11-23T21:54:09.610-03:00[America/Sao_Paulo] - EventoRules -  Sucesso - deleteAllEntry - Evento Nova Entrada 3
+2020-11-23T21:54:10.841-03:00[America/Sao_Paulo] - EventoRules -  Sucesso - deleteAllEntry - Evento Nova Entrada 3
+2020-11-23T21:54:12.038-03:00[America/Sao_Paulo] - EventoRules -  Sucesso - deleteAllEntry - Evento Nova Entrada 4
+2020-11-23T21:54:27.137-03:00[America/Sao_Paulo] - EventoRules -  Sucesso - deleteAllEntry - Evento teste
+2020-11-24T14:23:43.044-03:00[America/Sao_Paulo] - Acesso - Error - Probelmas de Conexao
+2020-11-24T14:23:43.061-03:00[America/Sao_Paulo] - Acesso - Usuário não cadastrado
+2020-11-24T14:23:43.061-03:00[America/Sao_Paulo] - Login - Usuário não cadastrado
+2020-11-24T14:23:49.488-03:00[America/Sao_Paulo] - Acesso - Error - Probelmas de Conexao
+2020-11-24T14:23:49.488-03:00[America/Sao_Paulo] - Acesso - Usuário não cadastrado
+2020-11-24T14:23:49.488-03:00[America/Sao_Paulo] - Login - Usuário não cadastrado
+2020-11-24T14:28:41.629-03:00[America/Sao_Paulo] - EventoRules - Sucesso - saveAllEntry - Evento: Nova Entrada 1
+2020-11-24T14:28:42.821-03:00[America/Sao_Paulo] - EventoRules - Sucesso - saveAllEntry - Evento: Nova Entrada 2
+2020-11-24T14:28:44-03:00[America/Sao_Paulo] - EventoRules - Sucesso - saveAllEntry - Evento: Nova Entrada 3
+2020-11-24T14:34:51.023-03:00[America/Sao_Paulo] - EventoRules -  Sucesso - updateAllEntry - Evento Nova Entrada 1
+2020-11-24T14:34:52.195-03:00[America/Sao_Paulo] - EventoRules -  Sucesso - updateAllEntry - Evento Nova Entrada 2
+2020-11-24T14:34:53.364-03:00[America/Sao_Paulo] - EventoRules -  Sucesso - updateAllEntry - Evento Nova Entrada 3
+2020-11-24T14:35:15.327-03:00[America/Sao_Paulo] - EventoRules -  Sucesso - updateAllEntry - Evento Nova Entrada 1
+2020-11-24T14:35:16.539-03:00[America/Sao_Paulo] - EventoRules -  Sucesso - updateAllEntry - Evento Nova Entrada 2
+2020-11-24T14:35:17.707-03:00[America/Sao_Paulo] - EventoRules -  Sucesso - updateAllEntry - Evento Nova Entrada 3
+2020-11-24T14:38:12.120-03:00[America/Sao_Paulo] - EventoRules - Sucesso - saveAllEntry - Evento: Nova Entrada 1
+2020-11-24T14:38:13.313-03:00[America/Sao_Paulo] - EventoRules - Sucesso - saveAllEntry - Evento: Nova Entrada 2
+2020-11-24T14:38:14.518-03:00[America/Sao_Paulo] - EventoRules -  Sucesso - updateAllEntry - Evento Nova Entrada 2
+2020-11-24T14:38:15.650-03:00[America/Sao_Paulo] - EventoRules -  Sucesso - updateAllEntry - Evento Reunao com o CEO
+2020-11-24T14:40:06.151-03:00[America/Sao_Paulo] - PostIt - PostIt não alterado
+2020-11-24T14:40:12.620-03:00[America/Sao_Paulo] - PostIt - PostIt não alterado
+2020-11-24T14:40:24.910-03:00[America/Sao_Paulo] - PostIt - PostIt não alterado
+2020-11-24T14:40:26.134-03:00[America/Sao_Paulo] - PostIt - PostIt não alterado
+2020-11-24T14:40:27.348-03:00[America/Sao_Paulo] - PostIt - PostIt não alterado
+2020-11-24T14:40:56.067-03:00[America/Sao_Paulo] - PostIt - PostIt não alterado
+2020-11-24T14:41:07.151-03:00[America/Sao_Paulo] - PostIt - PostIt não alterado
+2020-11-24T14:41:14.103-03:00[America/Sao_Paulo] - PostIt - PostIt não alterado
+2020-11-24T14:56:14.322-03:00[America/Sao_Paulo] - Acesso - Usuário não cadastrado
+2020-11-24T14:56:14.330-03:00[America/Sao_Paulo] - Login - Usuário não cadastrado
+2020-11-24T14:56:21.714-03:00[America/Sao_Paulo] - Acesso - Usuário não cadastrado
+2020-11-24T14:56:21.714-03:00[America/Sao_Paulo] - Login - Usuário não cadastrado
+2020-11-24T15:22:50.408-03:00[America/Sao_Paulo] - sendEmail - Sucesso!
+2020-11-24T15:22:51.992-03:00[America/Sao_Paulo] - newPassword - Senha cadastrada com sucesso!
+2020-11-24T15:25:21.471-03:00[America/Sao_Paulo] - sendEmail - Sucesso!
+2020-11-24T15:25:23.032-03:00[America/Sao_Paulo] - newPassword - Senha cadastrada com sucesso!
+2020-11-24T15:25:56.858-03:00[America/Sao_Paulo] - sendEmail - Sucesso!
+2020-11-24T15:25:58.412-03:00[America/Sao_Paulo] - newPassword - Senha cadastrada com sucesso!

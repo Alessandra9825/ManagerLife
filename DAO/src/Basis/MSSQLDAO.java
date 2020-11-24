@@ -1,6 +1,7 @@
 package Basis;
 
 import Annotations.CampoNoBanco;
+import singleUsuario.usuarioSingleton;
 import vos.PostIt;
 
 import java.lang.reflect.Field;
@@ -110,7 +111,7 @@ public abstract class MSSQLDAO <E extends Entidade> extends DAO {
         ArrayList<E> entidades = new ArrayList();
         try(Connection conexao = getConnection())
         {
-            String SQL = "Select * from Post_It where situacaoPostit_id = 0";
+            String SQL = "Select * from Post_It where situacaoPostit_id = 0 and usuario_id = " + usuarioSingleton.idUsuario;
             try(PreparedStatement stmt = getStatement(SQL, conexao))
             {
                 try (ResultSet rs = stmt.executeQuery())

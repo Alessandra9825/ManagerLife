@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane fx:id="princPanel" prefHeight="387.0" prefWidth="597.0" style="-fx-background-color: #66ccff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TelaCadastraUsuario.src.CadastrarUsuario">
+<AnchorPane fx:id="princPanel" prefHeight="387.0" prefWidth="597.0" style="-fx-background-color: #66ccff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TelaCadastraUsuario.src.CadastrarUsuarioController">
    <children>
       <AnchorPane layoutX="21.0" layoutY="20.0" prefHeight="356.0" prefWidth="558.0" style="-fx-background-color: white;">
          <children>

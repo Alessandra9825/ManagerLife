@@ -6,6 +6,9 @@ import MSSQL.EventoMSSQL;
 import com.calendarfx.model.Calendar;
 import com.calendarfx.model.CalendarEvent;
 import com.calendarfx.model.Entry;
+import singleUsuario.usuarioSingleton;
+import vos.Evento;
+import vos.Usuario;
 
 import java.sql.SQLException;
 import java.time.ZoneId;
@@ -13,22 +16,17 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import vos.Evento;
-import vos.Usuario;
-
 public class EventoRules {
 
     private final String meth =  "EventoRules - ";
     private List<String> errosPopUp = new ArrayList();
 
     public boolean saveUpdateEntry(List<Calendar> calendars, List<Entry> entryListDB, List<Entry> entryListUpdate, List<Entry> entryListDelete){
-        Usuario user = null;
-
         clearLists(entryListDB, entryListUpdate, entryListDelete);
 
-        boolean save = saveAllEntry(calendars, entryListDB, 1);
+        boolean save = saveAllEntry(calendars, entryListDB, usuarioSingleton.idUsuario);
         boolean delete = deleteAllEntry(entryListDelete);
-        boolean update = updateAllEntry(entryListUpdate, 1, entryListDB);
+        boolean update = updateAllEntry(entryListUpdate, usuarioSingleton.idUsuario, entryListDB);
 
         return save && update && delete;
     }
@@ -38,6 +36,7 @@ public class EventoRules {
         clearDeleteUpdate(entryListDelete, entryListUpdate);
         clearDeleteDabatase(entryListDelete, entryListDB);
     }
+
     private void clearInsertUpdate(List<Entry> entryListDB, List<Entry> entryListUpdate){
         boolean delete;
 
@@ -197,14 +196,14 @@ public class EventoRules {
     }
 
     //Faz a busca de todos os eventos no banco
-    public List<Entry> findAllEntry(int usuarioId, List<Calendar> calendars) {
+    public List<Entry> findAllEntry(List<Calendar> calendars) {
         EventoMSSQL evento =  new EventoMSSQL();
         List<Evento> eventoDB;
         List<Entry> entryDB = new ArrayList<>();
         Entry entry;
 
         try{
-            eventoDB = evento.lista(usuarioId);
+            eventoDB = evento.lista(usuarioSingleton.getIdUsuario());
 
             if(eventoDB.size() > 0)
                 for (Evento evt: eventoDB){

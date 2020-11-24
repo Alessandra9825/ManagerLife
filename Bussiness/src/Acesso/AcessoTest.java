@@ -1,9 +1,9 @@
 package Acesso;
 
-import org.testng.annotations.Test;
+import org.junit.jupiter.api.Test;
 import vos.Usuario;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class AcessoTest {
     @Test
@@ -13,6 +13,10 @@ public class AcessoTest {
         user.setSenha("JvUv60871mYxvI");
 
         Acesso acess = new Acesso();
-        assertTrue(acess.validaUsuario(user));
+        try {
+            assertTrue(acess.validaUsuario(user));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

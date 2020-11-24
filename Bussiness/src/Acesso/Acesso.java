@@ -25,10 +25,12 @@ public class Acesso {
             GerenciadorAuditoria.getInstancia().adicionaMsgAuditoria(meth + "Error - Probelmas de Conexao");
         }
 
-        if(usuario != null && validaSenha(usuario, user))
+        if(usuario != null && validaSenha(usuario, user)) {
             usuarioSingleton.Instancia();
+            usuarioSingleton.usuario = usuario;
             usuarioSingleton.idUsuario = usuario.getId();
             return true;
+        }
         else
             GerenciadorAuditoria.getInstancia().adicionaMsgAuditoria(meth + "Usuário não cadastrado");
 

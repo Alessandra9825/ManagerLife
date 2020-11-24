@@ -22,6 +22,5 @@ public class Configuracoes extends Application {
         primaryStage.setTitle("Configurações");
         primaryStage.setScene(new Scene(root, 600, 500));
         primaryStage.show();
-
     }
 }

@@ -9,43 +9,40 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="Common" />
     <orderEntry type="module" module-name="DAO" />
-    <orderEntry type="module-library" exported="">
-      <library>
+    <orderEntry type="module-library">
+      <library name="JUnit5.4">
         <CLASSES>
-          <root url="jar://$USER_HOME$/Desktop/lib java/activation.jar!/" />
+          <root url="jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter/5.4.2/junit-jupiter-5.4.2.jar!/" />
+          <root url="jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-api/5.4.2/junit-jupiter-api-5.4.2.jar!/" />
+          <root url="jar://$MAVEN_REPOSITORY$/org/apiguardian/apiguardian-api/1.0.0/apiguardian-api-1.0.0.jar!/" />
+          <root url="jar://$MAVEN_REPOSITORY$/org/opentest4j/opentest4j/1.1.1/opentest4j-1.1.1.jar!/" />
+          <root url="jar://$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-commons/1.4.2/junit-platform-commons-1.4.2.jar!/" />
+          <root url="jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-params/5.4.2/junit-jupiter-params-5.4.2.jar!/" />
+          <root url="jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-engine/5.4.2/junit-jupiter-engine-5.4.2.jar!/" />
+          <root url="jar://$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-engine/1.4.2/junit-platform-engine-1.4.2.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="module-library" exported="">
+    <orderEntry type="library" name="adaptive" level="project" />
+    <orderEntry type="module" module-name="ManagerLife" exported="" />
+    <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$USER_HOME$/Desktop/lib java/mail.jar!/" />
+          <root url="jar://$MODULE_DIR$/../JARs/mail.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" exported="" name="mailactivation" level="application" />
-    <orderEntry type="module-library" exported="">
+    <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="file://$USER_HOME$/Desktop/lib java" />
+          <root url="jar://$MODULE_DIR$/../JARs/view-8.6.1.jar!/" />
         </CLASSES>
         <JAVADOC />
-        <SOURCES>
-          <root url="file://$USER_HOME$/Desktop/lib java/sqljdbc_8.4/ptb/samples/adaptive" />
-          <root url="file://$USER_HOME$/Desktop/lib java/sqljdbc_8.4/ptb/samples/alwaysencrypted" />
-          <root url="file://$USER_HOME$/Desktop/lib java/sqljdbc_8.4/ptb/samples/azureactivedirectoryauthentication" />
-          <root url="file://$USER_HOME$/Desktop/lib java/sqljdbc_8.4/ptb/samples/connections" />
-          <root url="file://$USER_HOME$/Desktop/lib java/sqljdbc_8.4/ptb/samples/constrained" />
-          <root url="file://$USER_HOME$/Desktop/lib java/sqljdbc_8.4/ptb/samples/dataclassification" />
-          <root url="file://$USER_HOME$/Desktop/lib java/sqljdbc_8.4/ptb/samples/datatypes" />
-          <root url="file://$USER_HOME$/Desktop/lib java/sqljdbc_8.4/ptb/samples/resultsets" />
-          <root url="file://$USER_HOME$/Desktop/lib java/sqljdbc_8.4/ptb/samples/sparse" />
-        </SOURCES>
-        <jarDirectory url="file://$USER_HOME$/Desktop/lib java" recursive="false" />
+        <SOURCES />
       </library>
     </orderEntry>
   </component>

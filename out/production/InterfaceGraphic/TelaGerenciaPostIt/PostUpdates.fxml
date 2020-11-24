@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="an_PostIt" prefHeight="345.0" prefWidth="496.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TelaGerenciaPostIt.ControllerPostUpdates">
+    <children>
+        <AnchorPane prefHeight="350.0" prefWidth="496.0" style="-fx-background-color: #66ccff;">
+            <children>
+                <Pane layoutX="16.0" layoutY="89.0" prefHeight="252.0" prefWidth="464.0" style="-fx-background-color: white;">
+                    <children>
+                        <Label layoutX="19.0" layoutY="29.0" text="Nome" textFill="#1c008d" />
+                        <Label layoutX="16.0" layoutY="69.0" text="Tempo Estimado" textFill="#1c008d" />
+                        <Label layoutX="16.0" layoutY="99.0" text="Descrição" textFill="#1c008d" />
+                        <Label layoutX="19.0" layoutY="185.0" text="Situação" textFill="#1c008d" />
+                        <TextField fx:id="txt_nome" layoutX="116.0" layoutY="25.0" prefHeight="25.0" prefWidth="78.0" />
+                        <TextField fx:id="txt_tempo" layoutX="115.0" layoutY="65.0" prefHeight="25.0" prefWidth="31.0" />
+                        <TextArea fx:id="txtA_descricao" layoutX="116.0" layoutY="94.0" prefHeight="77.0" prefWidth="276.0" />
+                        <ComboBox fx:id="cb_situacao" layoutX="115.0" layoutY="181.0" prefWidth="150.0" />
+                        <Button fx:id="btn_salvar" layoutX="56.0" layoutY="223.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="114.0" text="Salvar" textFill="#1c008d" />
+                        <Button fx:id="btn_cancelar" layoutX="190.0" layoutY="221.0" mnemonicParsing="false" onAction="#Cancelar" prefHeight="25.0" prefWidth="114.0" text="Cancelar" textFill="#1c008d" />
+                        <Button fx:id="btn_deletar" layoutX="330.0" layoutY="221.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="114.0" text="Deletar" textFill="#1c008d" />
+                        <Label layoutX="155.0" layoutY="63.0" text="Horas" textFill="#1c008d">
+                            <font>
+                                <Font name="Myanmar Text" size="12.0" />
+                            </font></Label>
+                    </children></Pane>
+                <Pane layoutY="14.0" prefHeight="62.0" prefWidth="496.0" style="-fx-background-color: #99ccff;">
+                    <children>
+                        <Label layoutX="191.0" prefHeight="62.0" prefWidth="120.0" text="Post-It" textFill="WHITE">
+                            <font>
+                                <Font name="Myanmar Text Bold" size="33.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </Pane>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

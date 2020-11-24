@@ -13,6 +13,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.stage.Stage;
+import singleUsuario.usuarioSingleton;
 import vos.Usuario;
 
 public class RecadastrarSenhaController implements Initializable {
@@ -110,21 +112,15 @@ public class RecadastrarSenhaController implements Initializable {
 
     @FXML
     public void exit(ActionEvent event) {
-        System.exit(0);
-    }
-
-    private Usuario testeRecadastrarSenha() {
-        Usuario user = new Usuario();
-        user.setEmail("lucas@russo");
-        user.setSenha(this.oldPass);
-        return user;
+        Stage stage = (Stage) recadastrar_btn.getScene().getWindow();
+        stage.close();
     }
 
     @FXML
     public void recadastrar(ActionEvent event) {
         recadastrar_btn.setDisable(true);
         NovaSenha solicitacao = new NovaSenha();
-        Usuario user = testeRecadastrarSenha();
+        Usuario user = usuarioSingleton.usuario;
 
         if (!Utilitarios.getInstancia().isNullorEmpty(newPass) && newPass.equals(confPass) && user.getSenha().equals(oldPass)) {
             String erros = solicitacao.newPassword(user.getEmail(), newPass);

@@ -3,8 +3,14 @@ package Acesso;
 import Auditoria.GerenciadorAuditoria;
 import MSSQL.UsuarioMSSQL;
 import Utilitarios.Utilitarios;
+import singleUsuario.usuarioSingleton;
 import vos.Usuario;
-import javax.mail.*;
+import javax.mail.Address;
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import java.sql.SQLException;
@@ -33,6 +39,7 @@ public class NovaSenha {
                     emailEnviado = sendEmail(email, senha);
 
                 if(emailEnviado){
+                    usuarioSingleton.usuario = (Usuario)dao.buscaEmail(email);
                     GerenciadorAuditoria.getInstancia().adicionaMsgAuditoria(meth + "Senha cadastrada com sucesso!");
                 }
                 else {

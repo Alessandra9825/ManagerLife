@@ -11,7 +11,7 @@ public class NovaSenhaTest {
     public void newPassword() {
         String email = "lucas@";
         //quando informado é recadastro, se nao esqueceu a senha
-        String senha = "testeUnitario2";
+        String senha = "testeUnitario";
 
         NovaSenha novaSenha = new NovaSenha();
 

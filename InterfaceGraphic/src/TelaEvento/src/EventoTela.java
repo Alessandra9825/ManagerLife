@@ -49,7 +49,7 @@ public class EventoTela extends Application {
             }
         }
 
-        calendarsEntryDB = bussiness.findAllEntry(1, calendarList);
+        calendarsEntryDB = bussiness.findAllEntry(calendarList);
 
         //configura os listeners apos a implementacao
         configCalendar();

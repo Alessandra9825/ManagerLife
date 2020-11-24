@@ -19,9 +19,9 @@
       <Label layoutX="33.0" layoutY="228.0" text="Celular:" />
       <Label layoutX="51.0" layoutY="259.0" text="Cor:" />
       <Label layoutX="33.0" layoutY="291.0" text="Moeda:" />
-      <TextField layoutX="84.0" layoutY="162.0" prefHeight="25.0" prefWidth="413.0" />
-      <TextField layoutX="84.0" layoutY="193.0" prefHeight="25.0" prefWidth="413.0" />
-      <TextField layoutX="84.0" layoutY="224.0" prefHeight="25.0" prefWidth="413.0" />
+      <TextField fx:id="nometxt" layoutX="84.0" layoutY="162.0" prefHeight="25.0" prefWidth="413.0" />
+      <TextField fx:id="emailtxt" layoutX="84.0" layoutY="193.0" prefHeight="25.0" prefWidth="413.0" />
+      <TextField fx:id="celtxt" layoutX="84.0" layoutY="224.0" prefHeight="25.0" prefWidth="413.0" />
       <MenuButton layoutX="84.0" layoutY="255.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="413.0" text="MenuButton">
         <items>
           <MenuItem mnemonicParsing="false" text="Action 1" />
@@ -34,6 +34,7 @@
           <MenuItem mnemonicParsing="false" text="Action 2" />
         </items>
       </MenuButton>
-      <Button layoutX="206.0" layoutY="340.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="189.0" text="Salvar" />
+      <Button layoutX="84.0" layoutY="341.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="189.0" text="Salvar" />
+      <Button fx:id="btn_novaSenha" layoutX="308.0" layoutY="341.0" mnemonicParsing="false" onAction="#newPassword" prefHeight="25.0" prefWidth="189.0" text="Nova Senha" />
    </children>
 </AnchorPane>

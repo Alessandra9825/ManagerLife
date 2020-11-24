@@ -2,16 +2,6 @@
   <library name="adaptive">
     <CLASSES />
     <JAVADOC />
-    <SOURCES>
-      <root url="file://$USER_HOME$/Desktop/lib java/sqljdbc_8.4/ptb/samples/adaptive" />
-      <root url="file://$USER_HOME$/Desktop/lib java/sqljdbc_8.4/ptb/samples/alwaysencrypted" />
-      <root url="file://$USER_HOME$/Desktop/lib java/sqljdbc_8.4/ptb/samples/azureactivedirectoryauthentication" />
-      <root url="file://$USER_HOME$/Desktop/lib java/sqljdbc_8.4/ptb/samples/connections" />
-      <root url="file://$USER_HOME$/Desktop/lib java/sqljdbc_8.4/ptb/samples/constrained" />
-      <root url="file://$USER_HOME$/Desktop/lib java/sqljdbc_8.4/ptb/samples/dataclassification" />
-      <root url="file://$USER_HOME$/Desktop/lib java/sqljdbc_8.4/ptb/samples/datatypes" />
-      <root url="file://$USER_HOME$/Desktop/lib java/sqljdbc_8.4/ptb/samples/resultsets" />
-      <root url="file://$USER_HOME$/Desktop/lib java/sqljdbc_8.4/ptb/samples/sparse" />
-    </SOURCES>
+    <SOURCES />
   </library>
 </component>

@@ -12,7 +12,7 @@ class ValidaPostItTest {
         PostIt postit = new PostIt();
         postit.setDescricao("Um test");
         postit.setNome("Test");
-        postit.setTempo("10");
+        postit.setTempo(10);
         postit.setSituacao(1);
 
         ValidaPostIt validaPostIt = new ValidaPostIt();

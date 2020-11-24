@@ -1,5 +1,7 @@
 package singleUsuario;
 
+import vos.Usuario;
+
 public class usuarioSingleton {
 
     public static usuarioSingleton _instance;
@@ -11,6 +13,7 @@ public class usuarioSingleton {
         return _instance;
     }
 
+    static public Usuario usuario;
     static public int idUsuario;
     static public int getIdUsuario(){
         return  idUsuario;

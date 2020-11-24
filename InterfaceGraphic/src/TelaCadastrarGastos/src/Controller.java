@@ -1,5 +1,5 @@
 package TelaCadastrarGastos.src;
-import Enums.EnumFrequencia;
+
 import MSSQL.SaldoCCMSSQL;
 import Utilitarios.Utilitarios;
 import Validacao.ValidaSaldoCC;
@@ -8,16 +8,15 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
-import singleUsuario.usuarioSingleton;
 import vos.SaldoCC;
 
 import javax.swing.*;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.Date;
 import java.sql.SQLException;
 import java.time.Instant;
 import java.time.ZoneId;
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.ResourceBundle;
 
 public class Controller implements Initializable {

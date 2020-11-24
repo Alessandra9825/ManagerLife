@@ -1,5 +1,6 @@
 package TelaMenu.src;
 
+import TelaEvento.src.EventoTela;
 import TelaPainelPostIt.src.ControllerPainel;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -39,6 +40,9 @@ public class Controller implements Initializable {
         }
         else if(event.getSource()== btn_eventos)
         {
+            EventoTela tela = new EventoTela();
+            tela.start(new Stage());
+
         }
         else if(event.getSource()== btn_financas)
         {
